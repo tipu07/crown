@@ -1001,18 +1001,10 @@
 			color: var(--light);
 			margin: auto;
 			z-index: 2;
-			.terms_list {
-				@include list;
-				@include flex($flow: wrap);
-				@include gap(1rem 2rem);
-				margin-top: 2rem;
-				> li {
-					> a {
-						color: rgba(var(--light_rgb), 0.7);
-						&:hover {
-							color: var(--light);
-						}
-					}
+			h4 {
+				> span {
+					display: block;
+					font-weight: 400;
 				}
 			}
 		}

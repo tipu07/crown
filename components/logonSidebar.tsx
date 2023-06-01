@@ -10,19 +10,11 @@ const LogonSidebar = (props: any) => {
 			<div className={style.login_sidebar} style={{ backgroundImage: "url(" + bg_image.src + ")" }}>
 				<div className={style.login_sidebar_txt}>
 					<Logo />
-					<h3 className="mt-4">Welcome to Eventplus!</h3>
-					<p>Rerum veniam dolores sit illum consectetur dolorum numquam eveniet iste. Pariatur fugiat consequatur nobis dolor et labore sit voluptas omnis.</p>
-					<ul className={style.terms_list}>
-						<li>
-							<Link href="/production/terms-conditions">Terms & conditions</Link>
-						</li>
-						<li>
-							<Link href="/production/disclaimer">Disclaimer</Link>
-						</li>
-						<li>
-							<Link href="/production/privacy-policy">Privacy Policy</Link>
-						</li>
-					</ul>
+					<h3 className="mt-4">
+						We Sell Integrity
+						<span>not Credit Repair</span>
+					</h3>
+					<p>If you don’t take good care of your credit, then your credit won’t take good care of you</p>
 				</div>
 			</div>
 		</>

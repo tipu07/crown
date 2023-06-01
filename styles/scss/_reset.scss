@@ -20,7 +20,7 @@ $colors: (
 		--#{$color}_rgb: #{red($value)}, #{green($value)}, #{blue($value)};
 	}
 	// "green": #19cba6,
-	--font-plus-jakarta-sans: "Plus Jakarta Sans", sans-serif;
+	--font-montserrat: "Montserrat", sans-serif;
 	--transition: all ease 0.3s;
 }
 
@@ -65,12 +65,10 @@ body {
 	position: relative;
 	@include flex($flow: column);
 	min-height: 100vh;
-	// background-color: var(--light);
-	background-color: var(--black);
-	// color: var(--dark);
-	color: var(--light);
+	background-color: var(--light);
+	color: var(--black);
 	font-size: 1.4rem;
-	font-family: var(--font-plus-jakarta-sans);
+	font-family: var(--font-montserrat);
 	font-weight: 400;
 	margin: 0;
 	padding: 0;
