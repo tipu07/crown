@@ -1,7 +1,6 @@
 import React from "react"
 import style from "@/styles/scss/web.module.scss"
 import Link from "next/link"
-import Image from "next/image"
 
 const HeaderStrip = () => {
 	return (
