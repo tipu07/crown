@@ -1,7 +1,6 @@
 import Link from "next/link"
-import style from "@/styles/scss/app.module.scss"
+import style from "@/styles/scss/web.module.scss"
 import { useRouter } from "next/router"
-import { IconBell, IconEnvelope, PhotoUser_01 } from "../images"
 import Image from "next/image"
 import { useState } from "react"
 
@@ -14,9 +13,7 @@ const Navigation = (props: any) => {
 		setDropdown(!dropdown)
 	}
 
-	return (
-		<>
-			<nav id={style.nav} className={`${navActive ? style.active : ""}`}>
+	return <>{/* <nav id={style.nav} className={`${navActive ? style.active : ""}`}>
 				{headerType === "player" ? (
 					<>
 						<ul id={style.nav_list}>
@@ -142,9 +139,7 @@ const Navigation = (props: any) => {
 						</li>
 					</ul>
 				)}
-			</nav>
-		</>
-	)
+			</nav> */}</>
 }
 
 export default Navigation

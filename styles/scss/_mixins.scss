@@ -38,13 +38,13 @@ $cross_circle: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www
 	}
 }
 
-@include font-face("Plus Jakarta Sans", "/fonts/PlusJakartaSans", woff2, "woff", 200);
-@include font-face("Plus Jakarta Sans", "/fonts/PlusJakartaSans", woff2, "woff", 300);
-@include font-face("Plus Jakarta Sans", "/fonts/PlusJakartaSans", woff2, "woff", 400);
-@include font-face("Plus Jakarta Sans", "/fonts/PlusJakartaSans", woff2, "woff", 500);
-@include font-face("Plus Jakarta Sans", "/fonts/PlusJakartaSans", woff2, "woff", 600);
-@include font-face("Plus Jakarta Sans", "/fonts/PlusJakartaSans", woff2, "woff", 700);
-@include font-face("Plus Jakarta Sans", "/fonts/PlusJakartaSans", woff2, "woff", 800);
+@include font-face("Montserrat", "/fonts/Montserrat", woff2, "woff", 200);
+@include font-face("Montserrat", "/fonts/Montserrat", woff2, "woff", 300);
+@include font-face("Montserrat", "/fonts/Montserrat", woff2, "woff", 400);
+@include font-face("Montserrat", "/fonts/Montserrat", woff2, "woff", 500);
+@include font-face("Montserrat", "/fonts/Montserrat", woff2, "woff", 600);
+@include font-face("Montserrat", "/fonts/Montserrat", woff2, "woff", 700);
+@include font-face("Montserrat", "/fonts/Montserrat", woff2, "woff", 800);
 
 @mixin flex($align: null, $justify: null, $flow: null, $direction: null) {
 	display: -webkit-box;
@@ -105,7 +105,7 @@ $cross_circle: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www
 	background-attachment: $attach;
 }
 
-@mixin row($tb: 1.5rem, $lr: 1.5rem) {
+@mixin row($tb: 2rem, $lr: 2rem) {
 	// @mixin row($tb: 1rem, $lr: 1rem, $w: calc(100% + #{$lr * 2})) {
 	// width: $w;
 	margin: (-($tb)) (-($lr));
@@ -181,12 +181,12 @@ $cross_circle: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www
 }
 
 @mixin trans {
-	-webkit-transition: all ease 0.5s;
-	transition: all ease 0.5s;
+	-webkit-transition: var(--transition);
+	transition: var(--transition);
 }
 
 @mixin input_height {
-	height: 5rem;
+	height: 6rem;
 }
 
 @mixin gap($num: null) {
@@ -373,7 +373,7 @@ $cross_circle: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www
 // mobile_xx ---- 320
 
 @mixin led {
-	@media (min-width: 1900px) {
+	@media (min-width: 1920px) {
 		@content;
 	}
 }

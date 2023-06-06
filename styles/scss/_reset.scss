@@ -4,7 +4,7 @@ $colors: (
 	"dark": #000,
 	"light": #fff,
 	"light_white": #f8f7f4,
-	"gray": #dcdcdc,
+	"gray": #acacac,
 	"dark_gray": #a4a4aa,
 	"light_gray": #f8f7f4,
 	"green": #12b07e,
@@ -20,7 +20,7 @@ $colors: (
 		--#{$color}_rgb: #{red($value)}, #{green($value)}, #{blue($value)};
 	}
 	// "green": #19cba6,
-	--font-plus-jakarta-sans: "Plus Jakarta Sans", sans-serif;
+	--font-montserrat: "Montserrat", sans-serif;
 	--transition: all ease 0.3s;
 }
 
@@ -32,7 +32,7 @@ $colors: (
 
 html {
 	min-height: 100%;
-	font-size: 10px;
+	font-size: 7.11458px;
 	overflow: hidden;
 	overflow-y: initial;
 	&.flow {
@@ -65,12 +65,11 @@ body {
 	position: relative;
 	@include flex($flow: column);
 	min-height: 100vh;
-	// background-color: var(--light);
-	background-color: var(--black);
-	// color: var(--dark);
-	color: var(--light);
-	font-size: 1.4rem;
-	font-family: var(--font-plus-jakarta-sans);
+	background-color: var(--light);
+	color: var(--black);
+	// font-size: 1.4rem;
+	font-size: 2rem;
+	font-family: var(--font-montserrat);
 	font-weight: 400;
 	margin: 0;
 	padding: 0;
@@ -131,7 +130,7 @@ h5,
 .h5,
 h6,
 .h6 {
-	font-weight: 600;
+	font-weight: 700;
 	line-height: 1.1;
 	margin: 0 0 1rem;
 	/* &.subheading {
@@ -315,13 +314,13 @@ input {
 		-webkit-appearance: none;
 		-moz-appearance: none;
 		appearance: none;
-		width: 1.8rem;
-		min-width: 1.8rem;
-		height: 1.8rem;
-		background: var(--black);
-		color: var(--black);
+		width: 2rem;
+		min-width: 2rem;
+		height: 2rem;
+		background: var(--light);
+		color: var(--light);
 		margin-top: 0;
-		border: 0.1rem solid rgba(var(--light_rgb), 0.1);
+		border: 0.1rem solid var(--gray);
 		cursor: pointer;
 	}
 	&[type="radio"] {
