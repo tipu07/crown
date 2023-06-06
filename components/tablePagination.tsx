@@ -1,5 +1,5 @@
 import React from "react"
-import style from "@/styles/scss/app.module.scss"
+import style from "@/styles/scss/web.module.scss"
 import Pagination from "./pagination"
 
 const TablePagination = () => {

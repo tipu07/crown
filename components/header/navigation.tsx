@@ -1,5 +1,5 @@
 import Link from "next/link"
-import style from "@/styles/scss/app.module.scss"
+import style from "@/styles/scss/web.module.scss"
 import { useRouter } from "next/router"
 import { IconBell, IconEnvelope, PhotoUser_01 } from "../images"
 import Image from "next/image"

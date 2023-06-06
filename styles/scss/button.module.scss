@@ -27,11 +27,10 @@
 	border: 0;
 	border-radius: 0.8rem;
 	outline: none !important;
-	text-transform: uppercase;
+	// text-transform: uppercase;
 	-webkit-box-shadow: 0 0.3rem 0.3rem 0 rgba(var(--black_rgb) 0.55);
 	box-shadow: 0 0.3rem 0.3rem 0 rgba(var(--black_rgb) 0.55);
-	-webkit-transition: var(--transition);
-	transition: var(--transition);
+	@include trans;
 	@include ipad_sm {
 		height: 5.4rem;
 		font-size: 1.4rem;
@@ -165,8 +164,7 @@
 	border: 0;
 	border-radius: 75%;
 	cursor: pointer;
-	-webkit-transition: var(--transition);
-	transition: var(--transition);
+	@include trans;
 	z-index: 5;
 	&:hover {
 		background: var(--prime_color);
@@ -186,7 +184,7 @@
 	text-align: left;
 	> input[type="radio"],
 	> input[type="checkbox"] {
-		margin-top: 0.1rem;
+		margin-top: 0.5rem;
 	}
 	label {
 		-ms-flex-item-align: center;
