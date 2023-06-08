@@ -175,6 +175,7 @@
 		img {
 			-o-object-fit: cover;
 			object-fit: cover;
+			border-radius: inherit;
 		}
 	}
 }
@@ -482,7 +483,7 @@
 		background: rgba(var(--prime_color_rgb), 0.05);
 		border-color: var(--prime_color);
 	}
-	@include placeholder(rgba(var(--light_rgb), 0.5));
+	@include placeholder(rgba(var(--black_rgb), 0.5));
 	&:focus {
 		@include placeholder($opacity: 0);
 	}
