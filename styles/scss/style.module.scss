@@ -1,5 +1,35 @@
 /*
 |----------------------------------------------------------------------
+|       Body
+|----------------------------------------------------------------------
+*/
+
+.form_blk {
+	font-size: 1.6rem;
+	h6 {
+		color: #959595;
+		font-size: 1.4rem;
+		font-weight: 600;
+		margin-bottom: 0.8rem;
+	}
+}
+
+.upload_blk {
+	@include flex(center, center, column);
+	height: 14rem;
+	background: #f8f8f8;
+	padding: 2rem;
+	text-align: center;
+	border: 0.2rem dashed #d6d6d6;
+	border-radius: 0.8rem;
+	> p {
+		font-size: 1.4rem;
+		font-weight: 500;
+	}
+}
+
+/*
+|----------------------------------------------------------------------
 |       Logo
 |----------------------------------------------------------------------
 */
@@ -745,6 +775,7 @@
 	background: #f1f4fa;
 	margin-top: -8.8rem;
 	padding: 2rem;
+	overflow: unset;
 	#main_area {
 		width: calc(100% - 33rem);
 		background: var(--light);
@@ -752,7 +783,8 @@
 		border-radius: 4rem;
 	}
 	#top_header {
-		@include flex;
+		@include flex(center);
+		margin-bottom: 3rem;
 		.title {
 			font-size: 2.4rem;
 			> span {
@@ -761,13 +793,66 @@
 				font-size: 1.8rem;
 			}
 		}
+		.query_form {
+			position: relative;
+			width: 44rem;
+			min-width: 44rem;
+			-ms-flex-item-align: center;
+			align-self: center;
+			margin-left: auto;
+			> .input {
+				font-size: 1.6rem;
+				&:not(:hover) {
+					border: 0.2rem solid #d9e1e7;
+				}
+			}
+			> button {
+				@include pos($l: null);
+				width: 1.8rem;
+				min-width: 1.8rem;
+				height: 1.8rem;
+				margin: auto;
+				margin-right: 2rem;
+			}
+		}
+		#notification_btn {
+			@include flex(center, center);
+			width: 6rem;
+			min-width: 6rem;
+			height: 6rem;
+			margin-left: 2rem;
+			border: 0.2rem solid #d9e1e7;
+			border-radius: 0.8rem;
+			@include trans;
+			> img {
+				width: 2.2rem;
+				min-width: 2.2rem;
+				height: 2.2rem;
+				margin: auto;
+			}
+		}
+		#pro_btn {
+			.ico {
+				width: 6rem;
+				min-width: 6rem;
+				height: 6rem;
+				margin-left: 2rem;
+				padding: 1rem;
+				border: 0.2rem solid #d9e1e7;
+				border-radius: 75%;
+			}
+		}
 	}
 }
 
 #sidebar {
+	position: sticky;
+	top: 2rem;
 	@include flex($flow: column);
+	align-items: flex-start;
 	width: 33rem;
 	min-width: 33rem;
+	height: calc(100vh - 4rem);
 	padding-right: 2rem;
 	.logo {
 		max-width: 24rem;
@@ -839,6 +924,79 @@
 			display: block;
 			color: #809fb8;
 			font-size: 1.4rem;
+		}
+	}
+}
+
+#application {
+	.tabs_block {
+		@include flex(center, space-between);
+		background: #f5f5f5;
+		padding: 0 4rem;
+		margin-bottom: 2rem;
+		border-radius: 0.4rem;
+		overflow: hidden;
+		.tabs_list {
+			@include list;
+			@include flex;
+			> li {
+				margin-right: 9rem;
+				> button {
+					color: #809fb8;
+					font-size: 1.6rem;
+					padding: 1.4rem 0 1.6rem;
+					border-bottom: 0.3rem solid transparent;
+					&:hover {
+						color: var(--black);
+					}
+					&.active {
+						color: var(--prime_color);
+						font-weight: 600;
+						border-color: var(--prime_color);
+					}
+				}
+			}
+		}
+		.save_btn {
+			@include i_flex(center);
+			color: var(--prime_color);
+			font-size: 1.6rem;
+			font-weight: 600;
+			&:hover {
+				color: var(--black);
+			}
+			> img {
+				width: 1.8rem;
+				min-width: 1.8rem;
+				height: 1.8rem;
+				margin-right: 1rem;
+			}
+		}
+	}
+	.application_form {
+		max-width: 111rem;
+		.in_blk {
+			padding: 3.6rem 4rem;
+			border: 0.1rem solid #d9e1e7;
+			border-radius: 1.6rem;
+			&:not(:nth-last-child(1)) {
+				margin-bottom: 1.6rem;
+			}
+		}
+		.heading {
+			@include flex(center);
+			font-size: 2.2rem;
+			font-weight: 700;
+			margin-bottom: 3.6rem;
+			&::after {
+				content: "";
+				-webkit-box-flex: 1;
+				-ms-flex: 1;
+				flex: 1;
+				height: 0.1rem;
+				background: #d6d6d6;
+				margin-left: 1.6rem;
+			}
 		}
 	}
 }
