@@ -96,6 +96,14 @@
 			color: var(--light);
 		}
 	}
+	&.transparent {
+		background: #f1f0ff;
+		color: var(--prime_color);
+		&:hover {
+			background: var(--prime_color);
+			color: var(--light);
+		}
+	}
 	&.stroke {
 		border: 0.1rem solid var(--prime_color);
 	}

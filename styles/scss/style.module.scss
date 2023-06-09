@@ -999,4 +999,51 @@
 			}
 		}
 	}
+	.customer_details {
+		.title {
+			font-weight: 600;
+		}
+		p {
+			font-size: 1.4rem;
+			font-weight: 500;
+		}
+		.submitted {
+			font-weight: 600;
+			> span {
+				color: #959595;
+			}
+		}
+		.small {
+			color: #959595;
+			font-size: 1rem;
+		}
+	}
+	.credit_table {
+		border: 0.1rem solid var(--gray);
+		border-radius: 1rem;
+		overflow: hidden;
+		table {
+			width: 100%;
+			font-size: 1.4rem;
+			font-weight: 500;
+			overflow: hidden;
+			margin: -0.1rem 0;
+			tr {
+				th,
+				td {
+					border-top: 0.1rem solid var(--gray);
+					border-bottom: 0.1rem solid var(--gray);
+					padding: 1rem 2rem;
+				}
+			}
+			th {
+				width: 20rem;
+				white-space: nowrap;
+			}
+		}
+	}
+	.ccp_notice {
+		font-size: 1.8rem;
+		font-weight: 500;
+	}
 }
