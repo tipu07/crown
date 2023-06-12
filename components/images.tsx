@@ -27,7 +27,11 @@ export { default as IconDocuments } from "/public/images/icon-documents.svg"
 export { default as IconNotices } from "/public/images/icon-notices.svg"
 export { default as IconPayment } from "/public/images/icon-payment.svg"
 
-export { default as SaveIcon } from "/public/images/save-icon.svg"
+export { default as SaveIcon } from "/public/images/save_icon.svg"
+export { default as PlayIcon } from "/public/images/play_icon.svg"
+export { default as ZelleIcon } from "/public/images/zelle_icon.svg"
+export { default as CashAppIcon } from "/public/images/cash_app_icon.svg"
+export { default as TickIcon } from "/public/images/tick_icon.svg"
 /* export { default as IconTick } from "/public/images/tick.svg"
 export { default as IconCalendar } from "/public/images/icon-calendar.svg"
 export { default as IconSearch } from "/public/images/icon-search.svg"
@@ -45,3 +49,5 @@ export { default as IconList } from "/public/images/icon-list.svg"
 export { default as VectorPaypal } from "/public/images/paypal.svg"
 export { default as VectorVisa } from "/public/images/visa.svg"
 export { default as VectorBank } from "/public/images/bank.svg" */
+
+export { default as ProfessionalWoman } from "/public/images/professional_woman.jpg"
