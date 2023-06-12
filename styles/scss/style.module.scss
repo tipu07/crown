@@ -1042,8 +1042,143 @@
 			}
 		}
 	}
+	.svc_agreement,
 	.ccp_notice {
 		font-size: 1.8rem;
 		font-weight: 500;
+	}
+	.package_table {
+		border-radius: 0.8rem;
+		border: 0.1rem solid #d6d6d6;
+		overflow: hidden;
+		overflow-x: auto;
+		table {
+			width: 100%;
+			margin-bottom: -0.1rem;
+			tr {
+				th,
+				td {
+					font-size: 1.4rem;
+					font-weight: 500;
+					padding: 1.8rem 1.2rem;
+					border-bottom: 0.1rem solid #d6d6d6;
+					&:nth-child(1) {
+						padding-left: 2rem;
+					}
+					&:nth-last-child(1) {
+						padding-right: 2rem;
+					}
+				}
+				th {
+					background: #606060;
+					color: var(--light);
+					font-weight: 700;
+					white-space: nowrap;
+				}
+			}
+		}
+	}
+	.payment_method_blk {
+		font-size: 1.6rem;
+		font-weight: 500;
+	}
+	.payment_card {
+		position: relative;
+		color: #6e6e6e;
+		font-size: 1.6rem;
+		font-weight: 500;
+		margin-bottom: 2.4rem;
+		overflow: hidden;
+		&_inner {
+			@include flex;
+			padding: 4rem 3rem;
+			border: 0.2rem solid #d6d6d6;
+			border-radius: 0.6rem;
+			@include trans;
+		}
+		input[type="radio"] {
+			@include pos($z: 1);
+			width: 100%;
+			height: 100%;
+			background: transparent;
+			opacity: 0;
+			&:checked {
+				& + .payment_card_inner {
+					background: #f1f0ff;
+					border-color: var(--prime_color);
+					.checkbox {
+						background: var(--prime_color);
+						border-color: var(--prime_color);
+					}
+				}
+			}
+		}
+		.checkbox {
+			position: relative;
+			width: 2rem;
+			min-width: 2rem;
+			height: 2rem;
+			background: var(--light);
+			color: var(--light);
+			margin-top: 1.6rem;
+			margin-right: 2.5rem;
+			border: 0.1rem solid var(--gray);
+			border-radius: 0.4rem;
+			&::before {
+				content: "";
+				@include pos($z: 1);
+				@include tick;
+				width: 0.8rem;
+				height: 0.8rem;
+				margin: auto;
+			}
+		}
+		.icon {
+			height: 6rem;
+			margin-bottom: 1.6rem;
+			> img {
+				@include object(contain, left center);
+			}
+		}
+	}
+	.success_blk {
+		@include flex(center, center);
+		min-height: 50rem;
+		padding: 3rem;
+		.icon {
+			width: 12rem;
+			min-width: 12rem;
+			height: 12rem;
+			margin: 0 auto 4rem;
+		}
+		h5 {
+			color: #3c9505;
+			margin-bottom: 3rem;
+		}
+	}
+}
+
+.vid_blk {
+	position: relative;
+	@include bg(cover);
+	padding-bottom: 56%;
+	border-radius: 1rem;
+	box-shadow: 0 1rem 1.6rem 0 rgba(var(--black_rgb), 0.09);
+	overflow: hidden;
+	&::before {
+		content: "";
+		@include pos($z: 1);
+		background: var(--dark);
+		opacity: 0.45;
+	}
+	> button {
+		@include pos($z: 2);
+		margin: auto;
+		width: 11rem;
+		min-width: 11rem;
+		height: 11rem;
+		> img {
+			@include object(contain);
+		}
 	}
 }
