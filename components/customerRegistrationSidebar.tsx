@@ -4,8 +4,10 @@ import Logo from "./logo"
 import Image from "next/image"
 import { IconApplication, IconDocuments, IconNotices, IconPayment, PhotoUser_01 } from "./images"
 import Link from "next/link"
+import { useRouter } from "next/router"
 
 const CustomerRegistrationSidebar = () => {
+	const router = useRouter()
 	return (
 		<>
 			<div id={style.sidebar}>
@@ -22,25 +24,25 @@ const CustomerRegistrationSidebar = () => {
 				<div className={style.sidebar_inner}>
 					<ul>
 						<li>
-							<Link href="/customer-registration/application" className={style.active}>
+							<Link href="/customer-registration/application" className={router.pathname === "/customer-registration/application" ? style.active : ""}>
 								<Image width={100} height={100} src={IconApplication} alt="" />
 								Application
 							</Link>
 						</li>
 						<li>
-							<Link href="/customer-registration/documents-requests">
+							<Link href="/customer-registration/documents-requests" className={router.pathname === "/customer-registration/documents-requests" ? style.active : ""}>
 								<Image width={100} height={100} src={IconDocuments} alt="" />
 								Documents Requests
 							</Link>
 						</li>
 						<li>
-							<Link href="/customer-registration/notices">
+							<Link href="/customer-registration/notices" className={router.pathname === "/customer-registration/notices" ? style.active : ""}>
 								<Image width={100} height={100} src={IconNotices} alt="" />
 								Notices
 							</Link>
 						</li>
 						<li>
-							<Link href="/customer-registration/payments">
+							<Link href="/customer-registration/payments" className={router.pathname === "/customer-registration/payments" ? style.active : ""}>
 								<Image width={100} height={100} src={IconPayment} alt="" />
 								Payments
 							</Link>

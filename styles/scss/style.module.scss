@@ -843,6 +843,35 @@
 			}
 		}
 	}
+	.in_blk {
+		padding: 3.6rem 4rem;
+		border: 0.1rem solid #d9e1e7;
+		border-radius: 1.6rem;
+		&:not(:nth-last-child(1)) {
+			margin-bottom: 1.6rem;
+		}
+	}
+	.empty_data {
+		@include flex(center, center);
+		min-height: 60rem;
+		&_inner {
+			width: 100%;
+			max-width: 40rem;
+			text-align: center;
+			margin: auto;
+			.ico {
+				width: 22rem;
+				min-width: 22rem;
+				height: 22rem;
+				margin: 0 auto 3.2rem;
+			}
+			p {
+				color: #959595;
+				font-size: 1.8rem;
+				font-weight: 500;
+			}
+		}
+	}
 }
 
 #sidebar {
@@ -975,14 +1004,6 @@
 	}
 	.application_form {
 		max-width: 111rem;
-		.in_blk {
-			padding: 3.6rem 4rem;
-			border: 0.1rem solid #d9e1e7;
-			border-radius: 1.6rem;
-			&:not(:nth-last-child(1)) {
-				margin-bottom: 1.6rem;
-			}
-		}
 		.heading {
 			@include flex(center);
 			font-size: 2.2rem;
@@ -1179,6 +1200,97 @@
 		height: 11rem;
 		> img {
 			@include object(contain);
+		}
+	}
+}
+
+.table_blk {
+	color: #06152b;
+	font-size: 1.4rem;
+	&_wrapper {
+		margin: 0 -4rem;
+	}
+	table {
+		width: 100%;
+		thead {
+			background: #f5f5f5;
+			th {
+				color: #809fb8;
+				font-size: 1.4rem;
+				font-weight: 500;
+			}
+		}
+		tr {
+			th,
+			td {
+				padding: 1.6rem 3rem;
+			}
+		}
+	}
+	.status {
+		background: #eee;
+		color: var(--black);
+		font-weight: 500;
+		padding: 0.6rem;
+		border: 0;
+		border-radius: 0.8rem;
+		&.active {
+			background: #b5fae4;
+			color: #1ad598;
+		}
+		&.inactive {
+			background: #e6e6e6;
+			color: #959595;
+		}
+	}
+	.action_btn {
+		@include flex;
+		@include gap(0 3rem);
+		> a,
+		> button {
+			@include flex(center);
+			color: var(--prime_color);
+			font-size: 1.4rem;
+			font-weight: 600;
+			white-space: nowrap;
+			&:hover {
+				color: var(--black);
+			}
+			> img {
+				width: 1.2rem;
+				min-width: 1.2rem;
+				height: 1.2rem;
+				margin-right: 0.5rem;
+			}
+		}
+	}
+}
+
+#notices,
+#document_request {
+	.top_head {
+		@include flex($justify: flex-end);
+		margin-bottom: 2rem;
+		.srch_blk {
+			position: relative;
+			min-width: 26rem;
+			margin-right: 3rem;
+			button {
+				@include pos($r: null);
+				width: 1.4rem;
+				min-width: 1.4rem;
+				height: 1.4rem;
+				margin: auto;
+				margin-left: 1.6rem;
+				> img {
+					@include object(contain);
+				}
+			}
+			.input {
+				height: 5rem;
+				font-size: 1.4rem;
+				padding-left: 3.8rem;
+			}
 		}
 	}
 }

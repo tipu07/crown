@@ -26,6 +26,8 @@ export { default as IconApplication } from "/public/images/icon-application.svg"
 export { default as IconDocuments } from "/public/images/icon-documents.svg"
 export { default as IconNotices } from "/public/images/icon-notices.svg"
 export { default as IconPayment } from "/public/images/icon-payment.svg"
+export { default as IconEdit } from "/public/images/icon-edit.svg"
+export { default as IconDownload } from "/public/images/icon-download.svg"
 
 export { default as SaveIcon } from "/public/images/save_icon.svg"
 export { default as PlayIcon } from "/public/images/play_icon.svg"
@@ -51,3 +53,5 @@ export { default as VectorVisa } from "/public/images/visa.svg"
 export { default as VectorBank } from "/public/images/bank.svg" */
 
 export { default as ProfessionalWoman } from "/public/images/professional_woman.jpg"
+export { default as DocumentImage } from "/public/images/document_image.svg"
+export { default as NoticeImage } from "/public/images/notice_image.svg"
