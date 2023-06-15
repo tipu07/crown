@@ -872,6 +872,65 @@
 			}
 		}
 	}
+	.payment_card {
+		position: relative;
+		color: #6e6e6e;
+		font-size: 1.6rem;
+		font-weight: 500;
+		margin-bottom: 2.4rem;
+		overflow: hidden;
+		&_inner {
+			@include flex;
+			padding: 4rem 3rem;
+			border: 0.2rem solid #d6d6d6;
+			border-radius: 0.6rem;
+			@include trans;
+		}
+		input[type="radio"] {
+			@include pos($z: 1);
+			width: 100%;
+			height: 100%;
+			background: transparent;
+			opacity: 0;
+			&:checked {
+				& + .payment_card_inner {
+					background: #f1f0ff;
+					border-color: var(--prime_color);
+					.checkbox {
+						background: var(--prime_color);
+						border-color: var(--prime_color);
+					}
+				}
+			}
+		}
+		.checkbox {
+			position: relative;
+			width: 2rem;
+			min-width: 2rem;
+			height: 2rem;
+			background: var(--light);
+			color: var(--light);
+			margin-top: 1.6rem;
+			margin-right: 2.5rem;
+			border: 0.1rem solid var(--gray);
+			border-radius: 0.4rem;
+			&::before {
+				content: "";
+				@include pos($z: 1);
+				@include tick;
+				width: 0.8rem;
+				height: 0.8rem;
+				margin: auto;
+			}
+		}
+		.icon {
+			height: 6rem;
+			margin-bottom: 1.6rem;
+			> img {
+				@include object(contain, left center);
+			}
+		}
+	}
 }
 
 #sidebar {
@@ -1103,65 +1162,6 @@
 		font-size: 1.6rem;
 		font-weight: 500;
 	}
-	.payment_card {
-		position: relative;
-		color: #6e6e6e;
-		font-size: 1.6rem;
-		font-weight: 500;
-		margin-bottom: 2.4rem;
-		overflow: hidden;
-		&_inner {
-			@include flex;
-			padding: 4rem 3rem;
-			border: 0.2rem solid #d6d6d6;
-			border-radius: 0.6rem;
-			@include trans;
-		}
-		input[type="radio"] {
-			@include pos($z: 1);
-			width: 100%;
-			height: 100%;
-			background: transparent;
-			opacity: 0;
-			&:checked {
-				& + .payment_card_inner {
-					background: #f1f0ff;
-					border-color: var(--prime_color);
-					.checkbox {
-						background: var(--prime_color);
-						border-color: var(--prime_color);
-					}
-				}
-			}
-		}
-		.checkbox {
-			position: relative;
-			width: 2rem;
-			min-width: 2rem;
-			height: 2rem;
-			background: var(--light);
-			color: var(--light);
-			margin-top: 1.6rem;
-			margin-right: 2.5rem;
-			border: 0.1rem solid var(--gray);
-			border-radius: 0.4rem;
-			&::before {
-				content: "";
-				@include pos($z: 1);
-				@include tick;
-				width: 0.8rem;
-				height: 0.8rem;
-				margin: auto;
-			}
-		}
-		.icon {
-			height: 6rem;
-			margin-bottom: 1.6rem;
-			> img {
-				@include object(contain, left center);
-			}
-		}
-	}
 	.success_blk {
 		@include flex(center, center);
 		min-height: 50rem;
@@ -1267,10 +1267,43 @@
 }
 
 #notices,
+#payments,
 #document_request {
 	.top_head {
-		@include flex($justify: flex-end);
+		@include flex(center, flex-end);
 		margin-bottom: 2rem;
+		.payment_tab {
+			@include list;
+			@include flex;
+			@include gap(1rem 4rem);
+			margin-top: auto;
+			margin-right: auto;
+			> li {
+				> button {
+					position: relative;
+					color: #809fb8;
+					font-size: 1.6rem;
+					font-weight: 600;
+					&:hover,
+					&.active {
+						color: var(--prime_color);
+					}
+					&.active {
+						&::before {
+							content: "";
+						}
+					}
+					&::before {
+						@include pos($t: null);
+						width: 80%;
+						height: 0.3rem;
+						background: var(--prime_color);
+						margin: 0 auto -2.4rem;
+						border-radius: 10rem;
+					}
+				}
+			}
+		}
 		.srch_blk {
 			position: relative;
 			min-width: 26rem;
