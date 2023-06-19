@@ -24,7 +24,7 @@ const AddNewPaymentDetail = () => {
 									</div>
 								</div>
 							</div>
-							<p>Please use your first and last name in the memo. Please do not put “Credit Repair” in the memo</p>
+							<p>&nbsp;</p>
 						</div>
 						<div className="col-md-6">
 							<h5 className={style.text_prime}>How Cash app Works?</h5>
@@ -40,7 +40,7 @@ const AddNewPaymentDetail = () => {
 									</div>
 								</div>
 							</div>
-							<p>Please use your first and last name in the memo. Please do not put “Credit Repair” in the memo</p>
+							<p>&nbsp;</p>
 						</div>
 					</div>
 				</div>
@@ -48,11 +48,11 @@ const AddNewPaymentDetail = () => {
 				<div className="row">
 					<div className="col-sm-6">
 						<div className={style.form_blk}>
-							<h6>Enter Zelle Username</h6>
+							<h6>Enter Zelle or Cashapp Username</h6>
 							<input type="text" name="" id="" className={style.input} placeholder="" />
 						</div>
 					</div>
-					<div className="col-sm-6">
+					{/* <div className="col-sm-6">
 						<div className={style.form_blk}>
 							<h6>Enter Cashapp Username</h6>
 							<input type="text" name="" id="" className={style.input} placeholder="" />
@@ -69,8 +69,16 @@ const AddNewPaymentDetail = () => {
 							<h6>Amount to Deposit</h6>
 							<input type="text" name="" id="" className={style.input} placeholder="" />
 						</div>
-					</div>
+					</div> */}
 				</div>
+			</div>
+			<div className={`${style.btn_blk} justify-content-end mt-5`}>
+				<button type="reset" className={`${style.site_btn} ${style.blank} ${style.stroke}`}>
+					Cancel
+				</button>
+				<button type="submit" className={style.site_btn}>
+					Update Payment
+				</button>
 			</div>
 		</>
 	)
