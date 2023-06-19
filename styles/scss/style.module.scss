@@ -949,9 +949,12 @@
 }
 
 #sidebar {
+	position: -webkit-sticky;
 	position: sticky;
 	top: 2rem;
 	@include flex($flow: column);
+	-webkit-box-align: start;
+	-ms-flex-align: start;
 	align-items: flex-start;
 	width: 33rem;
 	min-width: 33rem;
@@ -1184,6 +1187,7 @@
 	@include bg(cover);
 	padding-bottom: 56%;
 	border-radius: 1rem;
+	-webkit-box-shadow: 0 1rem 1.6rem 0 rgba(var(--black_rgb), 0.09);
 	box-shadow: 0 1rem 1.6rem 0 rgba(var(--black_rgb), 0.09);
 	overflow: hidden;
 	&::before {
@@ -1323,6 +1327,324 @@
 				height: 5rem;
 				font-size: 1.4rem;
 				padding-left: 3.8rem;
+			}
+		}
+	}
+}
+
+#application_view {
+	.tabs_block {
+		background: #f5f5f5;
+		padding: 0 4rem;
+		margin-bottom: 3rem;
+		border-radius: 0.4rem;
+		ul {
+			@include list;
+			@include flex;
+			@include gap(1rem 10rem);
+			> li {
+				> button {
+					position: relative;
+					color: #959595;
+					font-size: 1.6rem;
+					font-weight: 600;
+					padding: 1.3rem 0 1.6rem;
+					&:hover,
+					&.active {
+						color: var(--prime_color);
+					}
+					&.active {
+						&::before {
+							content: "";
+							@include pos($t: null);
+							width: 80%;
+							height: 0.3rem;
+							background: var(--prime_color);
+							margin: auto;
+							border-radius: 10rem;
+						}
+					}
+				}
+			}
+		}
+	}
+	.in_blk {
+		padding: 3rem;
+		&:not(:nth-last-child(1)) {
+			margin-bottom: 2rem;
+		}
+		> h4 {
+			margin-bottom: 3rem;
+		}
+	}
+	.package_blk {
+		@include flex;
+		.ico {
+			width: 2.4rem;
+			min-width: 2.4rem;
+			height: 2.4rem;
+			margin-right: 1rem;
+		}
+		.txt {
+			font-size: 1.4rem;
+			font-weight: 500;
+			p {
+				color: #8e8e8e;
+			}
+		}
+	}
+	.attach_blk {
+		@include flex(center);
+		&:not(:nth-last-child(1)) {
+			margin-bottom: 3rem;
+		}
+		.ico {
+			width: 4rem;
+			min-width: 4rem;
+			height: 5rem;
+			margin-right: 2rem;
+		}
+		.txt {
+			font-size: 1.8rem;
+			font-weight: 600;
+		}
+	}
+	.application_blk {
+		position: relative;
+		padding: 4rem 5rem;
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			left: 6.8rem;
+			width: 0.4rem;
+			background: var(--prime_color);
+		}
+		&::before {
+			top: -2rem;
+			bottom: 0;
+		}
+		&::after {
+			top: 4rem;
+			bottom: -0.4rem;
+		}
+		&:nth-child(1) {
+			&::before {
+				display: none;
+			}
+		}
+		&:nth-last-child(1) {
+			&::after {
+				display: none;
+			}
+		}
+		.head {
+			@include flex(center);
+			position: relative;
+			font-size: 1.8rem;
+			font-weight: 600;
+			cursor: pointer;
+			@include trans;
+			&:hover {
+				color: var(--prime_color);
+			}
+			&.drop {
+				&::after {
+					content: "";
+					@include chevron;
+					width: 2.4rem;
+					min-width: 2.4rem;
+					height: 1.6rem;
+					margin-left: auto;
+				}
+			}
+			> small {
+				color: #67676a;
+				font-size: 1.6rem;
+				font-weight: 500;
+				margin-left: 3rem;
+			}
+			> .dot {
+				position: relative;
+				@include flex(center, center);
+				width: 4rem;
+				min-width: 4rem;
+				height: 4rem;
+				background: var(--prime_color);
+				margin-right: 1.6rem;
+				border-radius: 75%;
+				z-index: 2;
+				&::before {
+					content: "";
+					width: 1.6rem;
+					height: 1.6rem;
+					background: var(--light);
+					border-radius: inherit;
+					-webkit-box-shadow: rgba(var(--black_rgb), 0.4) 0 0 1rem;
+					box-shadow: rgba(var(--black_rgb), 0.4) 0 0 1rem;
+				}
+			}
+		}
+		.content {
+			padding-top: 2rem;
+			padding-left: 2rem;
+			ul {
+				@include list;
+				> li {
+					@include flex(center);
+					&:not(:nth-last-child(1)) {
+						margin-bottom: 1.5rem;
+					}
+					&::before {
+						content: "";
+						width: 1.6rem;
+						min-width: 1.6rem;
+						height: 1.6rem;
+						-ms-flex-item-align: center;
+						align-self: center;
+						background: var(--prime_color);
+						margin-left: -0.8rem;
+						margin-right: 3rem;
+						border-radius: 75%;
+					}
+					> small {
+						min-width: 10rem;
+						color: #67676a;
+						font-size: 1.4rem;
+						font-weight: 700;
+						margin-right: 2rem;
+					}
+					> span {
+						@include i_flex(center);
+						color: #67676a;
+						font-size: 1.6rem;
+						font-weight: 500;
+						> img {
+							width: 2rem;
+							min-width: 2rem;
+							height: 2rem;
+							margin-left: 0.5rem;
+						}
+					}
+					> .date {
+						background: #f0f0f0;
+						color: #67676a;
+						font-size: 1.2rem;
+						font-weight: 500;
+						padding: 0.4rem 0.7rem;
+						margin-left: auto;
+						border-radius: 0.4rem;
+					}
+					> .input {
+						width: 26rem;
+						height: 3.6rem;
+						font-size: 1.4rem;
+						margin-left: 1rem;
+					}
+				}
+			}
+		}
+	}
+	.logo_list {
+		@include flex;
+		@include gap(2rem);
+		margin-bottom: 3rem;
+		> button {
+			-webkit-box-flex: 1;
+			-ms-flex: 1 28rem;
+			flex: 1 28rem;
+			height: 8rem;
+			background: var(--light);
+			padding: 1.5rem 3rem;
+			border: 0.3rem solid #d0d0d0;
+			border-radius: 0.6rem;
+			@include trans;
+			&:hover {
+				border-color: var(--prime_color);
+			}
+			&.active {
+				background: #f1f0ff;
+				border-color: var(--prime_color);
+			}
+			> img {
+				@include object(contain);
+			}
+		}
+	}
+	.sm_blk {
+		background: var(--light);
+		color: #67676a;
+		font-size: 1.4rem;
+		padding: 2.5rem;
+		border: 0.1rem solid #d0d0d0;
+		border-radius: 0.6rem;
+		h3 {
+			> small {
+				color: #c3013e;
+				font-size: 1.8rem;
+				margin-left: 1rem;
+			}
+		}
+		h3,
+		h4 {
+			color: #06152b;
+			margin-bottom: 1.5rem;
+		}
+	}
+	.progress_blk {
+		.cnt {
+			@include flex(center, space-between);
+			margin-bottom: 1rem;
+			p {
+				color: #06152b;
+				font-size: 1.8rem;
+				font-weight: 600;
+				margin: 0;
+				> span {
+					color: var(--prime_color);
+				}
+			}
+			.ico {
+				width: 4.6rem;
+				min-width: 4.6rem;
+				height: 3rem;
+			}
+		}
+		.bar {
+			position: relative;
+			height: 1.4rem;
+			background: #f1f1f1;
+			border-radius: 10rem;
+			overflow: hidden;
+			> div {
+				@include pos;
+				background: var(--prime_color);
+				border-radius: inherit;
+			}
+		}
+	}
+	.address_table {
+		width: 100%;
+		color: #67676a;
+		tr {
+			&:nth-child(odd) {
+				td {
+					background: #f8f8f8;
+				}
+			}
+			td {
+				font-size: 1.4rem;
+				font-weight: 500;
+				padding: 1rem 3rem;
+				&:nth-child(1) {
+					border-radius: 0.6rem 0 0 0.6rem;
+				}
+				&:nth-last-child(1) {
+					border-radius: 0 0.6rem 0.6rem 0;
+				}
+				> small {
+					font-size: 1rem;
+				}
 			}
 		}
 	}
