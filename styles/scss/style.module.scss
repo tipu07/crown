@@ -1026,6 +1026,7 @@
 	}
 	.profile_block {
 		@include flex(center);
+		width: 100%;
 		margin-bottom: 4rem;
 		.ico {
 			width: 7rem;
@@ -1047,6 +1048,7 @@
 		}
 	}
 	.sidebar_inner {
+		width: 100%;
 		-webkit-box-flex: 1;
 		-ms-flex: 1;
 		flex: 1;
