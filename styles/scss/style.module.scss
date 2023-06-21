@@ -791,6 +791,63 @@
 			margin-left: 1.6rem;
 		}
 	}
+	.top_head {
+		@include flex(center, flex-end);
+		margin-bottom: 2rem;
+		.payment_tab {
+			@include list;
+			@include flex;
+			@include gap(1rem 4rem);
+			margin-top: auto;
+			margin-right: auto;
+			> li {
+				> button {
+					position: relative;
+					color: #809fb8;
+					font-size: 1.6rem;
+					font-weight: 600;
+					&:hover,
+					&.active {
+						color: var(--prime_color);
+					}
+					&.active {
+						&::before {
+							content: "";
+						}
+					}
+					&::before {
+						@include pos($t: null);
+						width: 80%;
+						height: 0.3rem;
+						background: var(--prime_color);
+						margin: 0 auto -2.4rem;
+						border-radius: 10rem;
+					}
+				}
+			}
+		}
+		.srch_blk {
+			position: relative;
+			min-width: 26rem;
+			margin-right: 3rem;
+			button {
+				@include pos($r: null);
+				width: 1.4rem;
+				min-width: 1.4rem;
+				height: 1.4rem;
+				margin: auto;
+				margin-left: 1.6rem;
+				> img {
+					@include object(contain);
+				}
+			}
+			.input {
+				height: 5rem;
+				font-size: 1.4rem;
+				padding-left: 3.8rem;
+			}
+		}
+	}
 	#main_area {
 		width: calc(100% - 33rem);
 		background: var(--light);
@@ -801,11 +858,13 @@
 		@include flex(center);
 		margin-bottom: 3rem;
 		.title {
-			font-size: 2.4rem;
+			font-size: 2.2rem;
+			font-weight: 600;
 			> span {
 				display: block;
 				color: #809fb8;
 				font-size: 1.8rem;
+				font-weight: 500;
 			}
 		}
 		.query_form {
@@ -859,7 +918,7 @@
 		}
 	}
 	.in_blk {
-		padding: 3.6rem 4rem;
+		padding: 3rem;
 		border: 0.1rem solid #d9e1e7;
 		border-radius: 1.6rem;
 		&:not(:nth-last-child(1)) {
@@ -967,6 +1026,7 @@
 	}
 	.profile_block {
 		@include flex(center);
+		width: 100%;
 		margin-bottom: 4rem;
 		.ico {
 			width: 7rem;
@@ -988,6 +1048,7 @@
 		}
 	}
 	.sidebar_inner {
+		width: 100%;
 		-webkit-box-flex: 1;
 		-ms-flex: 1;
 		flex: 1;
@@ -1001,6 +1062,7 @@
 				@include flex(center);
 				height: 7rem;
 				color: #809fb8;
+				font-size: 1.8rem;
 				font-weight: 500;
 				padding: 1rem 2.4rem;
 				border-radius: 1rem;
@@ -1212,7 +1274,7 @@
 	color: #06152b;
 	font-size: 1.4rem;
 	&_wrapper {
-		margin: 0 -4rem;
+		margin: 0 -3rem;
 	}
 	table {
 		width: 100%;
@@ -1227,17 +1289,24 @@
 		tr {
 			th,
 			td {
-				padding: 1.6rem 3rem;
+				padding: 1.6rem 1.5rem;
+				&:nth-child(1) {
+					padding-left: 3rem;
+				}
+				&:nth-last-child(1) {
+					padding-right: 3rem;
+				}
 			}
 		}
 	}
 	.status {
 		background: #eee;
 		color: var(--black);
-		font-weight: 500;
-		padding: 0.6rem;
+		font-weight: 600;
+		padding: 0.6rem 1rem;
 		border: 0;
 		border-radius: 0.8rem;
+		white-space: nowrap;
 		&.active {
 			background: #b5fae4;
 			color: #1ad598;
@@ -1246,6 +1315,22 @@
 			background: #e6e6e6;
 			color: #959595;
 		}
+		&.green {
+			background: #e2f6f0;
+			color: #47bb95;
+		}
+		&.orange {
+			background: #fef0e3;
+			color: #ce8f58;
+		}
+		&.blue {
+			background: #e7f6ff;
+			color: #0090ff;
+		}
+		&.red {
+			background: #ffdfe0;
+			color: #ee6164;
+		}
 	}
 	.action_btn {
 		@include flex;
@@ -1253,6 +1338,7 @@
 		> a,
 		> button {
 			@include flex(center);
+			@include gap(0.5rem);
 			color: var(--prime_color);
 			font-size: 1.4rem;
 			font-weight: 600;
@@ -1264,69 +1350,6 @@
 				width: 1.2rem;
 				min-width: 1.2rem;
 				height: 1.2rem;
-				margin-right: 0.5rem;
-			}
-		}
-	}
-}
-
-#notices,
-#payments,
-#document_request {
-	.top_head {
-		@include flex(center, flex-end);
-		margin-bottom: 2rem;
-		.payment_tab {
-			@include list;
-			@include flex;
-			@include gap(1rem 4rem);
-			margin-top: auto;
-			margin-right: auto;
-			> li {
-				> button {
-					position: relative;
-					color: #809fb8;
-					font-size: 1.6rem;
-					font-weight: 600;
-					&:hover,
-					&.active {
-						color: var(--prime_color);
-					}
-					&.active {
-						&::before {
-							content: "";
-						}
-					}
-					&::before {
-						@include pos($t: null);
-						width: 80%;
-						height: 0.3rem;
-						background: var(--prime_color);
-						margin: 0 auto -2.4rem;
-						border-radius: 10rem;
-					}
-				}
-			}
-		}
-		.srch_blk {
-			position: relative;
-			min-width: 26rem;
-			margin-right: 3rem;
-			button {
-				@include pos($r: null);
-				width: 1.4rem;
-				min-width: 1.4rem;
-				height: 1.4rem;
-				margin: auto;
-				margin-left: 1.6rem;
-				> img {
-					@include object(contain);
-				}
-			}
-			.input {
-				height: 5rem;
-				font-size: 1.4rem;
-				padding-left: 3.8rem;
 			}
 		}
 	}
@@ -1647,5 +1670,32 @@
 				}
 			}
 		}
+	}
+}
+
+.instalment_blk {
+	@include flex(center);
+	@include gap(2rem);
+	padding: 2rem 3rem;
+	background: var(--light);
+	border: 0.1rem solid #d9e1e7;
+	border-radius: 1rem;
+	.ico {
+		width: 5.6rem;
+		min-width: 5.6rem;
+		height: 5.6rem;
+	}
+	.price {
+		color: var(--black);
+		font-size: 2.8rem;
+		font-weight: 700;
+		line-height: 1;
+		margin-bottom: 0.5rem;
+	}
+	span {
+		display: block;
+		color: #809fb8;
+		font-size: 1.6rem;
+		font-weight: 600;
 	}
 }
