@@ -7,7 +7,6 @@ import InvoicesTable from "./invoicesTable"
 const InvoicesDetail = () => {
 	return (
 		<>
-			<div className="pt-5 pb-4"></div>
 			<div className={style.in_blk}>
 				<div className={style.top_head}>
 					<div className={style.srch_blk}>
