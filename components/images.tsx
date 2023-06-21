@@ -42,6 +42,8 @@ export { default as NoteIcon } from "/public/images/icon-note.svg"
 export { default as PDFIcon } from "/public/images/pdf_icon.svg"
 export { default as InfoIcon } from "/public/images/info_icon.svg"
 export { default as CrownIcon } from "/public/images/crown.svg"
+export { default as UpwardIcon } from "/public/images/upward.svg"
+export { default as DownwardIcon } from "/public/images/downward.svg"
 
 export { default as ProfessionalWoman } from "/public/images/professional_woman.jpg"
 export { default as DocumentImage } from "/public/images/document_image.svg"
