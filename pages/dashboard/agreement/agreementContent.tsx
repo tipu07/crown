@@ -32,9 +32,9 @@ const AgreementContent = () => {
 				<p>I, Leonardo DaVinci, hereby enter into the following agreement with Crown Credit Pro.</p>
 				<p>Credit Repair Service Agreement for Leonardo DaVinci</p>
 				<ol>
-					<li>To evaluate Customer’s current credit reports as listed with applicable credit reporting agencies and to identify inaccurate, erroneous, false, or obsolete information.</li>
-					<li>To advise Customer as to the necessary steps to be taken on the part of Customer in conjunction with Our Company, , to dispute any inaccurate, erroneous, false or obsolete information contained in the customer’s credit reports.</li>
-					<li>To prepare all necessary correspondence in dispute of inaccurate, erroneous, false, or obsolete information in customer’s credit reports.</li>
+					<li>To evaluate Customer&lsquo;s current credit reports as listed with applicable credit reporting agencies and to identify inaccurate, erroneous, false, or obsolete information.</li>
+					<li>To advise Customer as to the necessary steps to be taken on the part of Customer in conjunction with Our Company, , to dispute any inaccurate, erroneous, false or obsolete information contained in the customer&lsquo;s credit reports.</li>
+					<li>To prepare all necessary correspondence in dispute of inaccurate, erroneous, false, or obsolete information in customer&lsquo;s credit reports.</li>
 					<li>To review credit profile status from the credit reporting agencies such as: Experian, Equifax and Transunion. Consulting, coaching, and monitoring services are conducted by personal meetings, webinars, video conferencing, telephone, email, or by any other form of communication during normal business hours.</li>
 				</ol>
 				<br />
@@ -48,10 +48,10 @@ const AgreementContent = () => {
 				<br />
 				<h5>Authorization for Credit Repair Action</h5>
 				<ol>
-					<li>I, Leonardo DaVinci, hereafter known as “client” hereby authorize, Crown Credit Pro, , , , to make, receive, sign, endorse, execute, acknowledge, deliver, and possess such applications, correspondence, contracts, or agreements, as necessary to improve my credit. Such instruments in writing of whatever and nature shall only be effective for any or all of the three credit reporting agencies which are TransUnion, Experian, Equifax, and any other reporting agencies or creditor’s listed, asmay be necessary or proper in the exercise of the rights and powers herein granted.</li>
+					<li>I, Leonardo DaVinci, hereafter known as “client” hereby authorize, Crown Credit Pro, , , , to make, receive, sign, endorse, execute, acknowledge, deliver, and possess such applications, correspondence, contracts, or agreements, as necessary to improve my credit. Such instruments in writing of whatever and nature shall only be effective for any or all of the three credit reporting agencies which are TransUnion, Experian, Equifax, and any other reporting agencies or creditor&lsquo;s listed, asmay be necessary or proper in the exercise of the rights and powers herein granted.</li>
 					<li>This authorization may be revoked by the undersigned at any time by giving written notice to the party authorized herein. Any activity made prior to revocation in reliance upon this authorization shall not constitute a breach of rights of the client. If not earlier revoked, this authorization will automatically expire twelve months from the date of signature.</li>
 					<li>The party named above to receive the information is not authorized to make any further release or disclosure of the information received. This authorization does not authorize the release or disclosure of any information except as provided herein.</li>
-					<li>I grant to Crown Credit Pro, authority to do, take, and perform, all acts and things whatsoever requisite, proper, or necessary to be done, in the exercise of repairing my credit with the three credit reporting agencies, which are TransUnion, Experian, Equifax and any other reporting agencies or creditor’s listed, as fully for all intents and purposes as I might or could do if personally present.</li>
+					<li>I grant to Crown Credit Pro, authority to do, take, and perform, all acts and things whatsoever requisite, proper, or necessary to be done, in the exercise of repairing my credit with the three credit reporting agencies, which are TransUnion, Experian, Equifax and any other reporting agencies or creditor&lsquo;s listed, as fully for all intents and purposes as I might or could do if personally present.</li>
 					<li>I hereby release Crown Credit Pro, from all and all matters of actions, causes of action, suits, proceedings, debts, dues, contracts, judgments, damages, claims, and demands whatsoever in law or equity, for or by reason of any matter, cause, or thing whatsoever as based on the circumstances of this contract.</li>
 				</ol>
 				<br />
@@ -63,11 +63,11 @@ const AgreementContent = () => {
 				<p>Credit bureaus are required to follow reasonable procedures to ensure that the information they report is accurate. However, mistakes may occur.</p>
 				<p>You may, on your own, notify a credit bureau in writing that you dispute that accuracy of information in your credit file. The credit bureau must then reinvestigate and modify or remove inaccurate or incomplete information. The credit bureau may not charge any fee for this service. Any pertinent information and copies of all documents you have concerning an error should be given to the credit bureau.</p>
 				<p>You may, on your own, notify a credit bureau in writing that you dispute that accuracy of information in your credit file. The credit bureau must then reinvestigate and modify or remove inaccurate or incomplete information. The credit bureau may not charge any fee for this service. Any pertinent information and copies of all documents you have concerning an error should be given to the credit bureau.</p>
-				<p>If the credit bureau's reinvestigation does not resolve the dispute to your satisfaction, you may send a brief statement to the credit bureau to be kept in your file, explaining why you think the record is inaccurate. The credit bureau must include a summary of your statement about disputed information with any report it issues about you.</p>
+				<p>If the credit bureau&lsquo;s reinvestigation does not resolve the dispute to your satisfaction, you may send a brief statement to the credit bureau to be kept in your file, explaining why you think the record is inaccurate. The credit bureau must include a summary of your statement about disputed information with any report it issues about you.</p>
 				<p>The Federal Trade Commission regulates credit bureaus and credit repair organizations. For more information contact: The Public Reference Branch Federal Trade Commission Washington, D.C. 20580.</p>
 				<p>Notice of Right to Cancel</p>
 				<p>"You may cancel this contract, without any penalty or obligation, at any time before midnight of the 3rd day which begins after the date the contract is signed by you.</p>
-				<p>"To cancel this contract, mail or deliver a signed, dated copy of this cancellation notice, or any other written notice to Crown Credit Pro, before midnight on the 3rd day which begins after the date you have signed this contract stating ''I hereby cancel this transaction, (date) (purchaser’s signature)."</p>
+				<p>"To cancel this contract, mail or deliver a signed, dated copy of this cancellation notice, or any other written notice to Crown Credit Pro, before midnight on the 3rd day which begins after the date you have signed this contract stating &lsquo;&lsquo;I hereby cancel this transaction, (date) (purchaser&lsquo;s signature)."</p>
 				<hr />
 				<p>Please acknowledge your receipt of this notice by electronically signing the form indicated below.</p>
 				<p>
