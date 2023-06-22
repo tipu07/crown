@@ -1699,3 +1699,343 @@
 		font-weight: 600;
 	}
 }
+
+#refund_policy {
+	.content {
+		font-size: 1.6rem;
+		h1 {
+			color: rgba(176, 175, 241, 0.2);
+			font-size: 6.4rem;
+			font-weight: 700;
+			line-height: 7.8rem;
+			text-transform: uppercase;
+			margin: 0 0 4rem;
+		}
+	}
+}
+
+#agreement {
+	.content {
+		font-size: 1.6rem;
+		h1 {
+			color: rgba(176, 175, 241, 0.2);
+			font-size: 8.4rem;
+			font-weight: 700;
+			line-height: 7.8rem;
+			text-transform: uppercase;
+			margin: 0 0 4rem;
+		}
+		.head {
+			@include flex(center, space-between);
+			margin-bottom: 4rem;
+			.input_blk {
+				color: var(--prime_color);
+				padding: 2rem 3rem;
+			}
+			.date_blk {
+				@include flex;
+				@include gap(6rem);
+				font-size: 2rem;
+				font-weight: 600;
+				line-height: 1.4;
+				&_item {
+					> span {
+						display: block;
+						color: #809fb8;
+						font-size: 1.6rem;
+					}
+				}
+			}
+		}
+		.text_blk {
+			@include flex;
+			.input_blk {
+				color: #b0aff1;
+				margin-left: 4rem;
+			}
+		}
+		.input_blk {
+			@include i_flex(center, center);
+			font-size: 2.8rem;
+			font-weight: 600;
+			line-height: 1;
+			padding: 1rem 3rem;
+			border: 0.1rem solid #d9e1e7;
+			border-radius: 0.6rem;
+		}
+		.signature {
+			width: 23rem;
+			padding: 2rem 3rem;
+			border: 0.1rem solid #d9e1e7;
+			border-radius: 0.6rem;
+			> img {
+				@include object(contain);
+			}
+		}
+		hr {
+			height: 0.1rem;
+			background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, #d9e1e7), color-stop(50%, transparent));
+			background-image: linear-gradient(to right, #d9e1e7 50%, transparent 50%);
+			background-size: 1.6rem;
+			color: transparent;
+			border: 0;
+			margin: 4rem 0;
+			opacity: 1;
+		}
+	}
+}
+
+#message {
+	&_wrapper {
+		@include flex;
+		border: 0.1rem solid #d9e1e7;
+		border-radius: 1.6rem;
+		overflow: hidden;
+		.users_block {
+			width: 54rem;
+			min-width: 54rem;
+			border-right: 0.1rem solid #d9e1e7;
+		}
+		.content_block {
+			@include flex($flow: column);
+			width: calc(100% - 54rem);
+		}
+		.head {
+			@include flex(center);
+			@include gap(2rem);
+			height: 8rem;
+			padding: 1rem 3rem;
+			border-bottom: 0.1rem solid #d9e1e7;
+			.title {
+				font-size: 2.2rem;
+				font-weight: 600;
+				line-height: 1;
+			}
+			.txt {
+				margin-right: auto;
+				> span {
+					display: block;
+					color: #6a7380;
+					font-size: 1.4rem;
+					font-weight: 600;
+				}
+			}
+			> button {
+				width: 2rem;
+				min-width: 2rem;
+				height: 2rem;
+			}
+		}
+	}
+	.user_outer {
+		height: 70rem;
+		overflow: hidden;
+		overflow-y: auto;
+	}
+	.ico {
+		width: inherit;
+		height: inherit;
+		&_wrap {
+			position: relative;
+			width: 6rem;
+			min-width: 6rem;
+			height: 6rem;
+			&.online {
+				&::after {
+					background: #1ad598;
+				}
+			}
+			&.offline {
+				&::after {
+					background: #99b2c6;
+				}
+			}
+			&::after {
+				content: "";
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				width: 1.8rem;
+				height: 1.8rem;
+				border: 0.3rem solid var(--light);
+				border-radius: 75%;
+			}
+		}
+	}
+	.user_blk {
+		@include flex;
+		@include gap(2rem);
+		padding: 3rem 3rem 2rem;
+		border-bottom: 0.1rem solid #d9e1e7;
+		.txt {
+			.title {
+				color: #384455;
+				font-size: 2rem;
+				font-weight: 600;
+			}
+			p {
+				font-size: 1.4rem;
+				margin-bottom: 1.5rem;
+			}
+			.date {
+				@include i_flex(center);
+				background: #f1f4f9;
+				color: #384455;
+				font-size: 1.4rem;
+				padding: 0 0.8rem 0 0.4rem;
+				border-radius: 0.4rem;
+				> img {
+					width: 2.8rem;
+					min-width: 2.8rem;
+					height: 2.8rem;
+				}
+			}
+		}
+		.star {
+			width: 2rem;
+			min-width: 2rem;
+			height: 2rem;
+			> img {
+				@include object(contain);
+			}
+		}
+	}
+	.message_data {
+		@include flex($flow: column);
+		@include gap(2rem);
+		-webkit-box-flex: 1;
+		-ms-flex: 1;
+		flex: 1;
+		max-height: calc(70rem - 8rem);
+		background: #f8faff;
+		padding: 1.5rem 3rem;
+		overflow: hidden;
+		overflow-y: auto;
+		.date {
+			width: 100%;
+			color: #99b2c6;
+			font-size: 1.4rem;
+			line-height: 1;
+			text-align: center;
+		}
+		.bubble {
+			@include flex($flow: column);
+			font-size: 1.6rem;
+			&.download_blk_wrap {
+				width: 32rem;
+				max-width: 32rem;
+			}
+			.time {
+				color: #99b2c6;
+				font-size: 1.2rem;
+				border-radius: 0 !important;
+			}
+			.cnt {
+				padding: 1.2rem 2rem;
+				margin-bottom: 0.4rem;
+			}
+			> div {
+				&:nth-child(1) {
+					border-top-left-radius: 1.4rem;
+					border-top-right-radius: 1.4rem;
+				}
+			}
+			&.you {
+				text-align: left;
+				margin-right: auto;
+				> div {
+					&:nth-last-child(2) {
+						border-bottom-left-radius: 0.4rem;
+						border-bottom-right-radius: 1.4rem;
+					}
+				}
+				.cnt {
+					background: rgba(153, 178, 198, 0.3);
+					color: var(--black);
+				}
+			}
+			&.me {
+				text-align: right;
+				margin-left: auto;
+				> div {
+					&:nth-last-child(2) {
+						border-bottom-left-radius: 1.4rem;
+						border-bottom-right-radius: 0.4rem;
+					}
+				}
+				.cnt {
+					background: var(--prime_color);
+					color: var(--light);
+				}
+			}
+			.download_blk {
+				@include flex(center);
+				@include gap(1.5rem);
+				background: #e4ecfb;
+				padding: 1rem 2rem;
+				text-align: left;
+				border: 0.1rem solid #d9e1e7;
+				// border-radius: 1.4rem;
+				> img {
+					@include object(contain);
+					width: 4rem;
+					min-width: 4rem;
+					height: 5rem;
+				}
+				.in {
+					strong {
+						display: block;
+						font-size: 1.4rem;
+						font-weight: 600;
+					}
+					span {
+						color: #6a7380;
+						font-size: 1.2rem;
+						font-weight: 600;
+					}
+				}
+				> button {
+					width: 4rem;
+					min-width: 4rem;
+					height: 4rem;
+					margin-left: auto;
+					border-radius: 75%;
+					overflow: hidden;
+					> img {
+						@include object(cover);
+					}
+				}
+			}
+		}
+	}
+	form {
+		&.send_message {
+			padding: 1rem 3rem;
+			border-top: 0.1rem solid #d9e1e7;
+			.in {
+				@include flex(center);
+				@include gap(2rem);
+				.input {
+					background: #f1f4f9;
+					border-radius: 5rem;
+					&:not(:hover) {
+						border-color: transparent;
+					}
+				}
+				.attach {
+					width: 3.2rem;
+					min-width: 3.2rem;
+					height: 3.2rem;
+					> img {
+						@include object(contain);
+					}
+				}
+				.site_btn {
+					> img {
+						height: 2.2rem;
+					}
+				}
+			}
+		}
+	}
+}
