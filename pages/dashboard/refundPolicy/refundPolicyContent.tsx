@@ -15,9 +15,9 @@ const RefundPolicyContent = () => {
 				<br />
 				<p>
 					A refund is only due when services are paid in full upon signing up for services. The 120 business day&lsquo;s money back guarantee doesn&lsquo;t apply to clients who have split their payments in two and haven&lsquo;t paid their balance past the 30 day due date. <br />
-					For full service that was paid in full within 30 days of initial payment , there is a 120 business day&lsquo;s money back guaranteed which is only based on items not removed.That is how your refund is calculated.Please keep in mind, if an Item that CCP is disputing from your credit profile comes back as a verified item, the 120 business days will then roll over to 150 business days. Clients under no circumstance are allowed to "wait out a refund" if they wish to cancel services prior to the end of the business days they would be forfeiting their refund. <br />
+					For full service that was paid in full within 30 days of initial payment , there is a 120 business day&lsquo;s money back guaranteed which is only based on items not removed.That is how your refund is calculated.Please keep in mind, if an Item that CCP is disputing from your credit profile comes back as a verified item, the 120 business days will then roll over to 150 business days. Clients under no circumstance are allowed to &quot;wait out a refund&quot; if they wish to cancel services prior to the end of the business days they would be forfeiting their refund. <br />
 					Upon receiving a request for refund, CCP will review your file thoroughly to ensure what items were not disputed from your credit profile and if there are any items that are still remaining from your credit profile from CCP&lsquo;s original dispute attempts, then a refund will be due at the end of the business days. <br />
-					“NO REFUND” is due for any client who breaches their contract with CCP{" "}
+					&quot;NO REFUND&quot; is due for any client who breaches their contract with CCP
 				</p>
 				<p>
 					<strong>Your contract is considered breach if you do any of the followings:</strong>
