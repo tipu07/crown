@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import style from "@/styles/scss/web.module.scss"
 import Head from "next/head"
 import Image from "next/image"
@@ -7,6 +7,10 @@ import Link from "next/link"
 
 const DashboardHeader = (props: any) => {
 	const { pageTitle } = props
+	const [sidebarShow, setSidebarShow] = useState(false)
+	const sidebarShowHandle = () => {
+		setSidebarShow(!sidebarShow)
+	}
 	return (
 		<>
 			<Head>
@@ -34,6 +38,9 @@ const DashboardHeader = (props: any) => {
 						<Image width={200} height={200} src={Favicon} alt="" />
 					</div>
 				</div>
+				<button type="button" className={`${style.toggle} ${sidebarShow ? style.active : ""}`} onClick={sidebarShowHandle}>
+					<span></span>
+				</button>
 			</div>
 		</>
 	)

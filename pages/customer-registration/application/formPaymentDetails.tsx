@@ -11,8 +11,8 @@ const FormPaymentDetails = (props: any) => {
 				<div className={style.in_blk}>
 					<div className={style.heading}>Payment Method</div>
 					<div className={style.payment_method_blk}>
-						<div className="row">
-							<div className="col-md-6">
+						<div className="row flex_row">
+							<div className="col-md-6 d-flex flex-column">
 								<h5 className={style.text_prime}>How Zelle Works?</h5>
 								<div className={style.payment_card}>
 									<input type="radio" name="payment_type" id="payment_type_zelle" checked={true} />
@@ -28,7 +28,7 @@ const FormPaymentDetails = (props: any) => {
 								</div>
 								<p>Please use your first and last name in the memo. Please do not put “Credit Repair” in the memo</p>
 							</div>
-							<div className="col-md-6">
+							<div className="col-md-6 d-flex flex-column">
 								<h5 className={style.text_prime}>How Cash app Works?</h5>
 								<div className={style.payment_card}>
 									<input type="radio" name="payment_type" id="payment_type_cash_app" />

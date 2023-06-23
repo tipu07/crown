@@ -8,7 +8,7 @@ const BigPicture = () => {
 	return (
 		<>
 			<div className="row">
-				<div className="col-md-9">
+				<div className="col-lg-9">
 					<div className={style.logo_list}>
 						<button type="button" className={picView === "TransUnion" ? style.active : ""} onClick={() => setPicView("TransUnion")}>
 							<Image width={300} height={100} src={TransUnionImage} alt="" />
@@ -103,64 +103,66 @@ const BigPicture = () => {
 						<div className="col-md-12">
 							<div className={style.sm_blk}>
 								<h4>ACCOUNTS</h4>
-								<table className={style.address_table}>
-									<tbody>
-										<tr>
-											<td>
-												<small>Type</small>
-												<br /> ECMC
-											</td>
-											<td>
-												<small>Date opened</small>
-												<br /> Sep. 14, 2017
-											</td>
-											<td>
-												<small>Balance</small>
-												<br /> $88795
-											</td>
-											<td>
-												<small>Loan Type</small>
-												<br /> Education Loan
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<small>Type</small>
-												<br /> ECMC
-											</td>
-											<td>
-												<small>Date opened</small>
-												<br /> Sep. 14, 2017
-											</td>
-											<td>
-												<small>Balance</small>
-												<br /> $88795
-											</td>
-											<td>
-												<small>Loan Type</small>
-												<br /> Education Loan
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<small>Type</small>
-												<br /> ECMC
-											</td>
-											<td>
-												<small>Date opened</small>
-												<br /> Sep. 14, 2017
-											</td>
-											<td>
-												<small>Balance</small>
-												<br /> $88795
-											</td>
-											<td>
-												<small>Loan Type</small>
-												<br /> Education Loan
-											</td>
-										</tr>
-									</tbody>
-								</table>
+								<div className={style.address_table_wrap}>
+									<table className={style.address_table}>
+										<tbody>
+											<tr>
+												<td>
+													<small>Type</small>
+													<br /> ECMC
+												</td>
+												<td>
+													<small>Date opened</small>
+													<br /> Sep. 14, 2017
+												</td>
+												<td>
+													<small>Balance</small>
+													<br /> $88795
+												</td>
+												<td>
+													<small>Loan Type</small>
+													<br /> Education Loan
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<small>Type</small>
+													<br /> ECMC
+												</td>
+												<td>
+													<small>Date opened</small>
+													<br /> Sep. 14, 2017
+												</td>
+												<td>
+													<small>Balance</small>
+													<br /> $88795
+												</td>
+												<td>
+													<small>Loan Type</small>
+													<br /> Education Loan
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<small>Type</small>
+													<br /> ECMC
+												</td>
+												<td>
+													<small>Date opened</small>
+													<br /> Sep. 14, 2017
+												</td>
+												<td>
+													<small>Balance</small>
+													<br /> $88795
+												</td>
+												<td>
+													<small>Loan Type</small>
+													<br /> Education Loan
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
 							</div>
 						</div>
 						<div className="col-md-12">

@@ -8,17 +8,21 @@ const ApplicationStatus = () => {
 	return (
 		<>
 			<div className="row">
-				<div className="col-md-9">
+				<div className="col-lg-9">
 					<div className={`${style.in_blk} ${style.application_blk}`}>
 						<div className={`${style.head} ${style.drop}`}>
 							<div className={style.dot}></div>
-							Application Approved <small>Wed, 6 Aug 2021</small>
+							<div className={style.head_name}>
+								Application Approved <small>Wed, 6 Aug 2021</small>
+							</div>
 						</div>
 					</div>
 					<div className={`${style.in_blk} ${style.application_blk}`}>
 						<div className={`${style.head} ${style.drop}`}>
 							<div className={style.dot}></div>
-							Applications sent to processing <small>Wed, 6 Aug 2021</small>
+							<div className={style.head_name}>
+								Applications sent to processing <small>Wed, 6 Aug 2021</small>
+							</div>
 						</div>
 						<div className={style.content}>
 							<ul>
@@ -40,7 +44,9 @@ const ApplicationStatus = () => {
 					<div className={`${style.in_blk} ${style.application_blk}`}>
 						<div className={`${style.head} ${style.drop}`}>
 							<div className={style.dot}></div>
-							Update from Bureau <small>Wed, 6 Aug 2021</small>
+							<div className={style.head_name}>
+								Update from Bureau <small>Wed, 6 Aug 2021</small>
+							</div>
 						</div>
 						<div className={style.content}>
 							<ul>
@@ -68,7 +74,9 @@ const ApplicationStatus = () => {
 					<div className={`${style.in_blk} ${style.application_blk}`}>
 						<div className={`${style.head} ${style.drop}`}>
 							<div className={style.dot}></div>
-							Redisputes <small>Wed, 6 Aug 2021</small>
+							<div className={style.head_name}>
+								Redisputes <small>Wed, 6 Aug 2021</small>
+							</div>
 						</div>
 						<div className={style.content}>
 							<ul>
@@ -82,7 +90,9 @@ const ApplicationStatus = () => {
 					<div className={`${style.in_blk} ${style.application_blk}`}>
 						<div className={`${style.head} ${style.drop}`}>
 							<div className={style.dot}></div>
-							Update from Bureau <small>Wed, 6 Aug 2021</small>
+							<div className={style.head_name}>
+								Update from Bureau <small>Wed, 6 Aug 2021</small>
+							</div>
 						</div>
 						<div className={style.content}>
 							<ul>

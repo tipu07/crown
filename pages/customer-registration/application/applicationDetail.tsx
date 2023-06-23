@@ -43,7 +43,7 @@ const ApplicationDetail = () => {
 				</ul>
 				<button className={style.save_btn}>
 					<Image width={100} height={100} src={SaveIcon} alt="" />
-					Save as a draft
+					<span>Save as a draft</span>
 				</button>
 			</div>
 			<form action="" method="post" className={style.application_form}>
