@@ -6,11 +6,12 @@ import { Favicon, IconBell, IconSearch } from "./images"
 import Link from "next/link"
 
 const CustomerRegistrationHeader = (props: any) => {
-	const { pageTitle } = props
-	const [sidebarShow, setSidebarShow] = useState(false)
+	const { isActive, onToggle, pageTitle } = props
+	// const [sidebarShow, setSidebarShow] = useState(toggleSidebar)
+	/* const [sidebarShow, setSidebarShow] = useState(toggle)
 	const sidebarShowHandle = () => {
 		setSidebarShow(!sidebarShow)
-	}
+	} */
 	return (
 		<>
 			<Head>
@@ -38,7 +39,7 @@ const CustomerRegistrationHeader = (props: any) => {
 						<Image width={200} height={200} src={Favicon} alt="" />
 					</div>
 				</div>
-				<button type="button" className={`${style.toggle} ${sidebarShow ? style.active : ""}`} onClick={sidebarShowHandle}>
+				<button type="button" className={`${style.toggle} ${isActive ? style.active : ""}`} onClick={() => onToggle()}>
 					<span></span>
 				</button>
 			</div>

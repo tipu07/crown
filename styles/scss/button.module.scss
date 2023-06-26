@@ -99,6 +99,17 @@
 			@include filter(none);
 		}
 	}
+	&.light {
+		background: #eaeef6;
+		color: var(--prime_color);
+		&:hover {
+			background: var(--prime_color);
+			color: var(--light);
+		}
+		> img {
+			@include filter(none);
+		}
+	}
 	&.transparent {
 		background: #f1f0ff;
 		color: var(--prime_color);

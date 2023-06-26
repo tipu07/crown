@@ -789,6 +789,13 @@
 	margin-top: -8.8rem;
 	padding: 2rem;
 	overflow: unset;
+	&.flow {
+		height: 100vh;
+		overflow: hidden;
+	}
+	@include ipad_sm {
+		overflow: hidden;
+	}
 	.heading {
 		@include flex(center);
 		font-size: 2.2rem;
@@ -903,12 +910,14 @@
 	#top_header {
 		@include flex(center);
 		margin-bottom: 3rem;
-
 		.title {
 			font-size: 2.2rem;
 			font-weight: 600;
 			@include ipad_sm {
 				margin-right: auto;
+			}
+			@include mobile {
+				line-height: 1;
 			}
 			> span {
 				display: block;
@@ -991,6 +1000,7 @@
 				right: 0;
 				margin-left: 2rem;
 				margin-right: 0;
+				z-index: 20;
 			}
 		}
 	}
@@ -1113,7 +1123,24 @@
 		background: var(--light);
 		padding: 2rem;
 		margin: 0;
+		@include trans;
 		z-index: 5;
+		&.active {
+			left: 0;
+			&::after {
+				left: 33rem;
+			}
+		}
+		&::after {
+			content: "";
+			position: fixed;
+			top: 0;
+			left: 100%;
+			right: 0;
+			bottom: 0;
+			background: rgba(var(--black_rgb), 0.85);
+			@include trans;
+		}
 	}
 	.logo {
 		max-width: 24rem;
@@ -1145,13 +1172,16 @@
 	}
 	.sidebar_inner {
 		width: 100%;
+		@include flex($justify: space-between, $flow: column);
 		-webkit-box-flex: 1;
 		-ms-flex: 1;
 		flex: 1;
-		@include flex($justify: space-between, $flow: column);
+		overflow: hidden;
 	}
 	ul {
 		@include list;
+		overflow: hidden;
+		overflow-y: auto;
 		> li {
 			margin-bottom: 0.2rem;
 			> a {
@@ -1184,6 +1214,7 @@
 	}
 	p {
 		font-size: 1.8rem;
+		margin-top: 2rem;
 		> span {
 			display: block;
 			color: #809fb8;
@@ -2041,10 +2072,18 @@
 				min-width: 2rem;
 				height: 2rem;
 			}
+			.x_btn {
+				position: static;
+				display: none;
+				@include mobile {
+					@include flex;
+				}
+			}
 		}
 	}
 	.user_outer {
-		height: 70rem;
+		height: calc(100vh - 28rem);
+		min-height: 50rem;
 		overflow: hidden;
 		overflow-y: auto;
 	}
@@ -2082,6 +2121,7 @@
 		@include flex;
 		@include gap(2rem);
 		padding: 3rem 3rem 2rem;
+		cursor: pointer;
 		border-bottom: 0.1rem solid #d9e1e7;
 		.txt {
 			.title {
@@ -2122,7 +2162,8 @@
 		-webkit-box-flex: 1;
 		-ms-flex: 1;
 		flex: 1;
-		max-height: calc(70rem - 8rem);
+		min-height: 41rem;
+		max-height: calc(100vh - 36rem);
 		background: #f8faff;
 		padding: 1.5rem 3rem;
 		overflow: hidden;
@@ -2251,6 +2292,36 @@
 						height: 2.2rem;
 					}
 				}
+			}
+		}
+	}
+}
+
+#dashboard {
+	.profile_blk {
+		text-align: center;
+		overflow: hidden;
+		.inr {
+			background: #dfe6f4;
+			font-size: 1.6rem;
+			padding: 3rem 3rem 8rem;
+			margin: -3rem -3rem 0;
+		}
+		.ico {
+			width: 14rem;
+			min-width: 14rem;
+			height: 14rem;
+			margin: -7rem auto 2rem;
+		}
+		.name {
+			font-size: 1.8rem;
+			font-weight: 600;
+			line-height: 1.4;
+			> span {
+				display: block;
+				color: #99b2c6;
+				font-size: 1.6rem;
+				font-weight: 500;
 			}
 		}
 	}

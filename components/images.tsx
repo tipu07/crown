@@ -8,6 +8,7 @@ export { default as SocialInstagram } from "/public/images/social-instagram.svg"
 export { default as SocialFacebook } from "/public/images/social-facebook.svg" */
 
 export { default as PhotoLogon } from "/public/images/logon.jpg"
+export { default as PhotoCCP } from "/public/images/ccp_notice.png"
 
 export { default as PhotoUser_01 } from "/public/images/users/01.jpg"
 export { default as PhotoUser_02 } from "/public/images/users/02.jpg"

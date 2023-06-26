@@ -6,11 +6,12 @@ import { IconApplication, IconDocuments, IconNotices, IconPayment, PhotoUser_01 
 import Link from "next/link"
 import { useRouter } from "next/router"
 
-const CustomerRegistrationSidebar = () => {
+const CustomerRegistrationSidebar = (props: any) => {
+	const { isActive } = props
 	const router = useRouter()
 	return (
 		<>
-			<div id={style.sidebar}>
+			<div id={style.sidebar} className={`${isActive ? style.active : ""}`}>
 				<Logo />
 				<div className={style.profile_block}>
 					<div className={`${style.ico} ${style.fill}`}>
@@ -48,10 +49,10 @@ const CustomerRegistrationSidebar = () => {
 							</Link>
 						</li>
 					</ul>
-					<p>
-						© 2022CrownCreditPro <span>© Copyright</span>
-					</p>
 				</div>
+				<p>
+					© 2022CrownCreditPro <span>© Copyright</span>
+				</p>
 			</div>
 		</>
 	)
