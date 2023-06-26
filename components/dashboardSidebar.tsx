@@ -6,11 +6,12 @@ import { IconAgreement, IconApplication2, IconBook, IconDashboard, IconEnvelope,
 import Link from "next/link"
 import { useRouter } from "next/router"
 
-const DashboardSidebar = () => {
+const DashboardSidebar = (props: any) => {
+	const { isActive } = props
 	const router = useRouter()
 	return (
 		<>
-			<div id={style.sidebar}>
+			<div id={style.sidebar} className={`${isActive ? style.active : ""}`}>
 				<Logo />
 				<div className={style.profile_block}>
 					<div className={`${style.ico} ${style.fill}`}>
@@ -24,9 +25,9 @@ const DashboardSidebar = () => {
 				<div className={style.sidebar_inner}>
 					<ul>
 						<li>
-							<Link href="/dashboard/index" className={router.pathname === "/dashboard/index" ? style.active : ""}>
+							<Link href="/dashboard/dashboard" className={router.pathname === "/dashboard/dashboard" ? style.active : ""}>
 								<Image width={100} height={100} src={IconDashboard} alt="" />
-								Home
+								Dashboard
 							</Link>
 						</li>
 						<li>
@@ -72,10 +73,10 @@ const DashboardSidebar = () => {
 							</Link>
 						</li>
 					</ul>
-					<p>
-						© 2022CrownCreditPro <span>© Copyright</span>
-					</p>
 				</div>
+				<p>
+					© 2022CrownCreditPro <span>© Copyright</span>
+				</p>
 			</div>
 		</>
 	)

@@ -572,6 +572,8 @@
 		@include bg(cover);
 		@include ipad_sm {
 			position: relative;
+			width: 100%;
+			min-width: 0;
 			min-height: initial;
 		}
 		&::before {
@@ -608,6 +610,11 @@
 		min-height: 100vh;
 		margin-left: auto;
 		padding: 10rem;
+		@include ipad_sm {
+			width: 100%;
+			min-height: 0;
+			padding: 4rem;
+		}
 		> form {
 			width: 100%;
 		}
@@ -615,10 +622,16 @@
 			max-width: 40rem;
 			height: auto;
 			margin-bottom: 3.5rem;
+			@include ipad_sm {
+				max-width: 36rem;
+			}
 		}
 		.log_blk {
 			max-width: 75rem;
 			// margin: auto;
+			@include ipad_sm {
+				margin: auto;
+			}
 			.txt {
 				margin-bottom: 5rem;
 				h4 {
@@ -776,11 +789,21 @@
 	margin-top: -8.8rem;
 	padding: 2rem;
 	overflow: unset;
+	&.flow {
+		height: 100vh;
+		overflow: hidden;
+	}
+	@include ipad_sm {
+		overflow: hidden;
+	}
 	.heading {
 		@include flex(center);
 		font-size: 2.2rem;
 		font-weight: 700;
 		margin-bottom: 3.6rem;
+		@include mobile {
+			font-size: 1.8rem;
+		}
 		&::after {
 			content: "";
 			-webkit-box-flex: 1;
@@ -794,12 +817,26 @@
 	.top_head {
 		@include flex(center, flex-end);
 		margin-bottom: 2rem;
+		@include mobile_md {
+			@include flex($flow: wrap);
+			@include gap(2rem);
+			> * {
+				-webkit-box-flex: 1;
+				-ms-flex: 1 1 30rem;
+				flex: 1 1 30rem;
+			}
+		}
 		.payment_tab {
 			@include list;
 			@include flex;
 			@include gap(1rem 4rem);
 			margin-top: auto;
 			margin-right: auto;
+			@include mobile_md {
+				-webkit-box-ordinal-group: 2;
+				-ms-flex-order: 1;
+				order: 1;
+			}
 			> li {
 				> button {
 					position: relative;
@@ -830,6 +867,10 @@
 			position: relative;
 			min-width: 26rem;
 			margin-right: 3rem;
+			@include mobile_md {
+				min-width: 0;
+				margin: 0;
+			}
 			button {
 				@include pos($r: null);
 				width: 1.4rem;
@@ -847,12 +888,24 @@
 				padding-left: 3.8rem;
 			}
 		}
+		.btn_blk {
+			@include mobile_md {
+				> * {
+					-webkit-box-flex: 1;
+					-ms-flex: 1 1 15rem;
+					flex: 1 1 15rem;
+				}
+			}
+		}
 	}
 	#main_area {
 		width: calc(100% - 33rem);
 		background: var(--light);
 		padding: 3rem;
 		border-radius: 4rem;
+		@include ipad_sm {
+			width: 100%;
+		}
 	}
 	#top_header {
 		@include flex(center);
@@ -860,11 +913,20 @@
 		.title {
 			font-size: 2.2rem;
 			font-weight: 600;
+			@include ipad_sm {
+				margin-right: auto;
+			}
+			@include mobile {
+				line-height: 1;
+			}
 			> span {
 				display: block;
 				color: #809fb8;
 				font-size: 1.8rem;
 				font-weight: 500;
+				@include mobile {
+					display: none;
+				}
 			}
 		}
 		.query_form {
@@ -874,6 +936,9 @@
 			-ms-flex-item-align: center;
 			align-self: center;
 			margin-left: auto;
+			@include ipad_sm {
+				display: none;
+			}
 			> .input {
 				font-size: 1.6rem;
 				&:not(:hover) {
@@ -890,6 +955,7 @@
 			}
 		}
 		#notification_btn {
+			position: relative;
 			@include flex(center, center);
 			width: 6rem;
 			min-width: 6rem;
@@ -898,6 +964,17 @@
 			border: 0.2rem solid #d9e1e7;
 			border-radius: 0.8rem;
 			@include trans;
+			&::before {
+				content: "";
+				position: absolute;
+				top: 1.6rem;
+				right: 1.6rem;
+				width: 1.1rem;
+				height: 1.1rem;
+				background: var(--prime_color);
+				border: 0.2rem solid var(--light);
+				border-radius: 75%;
+			}
 			> img {
 				width: 2.2rem;
 				min-width: 2.2rem;
@@ -914,6 +991,16 @@
 				padding: 1rem;
 				border: 0.2rem solid #d9e1e7;
 				border-radius: 75%;
+			}
+		}
+		.toggle {
+			@include ipad_sm {
+				@include flex;
+				position: relative;
+				right: 0;
+				margin-left: 2rem;
+				margin-right: 0;
+				z-index: 20;
 			}
 		}
 	}
@@ -948,6 +1035,9 @@
 	}
 	.payment_card {
 		position: relative;
+		-webkit-box-flex: 1;
+		-ms-flex: 1;
+		flex: 1;
 		color: #6e6e6e;
 		font-size: 1.6rem;
 		font-weight: 500;
@@ -955,6 +1045,7 @@
 		overflow: hidden;
 		&_inner {
 			@include flex;
+			height: 100%;
 			padding: 4rem 3rem;
 			border: 0.2rem solid #d6d6d6;
 			border-radius: 0.6rem;
@@ -1000,6 +1091,9 @@
 		.icon {
 			height: 6rem;
 			margin-bottom: 1.6rem;
+			@include mobile {
+				height: 5rem;
+			}
 			> img {
 				@include object(contain, left center);
 			}
@@ -1019,6 +1113,35 @@
 	min-width: 33rem;
 	height: calc(100vh - 4rem);
 	padding-right: 2rem;
+	@include ipad_sm {
+		position: fixed;
+		top: 0;
+		left: -33rem;
+		right: 0;
+		bottom: 0;
+		height: 100vh;
+		background: var(--light);
+		padding: 2rem;
+		margin: 0;
+		@include trans;
+		z-index: 5;
+		&.active {
+			left: 0;
+			&::after {
+				left: 33rem;
+			}
+		}
+		&::after {
+			content: "";
+			position: fixed;
+			top: 0;
+			left: 100%;
+			right: 0;
+			bottom: 0;
+			background: rgba(var(--black_rgb), 0.85);
+			@include trans;
+		}
+	}
 	.logo {
 		max-width: 24rem;
 		height: auto;
@@ -1049,13 +1172,16 @@
 	}
 	.sidebar_inner {
 		width: 100%;
+		@include flex($justify: space-between, $flow: column);
 		-webkit-box-flex: 1;
 		-ms-flex: 1;
 		flex: 1;
-		@include flex($justify: space-between, $flow: column);
+		overflow: hidden;
 	}
 	ul {
 		@include list;
+		overflow: hidden;
+		overflow-y: auto;
 		> li {
 			margin-bottom: 0.2rem;
 			> a {
@@ -1088,6 +1214,7 @@
 	}
 	p {
 		font-size: 1.8rem;
+		margin-top: 2rem;
 		> span {
 			display: block;
 			color: #809fb8;
@@ -1104,16 +1231,28 @@
 		margin-bottom: 2rem;
 		border-radius: 0.4rem;
 		overflow: hidden;
+		@include mobile {
+			padding: 0 2rem;
+		}
 		.tabs_list {
 			@include list;
 			@include flex;
+			@include ipad {
+				margin-right: 4rem;
+				overflow: hidden;
+				overflow-x: auto;
+			}
 			> li {
 				margin-right: 9rem;
+				@include ipad {
+					margin-right: 4rem;
+				}
 				> button {
 					color: #809fb8;
 					font-size: 1.6rem;
 					padding: 1.4rem 0 1.6rem;
 					border-bottom: 0.3rem solid transparent;
+					white-space: nowrap;
 					&:hover {
 						color: var(--black);
 					}
@@ -1130,6 +1269,12 @@
 			color: var(--prime_color);
 			font-size: 1.6rem;
 			font-weight: 600;
+			white-space: nowrap;
+			@include mobile {
+				> span {
+					display: none;
+				}
+			}
 			&:hover {
 				color: var(--black);
 			}
@@ -1273,17 +1418,22 @@
 .table_blk {
 	color: #06152b;
 	font-size: 1.4rem;
+	overflow: hidden;
+	overflow-x: auto;
 	&_wrapper {
 		margin: 0 -3rem;
+		overflow: hidden;
 	}
 	table {
 		width: 100%;
+		min-width: 140rem;
 		thead {
 			background: #f5f5f5;
 			th {
 				color: #809fb8;
 				font-size: 1.4rem;
 				font-weight: 500;
+				white-space: nowrap;
 			}
 		}
 		tr {
@@ -1365,6 +1515,10 @@
 			@include list;
 			@include flex;
 			@include gap(1rem 10rem);
+			@include mobile {
+				@include flex($justify: center);
+				@include gap(1rem 5rem);
+			}
 			> li {
 				> button {
 					position: relative;
@@ -1435,6 +1589,9 @@
 	.application_blk {
 		position: relative;
 		padding: 4rem 5rem;
+		@include mobile {
+			padding: 2rem;
+		}
 		&::before,
 		&::after {
 			content: "";
@@ -1442,6 +1599,9 @@
 			left: 6.8rem;
 			width: 0.4rem;
 			background: var(--prime_color);
+			@include mobile {
+				left: 3.8rem;
+			}
 		}
 		&::before {
 			top: -2rem;
@@ -1481,11 +1641,17 @@
 					margin-left: auto;
 				}
 			}
-			> small {
-				color: #67676a;
-				font-size: 1.6rem;
-				font-weight: 500;
-				margin-left: 3rem;
+			&_name {
+				> small {
+					color: #67676a;
+					font-size: 1.6rem;
+					font-weight: 500;
+					margin-left: 3rem;
+					@include mobile {
+						display: block;
+						margin: 0;
+					}
+				}
 			}
 			> .dot {
 				position: relative;
@@ -1515,6 +1681,15 @@
 				@include list;
 				> li {
 					@include flex(center);
+					@include mobile {
+						@include gap(1rem);
+						@include flex($flow: wrap);
+						> * {
+							&:nth-child(1) {
+								margin-left: 1.4rem;
+							}
+						}
+					}
 					&:not(:nth-last-child(1)) {
 						margin-bottom: 1.5rem;
 					}
@@ -1529,6 +1704,9 @@
 						margin-left: -0.8rem;
 						margin-right: 3rem;
 						border-radius: 75%;
+						@include mobile {
+							margin-right: 0;
+						}
 					}
 					> small {
 						min-width: 10rem;
@@ -1536,12 +1714,26 @@
 						font-size: 1.4rem;
 						font-weight: 700;
 						margin-right: 2rem;
+						@include mobile {
+							-webkit-box-flex: 1;
+							-ms-flex: 1 30rem;
+							flex: 1 30rem;
+							margin: 0;
+							margin-left: 3rem;
+						}
 					}
 					> span {
 						@include i_flex(center);
 						color: #67676a;
 						font-size: 1.6rem;
 						font-weight: 500;
+						@include mobile {
+							-webkit-box-flex: 1;
+							-ms-flex: 1 1 30rem;
+							flex: 1 1 30rem;
+							margin: 0;
+							margin-left: 3rem;
+						}
 						> img {
 							width: 2rem;
 							min-width: 2rem;
@@ -1557,19 +1749,30 @@
 						padding: 0.4rem 0.7rem;
 						margin-left: auto;
 						border-radius: 0.4rem;
+						@include mobile {
+							margin: 0;
+							margin-left: 3rem;
+						}
 					}
 					> .input {
 						width: 26rem;
 						height: 3.6rem;
 						font-size: 1.4rem;
 						margin-left: 1rem;
+						@include mobile {
+							-webkit-box-flex: 1;
+							-ms-flex: 1 1 30rem;
+							flex: 1 1 30rem;
+							margin: 0;
+							margin-left: 3rem;
+						}
 					}
 				}
 			}
 		}
 	}
 	.logo_list {
-		@include flex;
+		@include flex($flow: wrap);
 		@include gap(2rem);
 		margin-bottom: 3rem;
 		> button {
@@ -1648,7 +1851,12 @@
 	}
 	.address_table {
 		width: 100%;
+		min-width: 80rem;
 		color: #67676a;
+		&_wrap {
+			overflow: hidden;
+			overflow-x: auto;
+		}
 		tr {
 			&:nth-child(odd) {
 				td {
@@ -1710,6 +1918,10 @@
 			line-height: 7.8rem;
 			text-transform: uppercase;
 			margin: 0 0 4rem;
+			@include mobile {
+				font-size: 4.4rem;
+				line-height: 1.2;
+			}
 		}
 	}
 }
@@ -1724,10 +1936,17 @@
 			line-height: 7.8rem;
 			text-transform: uppercase;
 			margin: 0 0 4rem;
+			@include mobile {
+				font-size: 5.4rem;
+			}
 		}
 		.head {
 			@include flex(center, space-between);
 			margin-bottom: 4rem;
+			@include mobile {
+				@include flex($flow: wrap);
+				@include gap(2rem);
+			}
 			.input_blk {
 				color: var(--prime_color);
 				padding: 2rem 3rem;
@@ -1738,6 +1957,11 @@
 				font-size: 2rem;
 				font-weight: 600;
 				line-height: 1.4;
+				@include mobile {
+					-webkit-box-flex: 1;
+					-ms-flex: 1 1 30rem;
+					flex: 1 1 30rem;
+				}
 				&_item {
 					> span {
 						display: block;
@@ -1749,9 +1973,16 @@
 		}
 		.text_blk {
 			@include flex;
+			@include mobile {
+				@include flex($flow: wrap);
+				@include gap(2rem);
+			}
 			.input_blk {
 				color: #b0aff1;
 				margin-left: 4rem;
+				@include mobile {
+					margin-left: 0;
+				}
 			}
 		}
 		.input_blk {
@@ -1762,6 +1993,11 @@
 			padding: 1rem 3rem;
 			border: 0.1rem solid #d9e1e7;
 			border-radius: 0.6rem;
+			@include mobile {
+				-webkit-box-flex: 1;
+				-ms-flex: 1 1 30rem;
+				flex: 1 1 30rem;
+			}
 		}
 		.signature {
 			width: 23rem;
@@ -1787,6 +2023,7 @@
 
 #message {
 	&_wrapper {
+		position: relative;
 		@include flex;
 		border: 0.1rem solid #d9e1e7;
 		border-radius: 1.6rem;
@@ -1795,10 +2032,20 @@
 			width: 54rem;
 			min-width: 54rem;
 			border-right: 0.1rem solid #d9e1e7;
+			@include mobile {
+				width: 100%;
+				min-width: 0;
+			}
 		}
 		.content_block {
 			@include flex($flow: column);
 			width: calc(100% - 54rem);
+			@include mobile {
+				display: none;
+				@include pos($z: 10);
+				width: 100%;
+				background: var(--light);
+			}
 		}
 		.head {
 			@include flex(center);
@@ -1825,10 +2072,18 @@
 				min-width: 2rem;
 				height: 2rem;
 			}
+			.x_btn {
+				position: static;
+				display: none;
+				@include mobile {
+					@include flex;
+				}
+			}
 		}
 	}
 	.user_outer {
-		height: 70rem;
+		height: calc(100vh - 28rem);
+		min-height: 50rem;
 		overflow: hidden;
 		overflow-y: auto;
 	}
@@ -1866,6 +2121,7 @@
 		@include flex;
 		@include gap(2rem);
 		padding: 3rem 3rem 2rem;
+		cursor: pointer;
 		border-bottom: 0.1rem solid #d9e1e7;
 		.txt {
 			.title {
@@ -1906,7 +2162,8 @@
 		-webkit-box-flex: 1;
 		-ms-flex: 1;
 		flex: 1;
-		max-height: calc(70rem - 8rem);
+		min-height: 41rem;
+		max-height: calc(100vh - 36rem);
 		background: #f8faff;
 		padding: 1.5rem 3rem;
 		overflow: hidden;
@@ -2035,6 +2292,36 @@
 						height: 2.2rem;
 					}
 				}
+			}
+		}
+	}
+}
+
+#dashboard {
+	.profile_blk {
+		text-align: center;
+		overflow: hidden;
+		.inr {
+			background: #dfe6f4;
+			font-size: 1.6rem;
+			padding: 3rem 3rem 8rem;
+			margin: -3rem -3rem 0;
+		}
+		.ico {
+			width: 14rem;
+			min-width: 14rem;
+			height: 14rem;
+			margin: -7rem auto 2rem;
+		}
+		.name {
+			font-size: 1.8rem;
+			font-weight: 600;
+			line-height: 1.4;
+			> span {
+				display: block;
+				color: #99b2c6;
+				font-size: 1.6rem;
+				font-weight: 500;
 			}
 		}
 	}

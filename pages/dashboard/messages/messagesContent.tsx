@@ -22,6 +22,7 @@ const MessagesContent = () => {
 					<button type="button">
 						<Image width={100} height={100} src={IconSearch} alt="" />
 					</button>
+					<button type="button" className={style.x_btn}></button>
 				</div>
 				<MessagesData />
 				<MessagesForm />

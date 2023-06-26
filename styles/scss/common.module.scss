@@ -83,7 +83,7 @@
 		position: absolute;
 		width: inherit;
 		height: 0.2rem;
-		background: var(--light);
+		background: var(--dark_gray);
 		@include trans;
 	}
 	&::before {
@@ -91,6 +91,7 @@
 		top: 0;
 		@at-root .active#{&} {
 			top: 50%;
+			background: var(--light);
 			margin-top: -0.1rem;
 			-webkit-transform: rotate(45deg);
 			-ms-transform: rotate(45deg);
@@ -102,6 +103,7 @@
 		bottom: 0;
 		@at-root .active#{&} {
 			bottom: 50%;
+			background: var(--light);
 			margin-bottom: -0.1rem;
 			-webkit-transform: rotate(135deg);
 			-ms-transform: rotate(135deg);
