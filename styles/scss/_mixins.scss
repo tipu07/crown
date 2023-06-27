@@ -127,6 +127,13 @@ $cross_circle: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www
 	overflow: hidden;
 }
 
+@mixin line_clamp($num) {
+	display: -webkit-box;
+	-webkit-line-clamp: $num;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}
+
 @mixin block($p: 2rem 3rem, $rad: 0.8rem) {
 	position: relative;
 	background: var(--light);

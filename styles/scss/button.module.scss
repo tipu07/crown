@@ -105,6 +105,9 @@
 		&:hover {
 			background: var(--prime_color);
 			color: var(--light);
+			> img {
+				@include filter(1);
+			}
 		}
 		> img {
 			@include filter(none);
