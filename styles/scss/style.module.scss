@@ -2663,4 +2663,72 @@
 			}
 		}
 	}
+	.user_profile_blk {
+		@include flex(center);
+		.ico {
+			width: 14rem;
+			min-width: 14rem;
+			height: 14rem;
+			&_blk {
+				position: relative;
+				margin-right: 2rem;
+				> span {
+					position: absolute;
+					background: #6bc600;
+					color: var(--light);
+					font-size: 1.4rem;
+					font-weight: 600;
+					line-height: 1;
+					padding: 0.6rem 1rem;
+					border-radius: 0.6rem;
+					bottom: -0.5rem;
+					left: 0;
+					right: 0;
+					max-width: 7rem;
+					text-align: center;
+					margin: auto;
+				}
+			}
+		}
+		.text {
+			flex: 1;
+			.top {
+				@include flex(center, space-between);
+				margin-bottom: 3rem;
+				.name {
+					font-size: 1.6rem;
+					font-weight: 600;
+					> span {
+						display: block;
+						color: #6a7380;
+						font-size: 1.3rem;
+					}
+				}
+				.score_logo_list {
+					@include list;
+					@include flex($justify: space-between);
+					@include gap(3rem);
+					.score_logo {
+						max-width: 8rem;
+						height: 4rem;
+						> img {
+							@include object(contain);
+						}
+					}
+				}
+			}
+			.btm {
+				@include flex(center, space-between);
+				ul {
+					@include list;
+					@include flex;
+					@include gap(2rem);
+					li {
+						font-size: 1.4rem;
+						font-weight: 600;
+					}
+				}
+			}
+		}
+	}
 }

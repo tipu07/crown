@@ -8,6 +8,7 @@ import PrivateNotesBlock from "./privateNotesBlock"
 import PublicFeedsBlock from "./publicFeedsBlock"
 import DisputeBlock from "./disputeBlock"
 import ScoreBlock from "./scoreBlock"
+import UserProfileBlock from "./userProfileBlock"
 
 const DashboardDetail = () => {
 	return (
@@ -15,6 +16,9 @@ const DashboardDetail = () => {
 			<div className="row">
 				<div className="col-md-8">
 					<div className="row">
+						<div className="col-md-12">
+							<UserProfileBlock />
+						</div>
 						<div className="col-md-12">
 							<ScoreBlock />
 						</div>
