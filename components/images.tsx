@@ -64,6 +64,8 @@ export { default as ProfessionalWoman } from "/public/images/professional_woman.
 export { default as DocumentImage } from "/public/images/document_image.svg"
 export { default as NoticeImage } from "/public/images/notice_image.svg"
 export { default as PDFImage } from "/public/images/pdf_image.svg"
+export { default as PieChart } from "/public/images/pie_chart.png"
+export { default as BarChart } from "/public/images/bar_chart.png"
 
 export { default as TransUnionImage } from "/public/images/trans_union.svg"
 export { default as ExperianImage } from "/public/images/experian.svg"
