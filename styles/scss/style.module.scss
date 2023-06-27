@@ -2628,7 +2628,9 @@
 			@include list;
 			@include flex($justify: space-between);
 			@include gap(3rem);
-			margin: 4rem 0 7rem;
+			margin: 4rem 0 5rem;
+			padding-bottom: 5rem;
+			border-bottom: 0.1rem solid #d9e1e7;
 			.score_logo {
 				max-width: 12rem;
 				height: 6rem;
