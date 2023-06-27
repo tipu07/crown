@@ -3,6 +3,7 @@ import style from "@/styles/scss/web.module.scss"
 import Image from "next/image"
 import { IconEdit, PhotoLogon, PhotoUser_01, PieChart, ProfessionalWoman } from "@/components/images"
 import Link from "next/link"
+import MainPieChart from "./mainPieChart"
 
 const DisputeBlock = () => {
 	return (
@@ -70,7 +71,7 @@ const DisputeBlock = () => {
 					</div>
 					<div className="col-md-6">
 						<div className={style.pie_chart}>
-							<Image width={800} height={600} src={PieChart} alt="" />
+							<MainPieChart />
 						</div>
 						<div className={`${style.btn_blk} justify-content-between`}>
 							<button type="button" className={style.mini_btn}>

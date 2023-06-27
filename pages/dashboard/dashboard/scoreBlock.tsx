@@ -2,6 +2,7 @@ import React from "react"
 import style from "@/styles/scss/web.module.scss"
 import Image from "next/image"
 import { BarChart, EquifaxImage, ExperianImage, IconEdit, TransUnionImage } from "@/components/images"
+import MainBarChart from "./mainBarChart"
 
 const ScoreBlock = () => {
 	return (
@@ -77,7 +78,7 @@ const ScoreBlock = () => {
 							</button>
 						</div>
 						<div className={style.bar_chart}>
-							<Image width={800} height={600} src={BarChart} alt="" />
+							<MainBarChart />
 						</div>
 					</div>
 				</div>
