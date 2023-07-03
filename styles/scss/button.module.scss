@@ -121,6 +121,15 @@
 			color: var(--light);
 		}
 	}
+	&.simple_stroke {
+		background: transparent;
+		color: var(--light);
+		border: 0.1rem solid;
+		&:hover {
+			background: var(--prime_color);
+			color: var(--light);
+		}
+	}
 	&.stroke {
 		border: 0.1rem solid var(--prime_color);
 	}
