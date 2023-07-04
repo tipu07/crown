@@ -3,6 +3,7 @@ import style from "@/styles/scss/web.module.scss"
 import { useRouter } from "next/router"
 import Image from "next/image"
 import { useState } from "react"
+import { ChevDownIcon, USAFlag } from "../images"
 
 const Navigation = (props: any) => {
 	const { headerType, navActive } = props
@@ -13,133 +14,48 @@ const Navigation = (props: any) => {
 		setDropdown(!dropdown)
 	}
 
-	return <>{/* <nav id={style.nav} className={`${navActive ? style.active : ""}`}>
-				{headerType === "player" ? (
-					<>
-						<ul id={style.nav_list}>
-							<li>
-								<Link href="/player" className={router.pathname === "/player" ? style.active : ""}>
-									Dashboard
-								</Link>
-							</li>
-							<li>
-								<Link href="/player/booking" className={router.pathname === "/player/booking" ? style.active : ""}>
-									Booking
-								</Link>
-							</li>
-							<li>
-								<Link href="/player/wishlists" className={router.pathname === "/player/wishlists" ? style.active : ""}>
-									Wishlists
-								</Link>
-							</li>
-						</ul>
-						<ul id={style.icon_btn}>
-							<li>
-								<Link href="/player/notifications" className={router.pathname === "/player/notifications" ? style.active : ""}>
-									<Image width={100} height={100} src={IconBell} alt="" />
-								</Link>
-							</li>
-							<li>
-								<Link href="/player/messages" className={router.pathname === "/player/messages" ? style.active : ""}>
-									<Image width={100} height={100} src={IconEnvelope} alt="" />
-								</Link>
-							</li>
-						</ul>
-						<div id={style.pro_btn} className={style.dropdown}>
-							<div className={`${style.ico} ${style.fill} ${style.round}`} onClick={dropdownHandle}>
-								<Image width={100} height={100} src={PhotoUser_01} alt="" />
-							</div>
-							<ul className={`${style.dropdown_menu} ${dropdown && style.active}`}>
-								<li>
-									<Link href="/player">Dashboard</Link>
-								</li>
-								<li>
-									<Link href="/player/booking">Bookings</Link>
-								</li>
-								<li>
-									<Link href="/production/signin">Sign out</Link>
-								</li>
-							</ul>
-						</div>
-					</>
-				) : headerType === "organizer" ? (
-					<>
-						<ul id={style.nav_list}>
-							<li>
-								<Link href="/organizer" className={router.pathname === "/organizer" ? style.active : ""}>
-									Dashboard
-								</Link>
-							</li>
-							<li>
-								<Link href="/organizer/transactions" className={router.pathname === "/organizer/transactions" ? style.active : ""}>
-									Transactions
-								</Link>
-							</li>
-							<li>
-								<Link href="/organizer/tournaments" className={router.pathname === "/organizer/tournaments" ? style.active : ""}>
-									Tournaments
-								</Link>
-							</li>
-						</ul>
-						<ul id={style.icon_btn}>
-							<li>
-								<Link href="/organizer/notifications" className={router.pathname === "/organizer/notifications" ? style.active : ""}>
-									<Image width={100} height={100} src={IconBell} alt="" />
-								</Link>
-							</li>
-							<li>
-								<Link href="/organizer/messages" className={router.pathname === "/organizer/messages" ? style.active : ""}>
-									<Image width={100} height={100} src={IconEnvelope} alt="" />
-								</Link>
-							</li>
-						</ul>
-						<div id={style.pro_btn} className={style.dropdown}>
-							<div className={`${style.ico} ${style.fill} ${style.round}`} onClick={dropdownHandle}>
-								<Image width={100} height={100} src={PhotoUser_01} alt="" />
-							</div>
-							<ul className={`${style.dropdown_menu} ${dropdown && style.active}`}>
-								<li>
-									<Link href="/organizer">Dashboard</Link>
-								</li>
-								<li>
-									<Link href="/organizer/transactions">Transactions</Link>
-								</li>
-								<li>
-									<Link href="/production/signin">Sign out</Link>
-								</li>
-							</ul>
-						</div>
-					</>
-				) : (
-					<ul id={style.nav_list}>
-						<li>
-							<Link href="/production" className={router.pathname === "/production" ? style.active : ""}>
-								Home
-							</Link>
-						</li>
-						<li>
-							<Link href="/production/search" className={router.pathname === "/production/search" ? style.active : ""}>
-								Search
-							</Link>
-						</li>
-						<li>
-							<Link href="/production/works" className={router.pathname === "/production/works" ? style.active : ""}>
-								How it works
-							</Link>
-						</li>
-						<li>
-							<Link href="/production/signin" className={router.pathname === "/production/signin" ? style.active : ""}>
-								Sign in
-							</Link>
-						</li>
-						<li>
-							<Link href="/production/signup" className={router.pathname === "/production/signup" ? style.active : ""}>
-								Sign up
-							</Link>
-						</li>
-					</ul>
-				)}
-			</nav> */}</>
+	return (
+		<>
+			<nav id={style.nav} className={`${navActive ? style.active : ""}`}>
+				<ul id={style.nav_list}>
+					<li>
+						<Link href="/production/login" className={router.pathname === "/production/login" ? style.active : ""}>
+							Affiliate Login
+						</Link>
+					</li>
+					<li>
+						<Link href="/production/pricing" className={router.pathname === "/production/pricing" ? style.active : ""}>
+							Pricing
+						</Link>
+					</li>
+					<li>
+						<Link href="/production/refund-policy" className={router.pathname === "/production/refund-policy" ? style.active : ""}>
+							Refund Policy
+						</Link>
+					</li>
+					<li>
+						<Link href="/production/faq" className={router.pathname === "/production/faq" ? style.active : ""}>
+							FAQ&lsquo;s
+						</Link>
+					</li>
+					<li className={style.btn_links}>
+						<Link href="/production/register" className={`${style.site_btn} ${style.blank}`}>
+							Get Started
+						</Link>
+					</li>
+					<li>
+						<Link href="/production/login" className={`${style.site_btn} ${style.blank} ${style.simple_stroke}`}>
+							Login
+						</Link>
+					</li>
+				</ul>
+				<button type="button" id={style.lang_dropdown}>
+					<Image width={60} height={60} src={USAFlag} alt="" className={style.flag_icon} /> English
+					<Image width={30} height={30} src={ChevDownIcon} alt="" />
+				</button>
+			</nav>
+		</>
+	)
 }
 
 export default Navigation

@@ -34,12 +34,12 @@ const Header = (props: any) => {
 				<link rel="icon" href="/images/favicon.png" />
 			</Head>
 			<header id={style.header} className={`${header !== "production" ? style.logged : ""}`}>
+				<HeaderStrip />
 				<div className={style.contain}>
 					<Logo />
 					<button type="button" className={`${style.toggle} ${navActive ? style.active : ""}`} onClick={navToggleHandle}>
 						<span></span>
 					</button>
-					{header === "production" ? <HeaderStrip /> : null}
 					<Navigation headerType={header} navActive={navActive} />
 				</div>
 			</header>

@@ -114,8 +114,18 @@
 		}
 	}
 	&.transparent {
-		background: #f1f0ff;
+		// background: #f1f0ff;
+		background: transparent;
 		color: var(--prime_color);
+		&:hover {
+			background: var(--prime_color);
+			color: var(--light);
+		}
+	}
+	&.simple_stroke {
+		background: transparent;
+		color: var(--light);
+		border: 0.1rem solid;
 		&:hover {
 			background: var(--prime_color);
 			color: var(--light);

@@ -47,6 +47,10 @@ html {
 			-webkit-box-flex: 1;
 			-ms-flex: 1;
 			flex: 1;
+			width: 100%;
+			section {
+				width: 100%;
+			}
 		}
 		section {
 			overflow: hidden;
@@ -73,7 +77,7 @@ body {
 	font-weight: 400;
 	margin: 0;
 	padding: 0;
-	padding-top: 8.8rem;
+	padding-top: 13.6rem;
 	line-height: 1.6;
 	word-break: break-word;
 	-webkit-transition: var(--transition);
@@ -98,7 +102,8 @@ body {
 			&:focus,
 			&:hover {
 				outline: none !important;
-				text-decoration: none !important;
+				// text-decoration: none !important;
+				text-decoration: none;
 			}
 		}
 		button {
@@ -375,6 +380,17 @@ input {
 */
 
 .slick-carousel {
+	&.slick-folio {
+		.slick-list {
+			margin: -2rem;
+			.slick-slide {
+				padding: 2rem;
+				&:not(.slick-current) {
+					opacity: 0.5;
+				}
+			}
+		}
+	}
 	&:not(:hover) {
 		.slick-arrow {
 			&.slick-prev {
