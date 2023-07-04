@@ -114,7 +114,8 @@
 		}
 	}
 	&.transparent {
-		background: #f1f0ff;
+		// background: #f1f0ff;
+		background: transparent;
 		color: var(--prime_color);
 		&:hover {
 			background: var(--prime_color);

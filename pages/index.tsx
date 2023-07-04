@@ -5,7 +5,7 @@ export default function Home() {
 	useEffect(() => {
 		const { pathname } = Router
 		if (pathname == "/") {
-			Router.push("/production/login")
+			Router.push("/production")
 		}
 	}, [])
 	return ""

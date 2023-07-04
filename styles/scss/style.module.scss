@@ -1,6 +1,6 @@
 /*
 |----------------------------------------------------------------------
-|       Body
+|		Body
 |----------------------------------------------------------------------
 */
 
@@ -30,7 +30,7 @@
 
 /*
 |----------------------------------------------------------------------
-|       Logo
+|		Logo
 |----------------------------------------------------------------------
 */
 
@@ -63,14 +63,15 @@
 		@include filter(1);
 	}
 	footer & {
-		max-width: 8rem;
+		max-width: 22rem;
 		height: auto;
+		@include filter(1);
 	}
 }
 
 /*
 |----------------------------------------------------------------------
-|       Header
+|		Header
 |----------------------------------------------------------------------
 */
 
@@ -215,7 +216,7 @@
 
 /*
 |----------------------------------------------------------------------
-|       Banner
+|		Banner
 |----------------------------------------------------------------------
 */
 
@@ -268,7 +269,7 @@
 
 /*
 |----------------------------------------------------------------------
-|       Choose
+|		Choose
 |----------------------------------------------------------------------
 */
 
@@ -286,7 +287,7 @@
 
 /*
 |----------------------------------------------------------------------
-|       Consult
+|		Consult
 |----------------------------------------------------------------------
 */
 
@@ -362,106 +363,157 @@
 
 /*
 |----------------------------------------------------------------------
-|       Footer
+|		Combo Section
 |----------------------------------------------------------------------
 */
 
-#footer {
-	background: var(--dark);
-	padding: 6rem 0;
-	margin-top: auto;
-	overflow: hidden;
-	.main_row {
-		> .column1 {
-			width: 25%;
-			@include ipad {
-				width: 100%;
-			}
-		}
-		> .column2,
-		> .column3 {
-			width: 20%;
-			@include ipad {
-				width: 50%;
-			}
-		}
-		> .column4 {
-			width: 30%;
-			@include ipad {
-				width: 50%;
-			}
-			@include mobile {
-				width: 100%;
-			}
+#combo_section {
+	@include bg(100% 100%);
+}
+
+/*__________ Steps __________*/
+
+#steps {
+	position: relative;
+	padding: 14rem 0;
+	.wrapper {
+		max-width: 119rem;
+		margin: auto;
+	}
+	.content {
+		max-width: 110rem;
+		margin: 0 auto 4rem;
+		text-align: center;
+	}
+	.image {
+		position: absolute;
+		top: 0;
+		left: -12rem;
+		bottom: -10rem;
+		width: 60rem;
+		> img {
+			@include object(contain);
 		}
 	}
-	a {
-		color: var(--light_gray);
-		&:hover {
-			color: var(--prime_color);
-		}
-	}
-	.title {
-		font-size: 1.6rem;
-		font-weight: 600;
-		margin-bottom: 1.6rem;
-		text-transform: uppercase;
-	}
-	.list {
-		@include list;
-		> li {
-			&:not(:nth-last-child(1)) {
-				margin-bottom: 1rem;
+	.inner {
+		@include flex(center);
+		border-radius: 1rem;
+		background: var(--light);
+		padding: 7.6rem 4.6rem 6.4rem 3.2rem;
+		box-shadow: 0 0.4rem 3.4rem 0 rgba(58, 54, 219, 0.15);
+		.ico {
+			position: relative;
+			width: 6rem;
+			min-width: 6rem;
+			height: 7rem;
+			margin-right: 5rem;
+			> span {
+				position: absolute;
+				top: 0;
+				right: -1.4rem;
+				color: var(--prime_color);
+				font-size: 4rem;
+				font-weight: 700;
+				line-height: 1;
+				opacity: 0.2;
 			}
 		}
+		.txt {
+			font-size: 1.4rem;
+		}
+	}
+}
+
+/*__________ Score __________*/
+
+#score {
+	position: relative;
+	padding: 8rem 0 6rem;
+	.wrapper {
+		@include flex;
+		@include gap(2rem 12rem);
+		.column {
+			flex: 1 1 30rem;
+		}
+	}
+	.content {
+		// font-size: 1.6rem;
+		font-size: 1.4rem;
 	}
 	form {
-		p {
-			font-size: 1.2rem;
-			line-height: 140%;
-			> a {
-				text-decoration: underline;
-			}
+		position: relative;
+		min-width: 79rem;
+		padding: 5rem 4.5rem;
+		border-radius: 1rem;
+		background: var(--light);
+		box-shadow: 0 0.4rem 3.4rem 0 rgba(58, 54, 219, 0.15);
+		overflow: hidden;
+		&::before,
+		&::after {
+			content: "";
+			height: 1rem;
+			background: var(--prime_color);
 		}
-		.form_blk {
-			> p {
-				position: relative;
-				@include flex(center);
-				button {
-					@include pos($l: null, $r: 1rem);
-					background: var(--light_gray);
-					margin: auto;
-				}
-			}
+		&::before {
+			@include pos($b: null);
+		}
+		&::after {
+			@include pos($t: null);
+		}
+		.txt {
+			font-size: 1.6rem;
 		}
 	}
-	.copyright {
-		@include flex(center, space-between);
-		font-size: 1.2rem;
-		margin-top: 6rem;
-		padding-top: 3rem;
-		border-top: 0.1rem solid rgba(var(--light_rgb), 0.2);
-		@include ipad {
-			display: block;
+}
+
+/*__________ Testimonials __________*/
+
+#testimonials {
+	position: relative;
+	padding: 4rem 0;
+	.wrapper {
+		@include flex(center);
+		@include gap(2rem 6rem);
+		margin-left: 12.5rem;
+		.txt {
+			width: 100%;
+			max-width: 54rem;
 		}
-		p {
-			margin: 0;
-			@include ipad {
-				margin: 0 0 2rem;
-			}
+		.slider {
+			width: calc(100% - 54rem);
 		}
-		.terms_list {
-			@include list;
-			@include flex($flow: wrap);
-			margin: -1rem -2rem;
-			@include ipad {
-				margin: -1rem;
-			}
-			> li {
-				padding: 1rem 2rem;
-				@include ipad {
-					padding: 1rem;
-				}
+	}
+	.slick_folio {
+		margin-right: -60rem;
+	}
+}
+
+.folio_blk {
+	background: var(--light);
+	border-radius: 1rem;
+	padding: 3.5rem 4.5rem;
+	box-shadow: 0 0.4rem 3.4rem 0 rgba(58, 54, 219, 0.15);
+	overflow: hidden;
+	.txt_blk {
+		margin-bottom: 5rem;
+	}
+	.ico_blk {
+		@include flex(center);
+		.ico {
+			width: 8rem;
+			min-width: 8rem;
+			height: 8rem;
+			margin-right: 2rem;
+		}
+		.name {
+			font-size: 2rem;
+			font-weight: 700;
+			> span {
+				display: block;
+				color: #384455;
+				font-size: 1.4rem;
+				font-weight: 400;
+				margin-top: 0.5rem;
 			}
 		}
 	}
@@ -469,7 +521,77 @@
 
 /*
 |----------------------------------------------------------------------
-|       X Banner
+|		Footer
+|----------------------------------------------------------------------
+*/
+
+#footer {
+	color: var(--light);
+	margin-top: auto;
+	.wrapper {
+		background: var(--prime_color);
+		padding-top: 3rem;
+	}
+	a {
+		color: var(--light);
+	}
+	.info {
+		@include flex;
+		@include gap(2rem);
+		margin: 4rem 0 5rem;
+		h3 {
+			width: 18rem;
+			min-width: 18rem;
+			margin: 0.4rem 0 0;
+		}
+		ul {
+			@include list;
+			@include flex($flow: column);
+			@include gap(0.5rem 4rem);
+			> li {
+				> a,
+				> span {
+					@include i_flex(center, center);
+					@include gap(1rem);
+					color: var(--light);
+					font-size: 1.8rem;
+					> img {
+						@include object(contain);
+						width: 3rem;
+						min-width: 3rem;
+						height: 3rem;
+					}
+				}
+			}
+		}
+	}
+	.copyright {
+		position: relative;
+		background: #211ea7;
+		padding: 1.5rem 0;
+		z-index: 2;
+		p {
+			a {
+				color: inherit;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+	.image {
+		position: absolute;
+		right: 0;
+		bottom: 5rem;
+		width: 50%;
+		max-width: 100rem;
+		z-index: 1;
+	}
+}
+
+/*
+|----------------------------------------------------------------------
+|		X Banner
 |----------------------------------------------------------------------
 */
 
@@ -515,7 +637,7 @@
 
 /*
 |----------------------------------------------------------------------
-|       Logon
+|		Logon
 |----------------------------------------------------------------------
 */
 
@@ -749,7 +871,7 @@
 
 /*
 |----------------------------------------------------------------------
-|       Dashboard
+|		Dashboard
 |----------------------------------------------------------------------
 */
 

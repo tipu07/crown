@@ -52,6 +52,7 @@ export { default as IconDownload2 } from "/public/images/icon-download2.svg"
 export { default as IconPhone } from "/public/images/icon-phone.svg"
 export { default as IconEnvelope2 } from "/public/images/icon-envelope2.svg"
 
+export { default as CrownLogoIcon } from "/public/images/crown_logo_icon.svg"
 export { default as SaveIcon } from "/public/images/save_icon.svg"
 export { default as PlayIcon } from "/public/images/play_icon.svg"
 export { default as ZelleIcon } from "/public/images/zelle_icon.svg"
