@@ -56,7 +56,7 @@ const Score = () => {
 								</div>
 								<div className={`${style.txt} text-center`}>
 									<p>Don&ldquo;t worry, this is secure and won&ldquo;t hurt your credit score.</p>
-									<p className="small mt-5">
+									<p className="small mt-5 p-0">
 										By clicking &quot;Submit&quot; I agree by electronic signature to: (1) be contacted by Crowncreditpro about credit repair or credit repair marketing by a live agent, artificial or prerecorded voice, and SMS text at my residential or cellular number, dialed manually or by autodialer even if my phone number is on a do-not-call registry, and by email (consent to be contacted is not a condition to purchase services); and (2) the <Link href="/production/privacy">Privacy Policy</Link> and <Link href="/production/terms">Terms of Use</Link> (including this arbitration provision ).
 									</p>
 								</div>
