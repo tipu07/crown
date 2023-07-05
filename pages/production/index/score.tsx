@@ -30,7 +30,7 @@ const Score = () => {
 											<input type="text" name="" id="" className={style.input} placeholder="Enter email address" />
 										</div>
 									</div>
-									<div className="col-md-4">
+									<div className="col-4">
 										<div className={style.form_blk}>
 											<h6>Code</h6>
 											<select name="" id="" className={style.input}>
@@ -42,7 +42,7 @@ const Score = () => {
 											</select>
 										</div>
 									</div>
-									<div className="col-md-8">
+									<div className="col-8">
 										<div className={style.form_blk}>
 											<h6>Phone Number</h6>
 											<input type="text" name="" id="" className={style.input} placeholder="00000 - 00000" />
