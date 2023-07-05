@@ -2,22 +2,16 @@ import Link from "next/link"
 import style from "@/styles/scss/web.module.scss"
 import { useRouter } from "next/router"
 import Image from "next/image"
-import { useState } from "react"
 import { ChevDownIcon, USAFlag } from "../images"
 
 const Navigation = (props: any) => {
-	const { headerType, navActive } = props
-	const [dropdown, setDropdown] = useState(false)
+	const { navActive } = props
 	const router = useRouter()
-
-	const dropdownHandle = () => {
-		setDropdown(!dropdown)
-	}
 
 	return (
 		<>
-			<nav id={style.nav} className={`${navActive ? style.active : ""}`}>
-				<ul id={style.nav_list}>
+			<nav id={style.nav}>
+				<ul id={style.nav_list} className={`${navActive ? style.active : ""}`}>
 					<li>
 						<Link href="/production/login" className={router.pathname === "/production/login" ? style.active : ""}>
 							Affiliate Login

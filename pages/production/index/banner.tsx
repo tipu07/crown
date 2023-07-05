@@ -8,6 +8,9 @@ const Banner = () => {
 	return (
 		<>
 			<section id={style.banner} style={{ backgroundImage: "url(" + BannerPhoto.src + ")" }}>
+				<div className={style.image}>
+					<Image width={2000} height={2000} src={MainPhoto} alt="" />
+				</div>
 				<div className={style.contain}>
 					<div className={style.outer}>
 						<div className={style.content}>
@@ -23,9 +26,6 @@ const Banner = () => {
 							</div>
 						</div>
 					</div>
-				</div>
-				<div className={style.image}>
-					<Image width={2000} height={2000} src={MainPhoto} alt="" />
 				</div>
 			</section>
 		</>
