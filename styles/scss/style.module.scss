@@ -501,6 +501,7 @@
 		border-radius: 1rem;
 		background: var(--light);
 		padding: 7.6rem 4.6rem 6.4rem 3.2rem;
+		-webkit-box-shadow: 0 0.4rem 3.4rem 0 rgba(58, 54, 219, 0.15);
 		box-shadow: 0 0.4rem 3.4rem 0 rgba(58, 54, 219, 0.15);
 		@include mobile {
 			padding: 4rem 3.2rem;
@@ -540,8 +541,12 @@
 			@include flex($flow: column-reverse);
 		}
 		.column {
+			-webkit-box-flex: 1;
+			-ms-flex: 1 1 30rem;
 			flex: 1 1 30rem;
 			@include ipad_sm {
+				-webkit-box-flex: 0;
+				-ms-flex: none;
 				flex: none;
 			}
 		}
@@ -556,6 +561,7 @@
 		padding: 5rem 4.5rem;
 		border-radius: 1rem;
 		background: var(--light);
+		-webkit-box-shadow: 0 0.4rem 3.4rem 0 rgba(58, 54, 219, 0.15);
 		box-shadow: 0 0.4rem 3.4rem 0 rgba(58, 54, 219, 0.15);
 		overflow: hidden;
 		@include ipad_sm {
@@ -621,6 +627,7 @@
 	background: var(--light);
 	border-radius: 1rem;
 	padding: 3.5rem 4.5rem;
+	-webkit-box-shadow: 0 0.4rem 3.4rem 0 rgba(58, 54, 219, 0.15);
 	box-shadow: 0 0.4rem 3.4rem 0 rgba(58, 54, 219, 0.15);
 	overflow: hidden;
 	.txt_blk {
@@ -1694,6 +1701,18 @@
 			}
 		}
 	}
+	.ico_blk {
+		@include flex(center);
+		@include gap(1.2rem);
+		.ico {
+			width: 4rem;
+			min-width: 4rem;
+			height: 4rem;
+		}
+		.name {
+			font-weight: 600;
+		}
+	}
 	.status {
 		background: #eee;
 		color: var(--black);
@@ -1726,6 +1745,10 @@
 			background: #ffdfe0;
 			color: #ee6164;
 		}
+	}
+	select.input {
+		min-width: 10rem;
+		height: 4rem;
 	}
 	.action_btn {
 		@include flex;
@@ -2980,6 +3003,58 @@
 					}
 				}
 			}
+		}
+	}
+}
+
+.table_pagination {
+	@include flex(center);
+	margin-top: 3rem;
+	> * {
+		-webkit-box-flex: 1;
+		-ms-flex: 1;
+		flex: 1;
+	}
+	> p {
+		font-size: 1.4rem;
+		font-weight: 600;
+	}
+	> .page_list {
+		@include list;
+		@include flex(center, center);
+		@include gap(2rem);
+		> li {
+			> span {
+				width: 2.6rem;
+			}
+			> span,
+			> button {
+				@include flex(center, center);
+				min-width: 2.6rem;
+				height: 2.6rem;
+				font-size: 1.4rem;
+				font-weight: 500;
+				cursor: pointer;
+				&.active {
+					background: #b0a5c4;
+					color: var(--light);
+					border-radius: 10rem;
+				}
+			}
+		}
+	}
+	> .rows_per {
+		@include flex(center, flex-end);
+		@include gap(0 2rem);
+		> span {
+			font-size: 1.4rem;
+			font-weight: 600;
+		}
+		select {
+			font-size: 1.6rem;
+			padding: 0.2rem 0.5rem;
+			border: 0.1rem solid var(--gray);
+			border-radius: 0.4rem;
 		}
 	}
 }

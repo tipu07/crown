@@ -87,6 +87,9 @@
 			background: var(--prime_color);
 			color: var(--light);
 		}
+		> img {
+			@include filter(none);
+		}
 	}
 	&.blank {
 		background: var(--light);
@@ -133,6 +136,9 @@
 	}
 	&.stroke {
 		border: 0.1rem solid var(--prime_color);
+	}
+	&.light_stroke {
+		border: 0.1rem solid var(--gray);
 	}
 	&.round {
 		border-radius: 5rem;
