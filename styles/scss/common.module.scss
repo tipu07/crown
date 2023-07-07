@@ -693,8 +693,8 @@
 
 .switch {
 	position: relative;
-	width: 4rem;
-	min-width: 4rem;
+	width: 3.6rem;
+	min-width: 3.6rem;
 	height: 2rem;
 	cursor: pointer;
 	* {
@@ -757,7 +757,7 @@
 		}
 		&:after {
 			content: "";
-			background: rgba(var(--light_rgb), 0.3);
+			background: rgba(var(--black_rgb), 0.3);
 			// background: #49474a;
 			border-radius: 5rem;
 			-webkit-transition: all linear 0.3s;
