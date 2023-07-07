@@ -1117,7 +1117,7 @@
 		}
 		.srch_blk {
 			position: relative;
-			min-width: 26rem;
+			min-width: 30rem;
 			margin-right: 3rem;
 			@include mobile_md {
 				min-width: 0;
@@ -1146,6 +1146,45 @@
 					-webkit-box-flex: 1;
 					-ms-flex: 1 1 15rem;
 					flex: 1 1 15rem;
+				}
+			}
+		}
+	}
+	.tab_head {
+		margin: 0 -3rem;
+		// padding: 0.8rem 3rem 1.6rem;
+		padding: 0.8rem 3rem 0;
+		border-top: inherit;
+		ul {
+			@include list;
+			@include flex;
+			@include gap(0 5rem);
+			> li {
+				> button {
+					position: relative;
+					color: #6a7380;
+					font-size: 1.4rem;
+					font-weight: 500;
+					line-height: 1;
+					padding-bottom: 1.8rem;
+					&:hover {
+						color: var(--prime_color);
+					}
+					&::after {
+						content: "";
+						position: absolute;
+						left: 0;
+						right: 0;
+						bottom: 0;
+						height: 0.2rem;
+						background: transparent;
+					}
+					&.active {
+						color: var(--prime_color);
+						&::after {
+							background: var(--prime_color);
+						}
+					}
 				}
 			}
 		}
@@ -1745,9 +1784,14 @@
 			background: #ffdfe0;
 			color: #ee6164;
 		}
+		&.gray {
+			background: #eaecf0;
+			color: #344054;
+		}
 	}
 	select.input {
-		min-width: 10rem;
+		width: 12rem;
+		min-width: 12rem;
 		height: 4rem;
 	}
 	.action_btn {
@@ -1768,6 +1812,20 @@
 				width: 1.2rem;
 				min-width: 1.2rem;
 				height: 1.2rem;
+			}
+		}
+	}
+	.action_btn_list {
+		@include flex;
+		@include gap(0 2rem);
+		> a,
+		> button {
+			@include flex(center);
+			width: 2.4rem;
+			min-width: 2.4rem;
+			height: 2.4rem;
+			> img {
+				@include object(contain);
 			}
 		}
 	}
