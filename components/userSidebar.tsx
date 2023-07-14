@@ -25,7 +25,7 @@ const UserSidebar = (props: any) => {
 				<div className={style.sidebar_inner}>
 					<ul>
 						<li>
-							<Link href="/user/home" className={router.pathname === "/user/home" ? style.active : ""}>
+							<Link href="/user" className={router.pathname === "/user" ? style.active : ""}>
 								<Image width={100} height={100} src={IconDashboard} alt="" />
 								Home
 							</Link>

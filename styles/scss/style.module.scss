@@ -3116,3 +3116,264 @@
 		}
 	}
 }
+
+#invoices,
+#user_dashboard {
+	.card_blk {
+		position: relative;
+		-webkit-box-flex: 1;
+		-ms-flex: 1;
+		flex: 1;
+		background: var(--light);
+		padding: 2.4rem;
+		border: 0.1rem solid #eaecf0;
+		border-radius: 1rem;
+		&:not(:nth-last-child(1)) {
+			margin-bottom: 2.4rem;
+		}
+		.more {
+			position: absolute;
+			top: 2rem;
+			right: 2rem;
+			width: 2rem;
+			height: 2rem;
+		}
+		.title {
+			color: #475467;
+			font-size: 1.4rem;
+			font-weight: 500;
+			margin-bottom: 1.2rem;
+		}
+		.price {
+			-webkit-box-flex: 1;
+			-ms-flex: 1 1 22rem;
+			flex: 1 1 22rem;
+			color: #101828;
+			font-size: 3.2rem;
+			font-weight: 600;
+			line-height: 1.2;
+			&_blk {
+				@include flex(center, space-between, wrap);
+				@include gap(0.4rem 1rem);
+				.percent {
+					@include i_flex(center);
+					@include gap(0.4rem);
+					font-size: 1.4rem;
+					font-weight: 500;
+					line-height: 2rem;
+					mix-blend-mode: multiply;
+					padding: 0.2rem 1rem;
+					border-radius: 1.6rem;
+					white-space: nowrap;
+					&.up {
+						background: #ecfdf3;
+						color: #067647;
+						border: 0.1rem solid #abefc6;
+					}
+					&.down {
+						background: #fef3f2;
+						color: #b42318;
+						border: 0.1rem solid #fecdca;
+					}
+					> img {
+						width: 1.6rem;
+						min-width: 1.6rem;
+						height: 1.6rem;
+					}
+				}
+			}
+		}
+	}
+	.cards_block {
+		@include flex;
+		@include gap(2.4rem);
+		> .column {
+			@include flex($flow: column);
+			&:nth-child(1) {
+				width: 37rem;
+				min-width: 37rem;
+			}
+			&:nth-child(2) {
+				-webkit-box-flex: 1;
+				-ms-flex: 1;
+				flex: 1;
+			}
+			&:nth-child(3) {
+				width: 27rem;
+				min-width: 27rem;
+			}
+		}
+	}
+	.invoice_report {
+		.top {
+			@include flex(center, space-between);
+		}
+		.month_list {
+			@include list;
+			@include flex($flow: wrap);
+			@include gap(0.8rem);
+			color: #667085;
+			margin: 1rem 0;
+			> li {
+				> span {
+					@include i_flex(center);
+					background: var(--light);
+					font-size: 1.4rem;
+					font-weight: 600;
+					line-height: 1.2;
+					padding: 0.8rem 1.2rem;
+					border-radius: 0.8rem;
+					&.active {
+						background: rgba(176, 175, 241, 0.3);
+					}
+				}
+			}
+		}
+	}
+}
+#user_dashboard {
+	.customer_info {
+		margin-top: 4rem;
+		.wrapper {
+			@include flex;
+			@include gap(2.4rem);
+			> .column {
+				@include flex;
+				width: 33.3334%;
+			}
+		}
+		.customer_card {
+			position: relative;
+			-webkit-box-flex: 1;
+			-ms-flex: 1;
+			flex: 1;
+			background: var(--light);
+			padding: 2.4rem;
+			border: 0.1rem solid #eaecf0;
+			border-radius: 1rem;
+			&:not(:nth-last-child(1)) {
+				margin-bottom: 2.4rem;
+			}
+			.more {
+				position: absolute;
+				top: 2rem;
+				right: 2rem;
+				width: 2rem;
+				height: 2rem;
+			}
+			.title {
+				@include flex(center);
+				@include gap(0 1.6rem);
+				color: #101828;
+				font-size: 1.6rem;
+				font-weight: 600;
+				margin-bottom: 2.4rem;
+				> img {
+					@include object(contain);
+					width: 4.8rem;
+					min-width: 4.8rem;
+					height: 4.8rem;
+				}
+			}
+			.price {
+				@include flex;
+				@include gap(0.4rem 0.8rem);
+				-webkit-box-flex: 1;
+				-ms-flex: 1 1 22rem;
+				flex: 1 1 22rem;
+				color: #101828;
+				font-size: 3.2rem;
+				font-weight: 600;
+				line-height: 1.2;
+				.percent {
+					@include i_flex(center);
+					@include gap(0.4rem);
+					font-size: 1.4rem;
+					font-weight: 500;
+					line-height: 2rem;
+					mix-blend-mode: multiply;
+					white-space: nowrap;
+					&.up {
+						color: #067647;
+					}
+					&.down {
+						color: #b42318;
+					}
+					> img {
+						width: 2rem;
+						min-width: 2rem;
+						height: 2rem;
+					}
+				}
+				&_blk {
+					@include flex(flex-end, space-between);
+					@include gap(0.4rem 1rem);
+					.graph_img {
+						width: 13rem;
+						min-width: 13rem;
+					}
+				}
+			}
+		}
+	}
+	.consult_analytics {
+		margin-top: 4rem;
+		.wrapper {
+			@include flex;
+			@include gap(2.4rem);
+			> .column {
+				@include flex;
+				width: 33.3334%;
+			}
+		}
+		.consult_card {
+			position: relative;
+			-webkit-box-flex: 1;
+			-ms-flex: 1;
+			flex: 1;
+			background: var(--light);
+			padding: 2.4rem;
+			border: 0.1rem solid #eaecf0;
+			border-radius: 1rem;
+			&:not(:nth-last-child(1)) {
+				margin-bottom: 2.4rem;
+			}
+			.more {
+				position: absolute;
+				top: 2rem;
+				right: 2rem;
+				width: 2rem;
+				height: 2rem;
+			}
+			.title {
+				@include flex(center);
+				@include gap(0 1.6rem);
+				color: #101828;
+				font-size: 1.6rem;
+				font-weight: 600;
+				margin-bottom: 2.4rem;
+				> img {
+					@include object(contain);
+					width: 4.8rem;
+					min-width: 4.8rem;
+					height: 4.8rem;
+				}
+			}
+			.price {
+				@include flex;
+				@include gap(0.4rem 0.8rem);
+				-webkit-box-flex: 1;
+				-ms-flex: 1 1 22rem;
+				flex: 1 1 22rem;
+				color: #101828;
+				font-size: 3.2rem;
+				font-weight: 600;
+				line-height: 1.2;
+				&_blk {
+					@include flex(flex-end, space-between);
+					@include gap(0.4rem 1rem);
+				}
+			}
+		}
+	}
+}

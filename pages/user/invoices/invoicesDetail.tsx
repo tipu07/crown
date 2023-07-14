@@ -3,10 +3,13 @@ import style from "@/styles/scss/web.module.scss"
 import Image from "next/image"
 import { IconDownload2, IconFilter, IconSearch } from "@/components/images"
 import InvoicesTable from "./invoicesTable"
+import CardsBlock from "./cardsBlock"
 
 const InvoicesDetail = () => {
 	return (
 		<>
+			<CardsBlock />
+			<div className="pb-5"></div>
 			<div className={style.in_blk}>
 				<div className={style.top_head}>
 					<div className={style.srch_blk}>
