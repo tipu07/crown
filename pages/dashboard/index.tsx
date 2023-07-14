@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import style from "@/styles/scss/web.module.scss"
 import DashboardHeader from "@/components/dashboardHeader"
 import DashboardSidebar from "@/components/dashboardSidebar"
-import DashboardDetail from "./dashboard/dashboardDetail"
+import DashboardDetail from "./index/dashboardDetail"
 
 const Application = () => {
 	const [toggle, setToggle] = useState(false)
