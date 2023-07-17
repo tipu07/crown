@@ -4,6 +4,7 @@ import Image from "next/image"
 import { IconCalendar, IconDownload2, IconFilter, IconPlus, IconSearch } from "@/components/images"
 import ManageApplicationsTable from "./manageApplicationsTable"
 import TablePagination from "@/components/tablePagination"
+import Link from "next/link"
 
 const ManageApplicationsDetail = () => {
 	return (
@@ -23,9 +24,9 @@ const ManageApplicationsDetail = () => {
 						<button className={`${style.site_btn} ${style.blank} ${style.stroke}`}>
 							<Image width={100} height={100} src={IconDownload2} alt="" /> Export CSV
 						</button>
-						<button className={style.site_btn}>
+						<Link href="/user/create-application" className={style.site_btn}>
 							<Image width={100} height={100} src={IconPlus} alt="" /> Create New Application
-						</button>
+						</Link>
 					</div>
 				</div>
 				<div className={style.tab_head}>

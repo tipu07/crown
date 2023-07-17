@@ -1495,21 +1495,23 @@
 				}
 				> img {
 					@include object(contain);
-					width: 2.2rem;
-					min-width: 2.2rem;
-					height: 2.2rem;
-					margin-right: 1.5rem;
+					width: 2.8rem;
+					min-width: 2.8rem;
+					height: 2.8rem;
+					margin-right: 1rem;
 				}
 			}
 		}
 	}
 	p {
 		font-size: 1.8rem;
+		font-weight: 600;
 		margin-top: 2rem;
 		> span {
 			display: block;
 			color: #809fb8;
 			font-size: 1.4rem;
+			font-weight: 400;
 		}
 	}
 }
@@ -3373,6 +3375,92 @@
 					@include flex(flex-end, space-between);
 					@include gap(0.4rem 1rem);
 				}
+			}
+		}
+	}
+}
+
+#create_application {
+	.tab_head {
+		margin-bottom: 3rem;
+		border-bottom: inherit;
+	}
+	@extend #agreement;
+	.icon_heading {
+		@include flex(center);
+		@include gap(0.5rem);
+		> img {
+			width: 1.8rem;
+			min-width: 1.8rem;
+			height: 1.8rem;
+		}
+	}
+	hr {
+		color: #eaecf0;
+		margin: 2rem 0;
+		opacity: 1;
+	}
+	.documents {
+		.input_shield {
+			@include flex(center);
+			img {
+				width: 2.4rem;
+				min-width: 2.4rem;
+				height: 2.4rem;
+			}
+			> * {
+				background: transparent;
+				padding: 0;
+				border: 0;
+			}
+			input {
+				flex: 1;
+				margin-left: 0.5rem;
+			}
+		}
+		.input_download {
+			@include flex(center);
+			img {
+				width: 2.4rem;
+				min-width: 2.4rem;
+				height: 2.4rem;
+			}
+			> * {
+				background: transparent;
+				padding: 0;
+				border: 0;
+			}
+			button {
+				height: inherit;
+				margin: -0.6rem 0;
+				padding-left: 1.6rem;
+				border-left: inherit;
+				border-radius: 0;
+				&:hover {
+					color: var(--prime_color);
+					> img {
+						@include filter(none);
+					}
+				}
+			}
+			input {
+				flex: 1;
+				margin-right: 0.5rem;
+			}
+		}
+	}
+	.payment_method {
+		.input_pay {
+			@include flex(center);
+			background: #f9fafb;
+			> * {
+				background: transparent;
+				padding: 0;
+				border: 0;
+			}
+			input {
+				flex: 1;
+				margin-left: 0.5rem;
 			}
 		}
 	}

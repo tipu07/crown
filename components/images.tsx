@@ -66,6 +66,12 @@ export { default as IconChevRightDouble } from "/public/images/icon-chev-right-d
 export { default as IconEye } from "/public/images/icon-eye.svg"
 export { default as IconEdit2 } from "/public/images/icon-edit2.svg"
 export { default as IconTrash } from "/public/images/icon-trash.svg"
+export { default as IconTeam } from "/public/images/icon-team.svg"
+export { default as IconCog } from "/public/images/icon-cog.svg"
+export { default as IconArrowLeft } from "/public/images/icon-arrow-left.svg"
+export { default as IconHelp } from "/public/images/icon-help.svg"
+export { default as IconShield } from "/public/images/icon-shield.svg"
+export { default as IconDownloadCircle } from "/public/images/icon-download-circle.svg"
 
 export { default as CrownLogoIcon } from "/public/images/crown_logo_icon.svg"
 export { default as SaveIcon } from "/public/images/save_icon.svg"
