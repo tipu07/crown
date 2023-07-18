@@ -14,7 +14,7 @@ const FieldsetDocuments = () => {
 					<div className="col-md-6">
 						<div className="row">
 							<div className="col-md-12">
-								<div className={`${style.input} ${style.input_shield}`}>
+								<div className={`${style.input} ${style.input_icon}`}>
 									<Image width={100} height={100} src={IconShield} alt="" />
 									<input type="text" name="" id="" />
 								</div>

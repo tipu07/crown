@@ -1,55 +1,12 @@
 import React from "react"
 import style from "@/styles/scss/web.module.scss"
 import Image from "next/image"
-import { BlockUploadIcon, IconCalendar2, IconHelp, IconMail, PhotoUser_01 } from "@/components/images"
+import { BlockUploadIcon, IconCalendar2, IconEye2, IconHelp, IconMail, PhotoUser_01 } from "@/components/images"
 
-const FieldsetUserDetails = () => {
+const SettingsForm = () => {
 	return (
 		<>
 			<div className={style.user_details}>
-				<div className="row">
-					<div className="col-md-3">
-						<h5 className={style.icon_heading}>Application ID</h5>
-					</div>
-					<div className="col-md-6">
-						<div className="row">
-							<div className="col-md-12">
-								<input type="text" name="" id="" className={style.input} placeholder="eg: CP15680" />
-							</div>
-						</div>
-					</div>
-				</div>
-				<div className="row">
-					<div className="col-md-3">
-						<h5 className={style.icon_heading}>Joined & Submitted Date</h5>
-					</div>
-					<div className="col-md-6">
-						<div className="row">
-							<div className="col-md-6">
-								<input type="text" name="" id="" className={style.input} placeholder="eg: 22 June 2023" />
-							</div>
-							<div className="col-md-6">
-								<input type="text" name="" id="" className={style.input} placeholder="eg: 22 June 2023" />
-							</div>
-						</div>
-					</div>
-				</div>
-				<div className="row">
-					<div className="col-md-3">
-						<h5 className={style.icon_heading}>Sales Agent</h5>
-					</div>
-					<div className="col-md-6">
-						<div className="row">
-							<div className="col-md-6">
-								<input type="text" name="" id="" className={style.input} placeholder="eg: Lindsay" />
-							</div>
-							<div className="col-md-6">
-								<input type="text" name="" id="" className={style.input} placeholder="eg: 22 June 2023" />
-							</div>
-						</div>
-					</div>
-				</div>
-				<hr />
 				<div className="row">
 					<div className="col-md-3">
 						<h5 className={style.icon_heading}>Name</h5>
@@ -152,6 +109,27 @@ const FieldsetUserDetails = () => {
 				<hr />
 				<div className="row">
 					<div className="col-md-3">
+						<h5 className={style.icon_heading}>Password</h5>
+					</div>
+					<div className="col-md-6">
+						<div className="row">
+							<div className="col-md-12">
+								<div className="col-md-12">
+									<div className={`${style.input} ${style.input_download}`}>
+										<input type="text" name="" id="" />
+										<button type="button" className={`${style.site_btn} ${style.simple}`}>
+											<Image width={100} height={100} src={IconEye2} alt="" />
+											Change password
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<hr />
+				<div className="row">
+					<div className="col-md-3">
 						<h5 className={style.icon_heading}>Country</h5>
 					</div>
 					<div className="col-md-6">
@@ -193,22 +171,9 @@ const FieldsetUserDetails = () => {
 						</div>
 					</div>
 				</div>
-				<hr />
-				<div className="row">
-					<div className="col-md-3">
-						<h5 className={style.icon_heading}>Customer Notes</h5>
-					</div>
-					<div className="col-md-6">
-						<div className="row">
-							<div className="col-md-12">
-								<textarea name="" id="" rows={5} className={style.input} placeholder="Type something here"></textarea>
-							</div>
-						</div>
-					</div>
-				</div>
 			</div>
 		</>
 	)
 }
 
-export default FieldsetUserDetails
+export default SettingsForm
