@@ -429,9 +429,9 @@
 	@include input_height;
 	background: var(--light);
 	color: var(--black);
-	font-size: inherit;
+	font-size: 1.6rem;
 	// font-weight: inherit;
-	font-weight: 400;
+	font-weight: 500;
 	text-align: left;
 	line-height: inherit;
 	padding: 0.6rem 1.6rem;
@@ -485,7 +485,7 @@
 		background: rgba(var(--prime_color_rgb), 0.05);
 		border-color: var(--prime_color);
 	}
-	@include placeholder(rgba(var(--black_rgb), 0.5));
+	@include placeholder(rgba(var(--black_rgb), 0.3));
 	&:focus {
 		@include placeholder($opacity: 0);
 	}

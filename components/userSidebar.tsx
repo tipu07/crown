@@ -2,7 +2,7 @@ import React from "react"
 import style from "@/styles/scss/web.module.scss"
 import Logo from "./logo"
 import Image from "next/image"
-import { IconAffiliate, IconApplication2, IconCommission, IconCrowned, IconCustomer, IconDashboard, IconDispute, IconEnvelope, IconInstallment, IconInvoice, IconWithdraw, PhotoUser_01 } from "./images"
+import { IconAffiliate, IconApplication2, IconCog, IconCommission, IconCrowned, IconCustomer, IconDashboard, IconDispute, IconEnvelope, IconInstallment, IconInvoice, IconTeam, IconWithdraw, PhotoUser_01 } from "./images"
 import Link from "next/link"
 import { useRouter } from "next/router"
 
@@ -88,6 +88,18 @@ const UserSidebar = (props: any) => {
 							<Link href="/user/crowned-list" className={router.pathname === "/user/crowned-list" ? style.active : ""}>
 								<Image width={100} height={100} src={IconCrowned} alt="" />
 								Crowned List
+							</Link>
+						</li>
+						<li>
+							<Link href="/user/team" className={router.pathname === "/user/team" ? style.active : ""}>
+								<Image width={100} height={100} src={IconTeam} alt="" />
+								Team
+							</Link>
+						</li>
+						<li>
+							<Link href="/user/settings" className={router.pathname === "/user/settings" ? style.active : ""}>
+								<Image width={100} height={100} src={IconCog} alt="" />
+								Settings
 							</Link>
 						</li>
 					</ul>
