@@ -115,11 +115,11 @@ const SettingsForm = () => {
 						<div className="row">
 							<div className="col-md-12">
 								<div className="col-md-12">
-									<div className={`${style.input} ${style.input_download}`}>
+									<div className={`${style.input} ${style.input_password}`}>
 										<input type="text" name="" id="" />
 										<button type="button" className={`${style.site_btn} ${style.simple}`}>
 											<Image width={100} height={100} src={IconEye2} alt="" />
-											Change password
+											<span>Change password</span>
 										</button>
 									</div>
 								</div>

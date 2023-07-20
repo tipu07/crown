@@ -109,7 +109,7 @@ const FieldsetCreditReports = () => {
 									<input type="text" name="" id="" />
 									<button type="button" className={`${style.site_btn} ${style.simple}`}>
 										<Image width={100} height={100} src={IconDownloadCircle} alt="" />
-										Download
+										<span>Download</span>
 									</button>
 								</div>
 							</div>
@@ -129,7 +129,7 @@ const FieldsetCreditReports = () => {
 									<input type="text" name="" id="" />
 									<button type="button" className={`${style.site_btn} ${style.simple}`}>
 										<Image width={100} height={100} src={IconDownloadCircle} alt="" />
-										Download
+										<span>Download</span>
 									</button>
 								</div>
 							</div>
@@ -149,7 +149,7 @@ const FieldsetCreditReports = () => {
 									<input type="text" name="" id="" />
 									<button type="button" className={`${style.site_btn} ${style.simple}`}>
 										<Image width={100} height={100} src={IconDownloadCircle} alt="" />
-										Download
+										<span>Download</span>
 									</button>
 								</div>
 							</div>

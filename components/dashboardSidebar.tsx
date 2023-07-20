@@ -25,7 +25,7 @@ const DashboardSidebar = (props: any) => {
 				<div className={style.sidebar_inner}>
 					<ul>
 						<li>
-							<Link href="/dashboard/dashboard" className={router.pathname === "/dashboard/dashboard" ? style.active : ""}>
+							<Link href="/dashboard" className={router.pathname === "/dashboard" ? style.active : ""}>
 								<Image width={100} height={100} src={IconDashboard} alt="" />
 								Dashboard
 							</Link>

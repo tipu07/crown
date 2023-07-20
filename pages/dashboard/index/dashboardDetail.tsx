@@ -14,7 +14,7 @@ const DashboardDetail = () => {
 	return (
 		<>
 			<div className="row">
-				<div className="col-md-8">
+				<div className="col-lg-8">
 					<div className="row">
 						<div className="col-md-12">
 							<UserProfileBlock />
@@ -33,7 +33,7 @@ const DashboardDetail = () => {
 						</div>
 					</div>
 				</div>
-				<div className="col-md-4">
+				<div className="col-lg-4">
 					<ProfileBlock />
 					<DocumentBlock />
 					<InvoiceBlock />

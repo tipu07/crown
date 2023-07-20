@@ -121,14 +121,14 @@
 				}
 			}
 		}
-		.toggle {
-			@include ipad_sm {
-				@include flex;
-				&::before,
-				&::after,
-				> span {
-					background: var(--light);
-				}
+	}
+	.toggle {
+		@include ipad_sm {
+			@include flex;
+			&::before,
+			&::after,
+			> span {
+				background: var(--light);
 			}
 		}
 	}
@@ -1159,6 +1159,11 @@
 			@include list;
 			@include flex;
 			@include gap(0 5rem);
+			@include mobile {
+				@include gap(0 3rem);
+				overflow: hidden;
+				overflow-x: auto;
+			}
 			> li {
 				> button {
 					position: relative;
@@ -1167,6 +1172,7 @@
 					font-weight: 500;
 					line-height: 1;
 					padding-bottom: 1.8rem;
+					white-space: nowrap;
 					&:hover {
 						color: var(--prime_color);
 					}
@@ -1638,6 +1644,9 @@
 		table {
 			width: 100%;
 			margin-bottom: -0.1rem;
+			@include mobile {
+				min-width: 80rem;
+			}
 			tr {
 				th,
 				td {
@@ -2961,6 +2970,10 @@
 			margin: 4rem 0 5rem;
 			padding-bottom: 5rem;
 			border-bottom: 0.1rem solid #d9e1e7;
+			@include mobile {
+				margin: 2rem 0 2rem;
+				padding-bottom: 2rem;
+			}
 			.score_logo {
 				max-width: 12rem;
 				height: 6rem;
@@ -2981,6 +2994,10 @@
 			@include flex($justify: space-between);
 			@include gap(3rem);
 			margin: 4rem 0 0;
+			@include mobile {
+				@include flex($flow: wrap);
+				margin: 2rem 0 0;
+			}
 			.num {
 				@include flex(center);
 				@include gap(1rem);
@@ -2997,6 +3014,9 @@
 	}
 	.user_profile_blk {
 		@include flex(center);
+		@include mobile {
+			@include flex($flow: column);
+		}
 		.ico {
 			width: 14rem;
 			min-width: 14rem;
@@ -3004,6 +3024,9 @@
 			&_blk {
 				position: relative;
 				margin-right: 2rem;
+				@include mobile {
+					margin: 0 auto 2rem;
+				}
 				> span {
 					position: absolute;
 					background: #6bc600;
@@ -3029,6 +3052,11 @@
 			.top {
 				@include flex(center, space-between);
 				margin-bottom: 3rem;
+				@include mobile {
+					@include flex($flow: column);
+					text-align: center;
+					margin-bottom: 1rem;
+				}
 				.name {
 					font-size: 1.6rem;
 					font-weight: 600;
@@ -3053,10 +3081,17 @@
 			}
 			.btm {
 				@include flex(center, space-between);
+				@include mobile {
+					@include flex($flow: column);
+					text-align: center;
+				}
 				ul {
 					@include list;
 					@include flex;
 					@include gap(2rem);
+					@include mobile {
+						margin-bottom: 1rem;
+					}
 					li {
 						font-size: 1.4rem;
 						font-weight: 600;
@@ -3069,6 +3104,9 @@
 
 .table_pagination {
 	@include flex(center);
+	@include mobile {
+		@include flex($flow: wrap);
+	}
 	margin-top: 3rem;
 	> * {
 		-webkit-box-flex: 1;
@@ -3083,6 +3121,16 @@
 		@include list;
 		@include flex(center, center);
 		@include gap(2rem);
+		@include mobile {
+			-webkit-box-flex: 0;
+			-ms-flex: none;
+			flex: none;
+			-webkit-box-ordinal-group: 2;
+			-ms-flex-order: 1;
+			order: 1;
+			width: 100%;
+			margin-top: 1rem;
+		}
 		> li {
 			> span {
 				width: 2.6rem;
@@ -3189,11 +3237,18 @@
 	.cards_block {
 		@include flex;
 		@include gap(2.4rem);
+		@include ipad_sm {
+			@include flex($flow: wrap);
+		}
 		> .column {
 			@include flex($flow: column);
 			&:nth-child(1) {
 				width: 37rem;
 				min-width: 37rem;
+				@include mobile {
+					width: 100%;
+					min-width: 100%;
+				}
 			}
 			&:nth-child(2) {
 				-webkit-box-flex: 1;
@@ -3203,6 +3258,10 @@
 			&:nth-child(3) {
 				width: 27rem;
 				min-width: 27rem;
+				@include ipad_sm {
+					width: 100%;
+					min-width: 100%;
+				}
 			}
 		}
 	}
@@ -3239,9 +3298,15 @@
 		.wrapper {
 			@include flex;
 			@include gap(2.4rem);
+			@include ipad_sm {
+				@include flex($flow: wrap);
+			}
 			> .column {
 				@include flex;
 				width: 33.3334%;
+				@include ipad_sm {
+					width: 100%;
+				}
 			}
 		}
 		.customer_card {
@@ -3321,11 +3386,17 @@
 	.consult_analytics {
 		margin-top: 4rem;
 		.wrapper {
-			@include flex;
+			@include flex($flow: wrap);
 			@include gap(2.4rem);
 			> .column {
 				@include flex;
-				width: 33.3334%;
+				width: calc(25% - 1.8rem);
+				@include ipad_sm {
+					width: calc(50% - 1.2rem);
+				}
+				@include mobile_md {
+					width: calc(100% - 2.4rem);
+				}
 			}
 		}
 		.consult_card {
@@ -3419,6 +3490,8 @@
 				border: 0;
 			}
 			input {
+				-webkit-box-flex: 1;
+				-ms-flex: 1;
 				flex: 1;
 				margin-left: 0.5rem;
 			}
@@ -3437,6 +3510,13 @@
 .icon_heading {
 	@include flex(center);
 	@include gap(0.5rem);
+	margin-bottom: 0;
+	@include mobile {
+		margin-bottom: -1.5rem;
+		& + p {
+			margin-top: 2rem;
+		}
+	}
 	> img {
 		width: 1.8rem;
 		min-width: 1.8rem;
@@ -3445,6 +3525,8 @@
 }
 
 .upload_file_blk {
+	-webkit-box-flex: 1;
+	-ms-flex: 1;
 	flex: 1;
 	color: #475467;
 	font-size: 1.3rem;
@@ -3463,6 +3545,11 @@
 		button {
 			color: var(--prime_color);
 			font-weight: 600;
+		}
+		br {
+			@include mobile {
+				display: none;
+			}
 		}
 	}
 	&_wrapper {
@@ -3496,6 +3583,11 @@
 		padding-left: 1.6rem;
 		border-left: inherit;
 		border-radius: 0;
+		@include mobile_md {
+			span {
+				display: none;
+			}
+		}
 		&:hover {
 			color: var(--prime_color) !important;
 			> img {
@@ -3504,6 +3596,8 @@
 		}
 	}
 	input {
+		-webkit-box-flex: 1;
+		-ms-flex: 1;
 		flex: 1;
 		margin-right: 0.5rem;
 	}
@@ -3523,6 +3617,8 @@
 		border: 0;
 	}
 	input {
+		-webkit-box-flex: 1;
+		-ms-flex: 1;
 		flex: 1;
 	}
 }
@@ -3535,6 +3631,8 @@
 		border: 0;
 	}
 	input {
+		-webkit-box-flex: 1;
+		-ms-flex: 1;
 		flex: 1;
 		margin-left: 1rem;
 	}
