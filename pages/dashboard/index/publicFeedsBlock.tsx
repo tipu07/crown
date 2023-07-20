@@ -18,7 +18,7 @@ const PublicFeedsBlock = () => {
 							<h5>Shayna fluker mcgee lorem</h5>
 							<div className={style.time}>3 hours ago</div>
 						</div>
-						<button type="button" className={`${style.site_btn} ${style.sm} ${style.light} ${style.x_btn}`}></button>
+						{/* <button type="button" className={`${style.site_btn} ${style.sm} ${style.light} ${style.x_btn}`}></button> */}
 					</div>
 					<div className={style.text}>
 						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt accusantium odit harum officia ipsa quam officiis iste accusamus! Quis suscipit ipsam libero eligendi quasi voluptate neque maxime error aliquam eos.</p>
