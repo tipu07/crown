@@ -3646,3 +3646,97 @@
 		margin: 0 auto 2rem;
 	}
 }
+
+#reward_points {
+	.reward_blk {
+		@include flex(center);
+		@include gap(2rem);
+		margin-bottom: 2rem;
+		.ico {
+			width: 5.6rem;
+			min-width: 5.6rem;
+			height: 5.6rem;
+		}
+		.txt {
+			.title {
+				color: var(--black);
+				font-size: 2.8rem;
+				font-weight: 700;
+				line-height: 1;
+				margin-bottom: 0.5rem;
+			}
+			p {
+				color: #809fb8;
+				font-size: 1.6rem;
+				font-weight: 500;
+			}
+		}
+	}
+}
+
+.affiliate_link_blk {
+	.flex_blk {
+		@include flex(center);
+		max-width: 60rem;
+		padding-right: 0.4rem;
+		border: 0.1rem solid var(--gray);
+		border-radius: 0.8rem;
+		> * {
+			border: 0;
+		}
+	}
+}
+
+#membership_card {
+	.membership_card {
+		&_wrap {
+			@include flex;
+			@include gap(3rem);
+			max-width: 100rem;
+		}
+		flex: 1;
+		background: #60199a;
+		color: var(--light);
+		padding: 4rem;
+		border-radius: 1rem;
+		.title {
+			font-size: 2.6rem;
+			line-height: 1;
+			margin-bottom: 4rem;
+			text-transform: uppercase;
+			> span {
+				font-size: 1.8rem;
+				font-weight: 600;
+				text-transform: none;
+			}
+		}
+		.name {
+			strong {
+				font-size: 1.8rem;
+			}
+		}
+		&.ccp {
+			@include flex(center, center, column);
+			font-size: 1.6rem;
+			text-align: center;
+			.logo {
+				max-width: 24rem;
+				height: auto;
+				margin: 0 auto 2rem;
+				@include filter(1);
+			}
+		}
+	}
+	.social_links {
+		@include list;
+		@include flex;
+		@include gap(1rem);
+		> li {
+			> a {
+				width: 4rem;
+				min-width: 4rem;
+				height: 4rem;
+			}
+		}
+	}
+}

@@ -2,7 +2,7 @@ import React from "react"
 import style from "@/styles/scss/web.module.scss"
 import Logo from "./logo"
 import Image from "next/image"
-import { IconAffiliate, IconApplication2, IconCog, IconCommission, IconCrowned, IconCustomer, IconDashboard, IconDispute, IconEnvelope, IconInstallment, IconInvoice, IconNotices, IconTeam, IconWithdraw, PhotoUser_01 } from "./images"
+import { IconClient, IconCreditCard, IconDashboard, IconNotices, IconPayouts, IconPlus, IconRequest, IconReward, IconUser2, PhotoUser_01 } from "./images"
 import Link from "next/link"
 import { useRouter } from "next/router"
 
@@ -26,7 +26,7 @@ const AffiliateRegistrationSidebar = (props: any) => {
 					<ul>
 						<li>
 							<Link href="/affiliate-registration/complete-profile" className={router.pathname === "/affiliate-registration/complete-profile" ? style.active : ""}>
-								<Image width={100} height={100} src={IconDashboard} alt="" />
+								<Image width={100} height={100} src={IconUser2} alt="" />
 								Complete Profile
 							</Link>
 						</li>
@@ -38,13 +38,13 @@ const AffiliateRegistrationSidebar = (props: any) => {
 						</li>
 						<li>
 							<Link href="/affiliate-registration/my-payouts" className={router.pathname === "/affiliate-registration/my-payouts" ? style.active : ""}>
-								<Image width={100} height={100} src={IconDashboard} alt="" />
+								<Image width={100} height={100} src={IconPayouts} alt="" />
 								My Payouts
 							</Link>
 						</li>
 						<li>
 							<Link href="/affiliate-registration/clients" className={router.pathname === "/affiliate-registration/clients" ? style.active : ""}>
-								<Image width={100} height={100} src={IconDashboard} alt="" />
+								<Image width={100} height={100} src={IconClient} alt="" />
 								Clients
 							</Link>
 						</li>
@@ -56,23 +56,29 @@ const AffiliateRegistrationSidebar = (props: any) => {
 						</li>
 						<li>
 							<Link href="/affiliate-registration/withdraw-request" className={router.pathname === "/affiliate-registration/withdraw-request" ? style.active : ""}>
-								<Image width={100} height={100} src={IconWithdraw} alt="" />
+								<Image width={100} height={100} src={IconRequest} alt="" />
 								Withdraw Request
 							</Link>
 						</li>
 						<li>
 							<Link href="/affiliate-registration/membership-card" className={router.pathname === "/affiliate-registration/membership-card" ? style.active : ""}>
-								<Image width={100} height={100} src={IconDashboard} alt="" />
+								<Image width={100} height={100} src={IconCreditCard} alt="" />
 								Membership Card
 							</Link>
 						</li>
 						<li>
 							<Link href="/affiliate-registration/my-reward-points" className={router.pathname === "/affiliate-registration/my-reward-points" ? style.active : ""}>
-								<Image width={100} height={100} src={IconDashboard} alt="" />
+								<Image width={100} height={100} src={IconReward} alt="" />
 								My Reward Points
 							</Link>
 						</li>
 					</ul>
+					<div className={`${style.btn_blk} mt-4`}>
+						<a href="?" className={`${style.site_btn} ${style.transparent} ${style.stroke}`}>
+							<Image width={100} height={100} src={IconPlus} alt="" />
+							Add New Affiliate
+						</a>
+					</div>
 				</div>
 				<p>
 					© 2022CrownCreditPro <span>© Copyright</span>
