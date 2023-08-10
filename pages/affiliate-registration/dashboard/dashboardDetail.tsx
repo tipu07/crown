@@ -14,6 +14,14 @@ const DashboardDetail = () => {
 			<div className="row">
 				<div className="col-md-8 d-flex">
 					<div className={`${style.in_blk} w-100`}>
+						<div className="d-flex justify-content-between">
+							<h5 className="m-0">Total Sales </h5>
+							<select name="" id="" className={`${style.input} w-auto`}>
+								<option value="">This Year</option>
+								<option value="">This Year</option>
+								<option value="">This Year</option>
+							</select>
+						</div>
 						<div className={style.bar_chart}>
 							<MainSalesChart />
 						</div>
