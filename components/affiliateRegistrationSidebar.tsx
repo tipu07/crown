@@ -2,7 +2,7 @@ import React from "react"
 import style from "@/styles/scss/web.module.scss"
 import Logo from "./logo"
 import Image from "next/image"
-import { IconClient, IconCreditCard, IconDashboard, IconNotices, IconPayouts, IconPlus, IconRequest, IconReward, IconUser2, PhotoUser_01 } from "./images"
+import { IconClient, IconCreditCard, IconDashboard, IconEnvelope, IconNotices, IconPayouts, IconPlus, IconRequest, IconReward, IconUser2, PhotoUser_01 } from "./images"
 import Link from "next/link"
 import { useRouter } from "next/router"
 
@@ -70,6 +70,12 @@ const AffiliateRegistrationSidebar = (props: any) => {
 							<Link href="/affiliate-registration/my-reward-points" className={router.pathname === "/affiliate-registration/my-reward-points" ? style.active : ""}>
 								<Image width={100} height={100} src={IconReward} alt="" />
 								My Reward Points
+							</Link>
+						</li>
+						<li>
+							<Link href="/affiliate-registration/team-chat" className={router.pathname === "/affiliate-registration/team-chat" ? style.active : ""}>
+								<Image width={100} height={100} src={IconEnvelope} alt="" />
+								Team Chat
 							</Link>
 						</li>
 					</ul>

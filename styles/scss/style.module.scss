@@ -1542,7 +1542,7 @@
 				overflow-x: auto;
 			}
 			> li {
-				margin-right: 9rem;
+				margin-right: 7rem;
 				@include ipad {
 					margin-right: 4rem;
 				}
@@ -3694,6 +3694,8 @@
 			@include gap(3rem);
 			max-width: 100rem;
 		}
+		-webkit-box-flex: 1;
+		-ms-flex: 1;
 		flex: 1;
 		background: #60199a;
 		color: var(--light);
