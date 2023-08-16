@@ -3675,6 +3675,10 @@
 }
 
 .affiliate_link_blk {
+	@include mobile {
+		padding: 0 $i;
+		border: 0 $i;
+	}
 	.flex_blk {
 		@include flex(center);
 		max-width: 60rem;
@@ -3693,6 +3697,9 @@
 			@include flex;
 			@include gap(3rem);
 			max-width: 100rem;
+			@include mobile {
+				@include flex($flow: wrap);
+			}
 		}
 		-webkit-box-flex: 1;
 		-ms-flex: 1;
@@ -3701,6 +3708,9 @@
 		color: var(--light);
 		padding: 4rem;
 		border-radius: 1rem;
+		@include mobile {
+			min-width: 100%;
+		}
 		.title {
 			font-size: 2.6rem;
 			line-height: 1;
@@ -3740,5 +3750,12 @@
 				height: 4rem;
 			}
 		}
+	}
+}
+
+#add_new_popup,
+#pay_later_popup {
+	._inner {
+		max-width: 80rem;
 	}
 }
