@@ -31,7 +31,7 @@ const AffiliateRegistrationSidebar = (props: any) => {
 							</Link>
 						</li>
 						<li>
-							<Link href="/affiliate-registration/dashboard" className={router.pathname === "/affiliate-registration/dashboard" ? style.active : ""}>
+							<Link href="/affiliate-registration" className={router.pathname === "/affiliate-registration" ? style.active : ""}>
 								<Image width={100} height={100} src={IconDashboard} alt="" />
 								Dashboard
 							</Link>

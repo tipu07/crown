@@ -1,10 +1,15 @@
-import React from "react"
+import React, { useState } from "react"
 import style from "@/styles/scss/web.module.scss"
 import Image from "next/image"
 import { CashAppIcon, ZelleIcon } from "@/components/images"
+import PopupPayLater from "@/components/popupPayLater"
 
 const FormPaymentDetails = (props: any) => {
 	const { onFieldset } = props
+	const [popupPayLater, setPopupPayLater] = useState(false)
+	const popupPayLaterHandle = () => {
+		setPopupPayLater(!popupPayLater)
+	}
 	return (
 		<>
 			<fieldset>
@@ -75,8 +80,8 @@ const FormPaymentDetails = (props: any) => {
 					</div>
 				</div>
 				<div className={`${style.btn_blk} justify-content-end mt-5`}>
-					<button type="reset" className={`${style.site_btn} ${style.blank} ${style.stroke}`}>
-						Cancel
+					<button type="button" className={`${style.site_btn} ${style.blank} ${style.stroke}`} onClick={popupPayLaterHandle}>
+						Pay Later
 					</button>
 					{/* <button type="submit" className={style.site_btn}>
 						Submit Application
@@ -85,6 +90,7 @@ const FormPaymentDetails = (props: any) => {
 						Submit Application
 					</button>
 				</div>
+				{popupPayLater ? <PopupPayLater closePopupHandle={popupPayLaterHandle} /> : null}
 			</fieldset>
 		</>
 	)
