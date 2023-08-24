@@ -3,9 +3,9 @@ import style from "@/styles/scss/web.module.scss"
 import TablePagination from "@/components/tablePagination"
 import Image from "next/image"
 import { IconDownload2, IconFilter, IconSearch } from "@/components/images"
-import ApplicationTable from "./applicationTable"
+import SalesTable from "./salesTable"
 
-const ApplicationDetail = () => {
+const SalesDetail = () => {
 	return (
 		<>
 			<div className={style.tabs_block}>
@@ -16,16 +16,10 @@ const ApplicationDetail = () => {
 						</button>
 					</li>
 					<li>
-						<button type="button">In Review</button>
+						<button type="button">Affiliate Leads</button>
 					</li>
 					<li>
-						<button type="button">Drafts</button>
-					</li>
-					<li>
-						<button type="button">Filled Application</button>
-					</li>
-					<li>
-						<button type="button">Follow Up</button>
+						<button type="button">Consultation Leads</button>
 					</li>
 				</ul>
 			</div>
@@ -46,11 +40,11 @@ const ApplicationDetail = () => {
 						</button>
 					</div>
 				</div>
-				<ApplicationTable />
+				<SalesTable />
 			</div>
 			<TablePagination />
 		</>
 	)
 }
 
-export default ApplicationDetail
+export default SalesDetail

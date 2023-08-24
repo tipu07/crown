@@ -3,32 +3,15 @@ import style from "@/styles/scss/web.module.scss"
 import TablePagination from "@/components/tablePagination"
 import Image from "next/image"
 import { IconDownload2, IconFilter, IconSearch } from "@/components/images"
-import ApplicationTable from "./applicationTable"
+import IssueBlocks from "./issueBlocks"
+import IssueTable from "./issueTable"
 
-const ApplicationDetail = () => {
+const IssueDetail = () => {
 	return (
 		<>
-			<div className={style.tabs_block}>
-				<ul className={style.tabs_list}>
-					<li>
-						<button type="button" className={style.active}>
-							All Application
-						</button>
-					</li>
-					<li>
-						<button type="button">In Review</button>
-					</li>
-					<li>
-						<button type="button">Drafts</button>
-					</li>
-					<li>
-						<button type="button">Filled Application</button>
-					</li>
-					<li>
-						<button type="button">Follow Up</button>
-					</li>
-				</ul>
-			</div>
+			<IssueBlocks />
+			<div className="py-4"></div>
+			<h4>Issue</h4>
 			<div className={style.in_blk}>
 				<div className={style.top_head}>
 					<div className={style.srch_blk}>
@@ -46,11 +29,11 @@ const ApplicationDetail = () => {
 						</button>
 					</div>
 				</div>
-				<ApplicationTable />
+				<IssueTable />
 			</div>
 			<TablePagination />
 		</>
 	)
 }
 
-export default ApplicationDetail
+export default IssueDetail

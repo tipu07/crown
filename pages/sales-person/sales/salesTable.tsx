@@ -1,13 +1,10 @@
-import React, { useState } from "react"
+import React from "react"
 import style from "@/styles/scss/web.module.scss"
+import Image from "next/image"
+import { IconEdit2, IconEye } from "@/components/images"
 import RatingStars from "@/components/ratingStars"
-import PopupTargetCall from "@/components/popupTargetCall"
 
-const CallsTable = () => {
-	const [call, setCall] = useState(false)
-	const callHandle = () => {
-		setCall(!call)
-	}
+const SalesTable = () => {
 	return (
 		<>
 			<div className={style.table_blk_wrapper}>
@@ -37,11 +34,7 @@ const CallsTable = () => {
 								</td>
 								<td>CP15627</td>
 								<td>Sep 04, 2021</td>
-								<td>
-									<button type="button" className={style.text_prime} onClick={callHandle}>
-										Leonardo Davinci
-									</button>
-								</td>
+								<td>Leonardo Davinci</td>
 								<td>6206750254</td>
 								<td className="text-center">-</td>
 								<td>
@@ -53,9 +46,12 @@ const CallsTable = () => {
 								<td>Credit CardCard</td>
 								<td>$1000</td>
 								<td>
-									<div className={style.btn_blk}>
-										<button type="button" className={`${style.site_btn} ${style.sm}`}>
-											Call
+									<div className={style.action_btn_list}>
+										<button type="button">
+											<Image width={100} height={100} src={IconEdit2} alt="" />
+										</button>
+										<button type="button">
+											<Image width={100} height={100} src={IconEye} alt="" />
 										</button>
 									</div>
 								</td>
@@ -66,11 +62,7 @@ const CallsTable = () => {
 								</td>
 								<td>CP15627</td>
 								<td>Sep 04, 2021</td>
-								<td>
-									<button type="button" className={style.text_prime} onClick={callHandle}>
-										Leonardo Davinci
-									</button>
-								</td>
+								<td>Leonardo Davinci</td>
 								<td>6206750254</td>
 								<td className="text-center">-</td>
 								<td>
@@ -82,9 +74,12 @@ const CallsTable = () => {
 								<td>Credit CardCard</td>
 								<td>$1000</td>
 								<td>
-									<div className={style.btn_blk}>
-										<button type="button" className={`${style.site_btn} ${style.sm}`}>
-											Call
+									<div className={style.action_btn_list}>
+										<button type="button">
+											<Image width={100} height={100} src={IconEdit2} alt="" />
+										</button>
+										<button type="button">
+											<Image width={100} height={100} src={IconEye} alt="" />
 										</button>
 									</div>
 								</td>
@@ -95,11 +90,7 @@ const CallsTable = () => {
 								</td>
 								<td>CP15627</td>
 								<td>Sep 04, 2021</td>
-								<td>
-									<button type="button" className={style.text_prime} onClick={callHandle}>
-										Leonardo Davinci
-									</button>
-								</td>
+								<td>Leonardo Davinci</td>
 								<td>6206750254</td>
 								<td className="text-center">-</td>
 								<td>
@@ -111,9 +102,12 @@ const CallsTable = () => {
 								<td>Credit CardCard</td>
 								<td>$1000</td>
 								<td>
-									<div className={style.btn_blk}>
-										<button type="button" className={`${style.site_btn} ${style.sm}`}>
-											Call
+									<div className={style.action_btn_list}>
+										<button type="button">
+											<Image width={100} height={100} src={IconEdit2} alt="" />
+										</button>
+										<button type="button">
+											<Image width={100} height={100} src={IconEye} alt="" />
 										</button>
 									</div>
 								</td>
@@ -124,11 +118,7 @@ const CallsTable = () => {
 								</td>
 								<td>CP15627</td>
 								<td>Sep 04, 2021</td>
-								<td>
-									<button type="button" className={style.text_prime} onClick={callHandle}>
-										Leonardo Davinci
-									</button>
-								</td>
+								<td>Leonardo Davinci</td>
 								<td>6206750254</td>
 								<td className="text-center">-</td>
 								<td>
@@ -140,9 +130,12 @@ const CallsTable = () => {
 								<td>Credit CardCard</td>
 								<td>$1000</td>
 								<td>
-									<div className={style.btn_blk}>
-										<button type="button" className={`${style.site_btn} ${style.sm}`}>
-											Call
+									<div className={style.action_btn_list}>
+										<button type="button">
+											<Image width={100} height={100} src={IconEdit2} alt="" />
+										</button>
+										<button type="button">
+											<Image width={100} height={100} src={IconEye} alt="" />
 										</button>
 									</div>
 								</td>
@@ -153,11 +146,7 @@ const CallsTable = () => {
 								</td>
 								<td>CP15627</td>
 								<td>Sep 04, 2021</td>
-								<td>
-									<button type="button" className={style.text_prime} onClick={callHandle}>
-										Leonardo Davinci
-									</button>
-								</td>
+								<td>Leonardo Davinci</td>
 								<td>6206750254</td>
 								<td className="text-center">-</td>
 								<td>
@@ -169,9 +158,12 @@ const CallsTable = () => {
 								<td>Credit CardCard</td>
 								<td>$1000</td>
 								<td>
-									<div className={style.btn_blk}>
-										<button type="button" className={`${style.site_btn} ${style.sm}`}>
-											Call
+									<div className={style.action_btn_list}>
+										<button type="button">
+											<Image width={100} height={100} src={IconEdit2} alt="" />
+										</button>
+										<button type="button">
+											<Image width={100} height={100} src={IconEye} alt="" />
 										</button>
 									</div>
 								</td>
@@ -182,11 +174,7 @@ const CallsTable = () => {
 								</td>
 								<td>CP15627</td>
 								<td>Sep 04, 2021</td>
-								<td>
-									<button type="button" className={style.text_prime} onClick={callHandle}>
-										Leonardo Davinci
-									</button>
-								</td>
+								<td>Leonardo Davinci</td>
 								<td>6206750254</td>
 								<td className="text-center">-</td>
 								<td>
@@ -198,9 +186,12 @@ const CallsTable = () => {
 								<td>Credit CardCard</td>
 								<td>$1000</td>
 								<td>
-									<div className={style.btn_blk}>
-										<button type="button" className={`${style.site_btn} ${style.sm}`}>
-											Call
+									<div className={style.action_btn_list}>
+										<button type="button">
+											<Image width={100} height={100} src={IconEdit2} alt="" />
+										</button>
+										<button type="button">
+											<Image width={100} height={100} src={IconEye} alt="" />
 										</button>
 									</div>
 								</td>
@@ -211,11 +202,7 @@ const CallsTable = () => {
 								</td>
 								<td>CP15627</td>
 								<td>Sep 04, 2021</td>
-								<td>
-									<button type="button" className={style.text_prime} onClick={callHandle}>
-										Leonardo Davinci
-									</button>
-								</td>
+								<td>Leonardo Davinci</td>
 								<td>6206750254</td>
 								<td className="text-center">-</td>
 								<td>
@@ -227,9 +214,12 @@ const CallsTable = () => {
 								<td>Credit CardCard</td>
 								<td>$1000</td>
 								<td>
-									<div className={style.btn_blk}>
-										<button type="button" className={`${style.site_btn} ${style.sm}`}>
-											Call
+									<div className={style.action_btn_list}>
+										<button type="button">
+											<Image width={100} height={100} src={IconEdit2} alt="" />
+										</button>
+										<button type="button">
+											<Image width={100} height={100} src={IconEye} alt="" />
 										</button>
 									</div>
 								</td>
@@ -240,11 +230,7 @@ const CallsTable = () => {
 								</td>
 								<td>CP15627</td>
 								<td>Sep 04, 2021</td>
-								<td>
-									<button type="button" className={style.text_prime} onClick={callHandle}>
-										Leonardo Davinci
-									</button>
-								</td>
+								<td>Leonardo Davinci</td>
 								<td>6206750254</td>
 								<td className="text-center">-</td>
 								<td>
@@ -256,9 +242,12 @@ const CallsTable = () => {
 								<td>Credit CardCard</td>
 								<td>$1000</td>
 								<td>
-									<div className={style.btn_blk}>
-										<button type="button" className={`${style.site_btn} ${style.sm}`}>
-											Call
+									<div className={style.action_btn_list}>
+										<button type="button">
+											<Image width={100} height={100} src={IconEdit2} alt="" />
+										</button>
+										<button type="button">
+											<Image width={100} height={100} src={IconEye} alt="" />
 										</button>
 									</div>
 								</td>
@@ -269,11 +258,7 @@ const CallsTable = () => {
 								</td>
 								<td>CP15627</td>
 								<td>Sep 04, 2021</td>
-								<td>
-									<button type="button" className={style.text_prime} onClick={callHandle}>
-										Leonardo Davinci
-									</button>
-								</td>
+								<td>Leonardo Davinci</td>
 								<td>6206750254</td>
 								<td className="text-center">-</td>
 								<td>
@@ -285,9 +270,12 @@ const CallsTable = () => {
 								<td>Credit CardCard</td>
 								<td>$1000</td>
 								<td>
-									<div className={style.btn_blk}>
-										<button type="button" className={`${style.site_btn} ${style.sm}`}>
-											Call
+									<div className={style.action_btn_list}>
+										<button type="button">
+											<Image width={100} height={100} src={IconEdit2} alt="" />
+										</button>
+										<button type="button">
+											<Image width={100} height={100} src={IconEye} alt="" />
 										</button>
 									</div>
 								</td>
@@ -298,11 +286,7 @@ const CallsTable = () => {
 								</td>
 								<td>CP15627</td>
 								<td>Sep 04, 2021</td>
-								<td>
-									<button type="button" className={style.text_prime} onClick={callHandle}>
-										Leonardo Davinci
-									</button>
-								</td>
+								<td>Leonardo Davinci</td>
 								<td>6206750254</td>
 								<td className="text-center">-</td>
 								<td>
@@ -314,9 +298,12 @@ const CallsTable = () => {
 								<td>Credit CardCard</td>
 								<td>$1000</td>
 								<td>
-									<div className={style.btn_blk}>
-										<button type="button" className={`${style.site_btn} ${style.sm}`}>
-											Call
+									<div className={style.action_btn_list}>
+										<button type="button">
+											<Image width={100} height={100} src={IconEdit2} alt="" />
+										</button>
+										<button type="button">
+											<Image width={100} height={100} src={IconEye} alt="" />
 										</button>
 									</div>
 								</td>
@@ -325,9 +312,8 @@ const CallsTable = () => {
 					</table>
 				</div>
 			</div>
-			{call ? <PopupTargetCall closePopupHandle={callHandle} /> : null}
 		</>
 	)
 }
 
-export default CallsTable
+export default SalesTable

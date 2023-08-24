@@ -3754,8 +3754,28 @@
 }
 
 #add_new_popup,
-#pay_later_popup {
+#pay_later_popup,
+#target_call_popup {
 	._inner {
 		max-width: 80rem;
+	}
+}
+
+.select_btn {
+	@extend .site_btn;
+	background: var(--light);
+	color: var(--black);
+	border: 0.1rem solid var(--gray);
+	&:hover {
+		background: var(--light);
+		color: var(--prime_color);
+	}
+	> img {
+		filter: grayscale(1) brightness(0.6) invert(1);
+	}
+	&.active {
+		background: #eaeef6;
+		color: var(--prime_color);
+		border-color: var(--prime_color);
 	}
 }

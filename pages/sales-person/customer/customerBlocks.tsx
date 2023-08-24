@@ -3,7 +3,7 @@ import style from "@/styles/scss/web.module.scss"
 import Image from "next/image"
 import { BlockCallIcon, BlockDraftsIcon, BlockThumbsUpIcon, BlockUserIcon } from "@/components/images"
 
-const ApplicationBlocks = () => {
+const CustomerBlocks = () => {
 	return (
 		<>
 			<div className="row">
@@ -56,4 +56,4 @@ const ApplicationBlocks = () => {
 	)
 }
 
-export default ApplicationBlocks
+export default CustomerBlocks

@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import style from "@/styles/scss/web.module.scss"
-import AffiliateRegistrationHeader from "@/components/affiliateRegistrationHeader"
-import AffiliateRegistrationSidebar from "@/components/affiliateRegistrationSidebar"
+import SalesPersonHeader from "@/components/salesPersonHeader"
+import SalesPersonSidebar from "@/components/salesPersonSidebar"
 import NoticesDetail from "./notices/noticesDetail"
 
 const Notices = () => {
@@ -12,9 +12,9 @@ const Notices = () => {
 	return (
 		<>
 			<section className={`${style.dashboard} ${toggle ? style.flow : ""}`} id={style.application}>
-				<AffiliateRegistrationSidebar isActive={toggle} />
+				<SalesPersonSidebar isActive={toggle} />
 				<div id={style.main_area}>
-					<AffiliateRegistrationHeader isActive={toggle} onToggle={toggleHandle} pageTitle="Notices" />
+					<SalesPersonHeader isActive={toggle} onToggle={toggleHandle} pageTitle="Notices" />
 					<NoticesDetail />
 				</div>
 			</section>
