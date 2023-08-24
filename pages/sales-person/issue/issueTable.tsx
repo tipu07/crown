@@ -1,13 +1,10 @@
-import React, { useState } from "react"
+import React from "react"
 import style from "@/styles/scss/web.module.scss"
+import Image from "next/image"
+import { IconChevRight, IconDownload, IconEdit } from "@/components/images"
 import RatingStars from "@/components/ratingStars"
-import PopupTargetCall from "@/components/popupTargetCall"
 
-const CallsTable = () => {
-	const [call, setCall] = useState(false)
-	const callHandle = () => {
-		setCall(!call)
-	}
+const IssueTable = () => {
 	return (
 		<>
 			<div className={style.table_blk_wrapper}>
@@ -37,11 +34,7 @@ const CallsTable = () => {
 								</td>
 								<td>CP15627</td>
 								<td>Sep 04, 2021</td>
-								<td>
-									<button type="button" className={style.text_prime} onClick={callHandle}>
-										Leonardo Davinci
-									</button>
-								</td>
+								<td>Leonardo Davinci</td>
 								<td>6206750254</td>
 								<td className="text-center">-</td>
 								<td>
@@ -54,9 +47,12 @@ const CallsTable = () => {
 								<td>$1000</td>
 								<td>
 									<div className={style.btn_blk}>
-										<button type="button" className={`${style.site_btn} ${style.sm}`}>
-											Call
-										</button>
+										<select name="" id="" className={style.input}>
+											<option value="">Action</option>
+											<option value="">Action</option>
+											<option value="">Action</option>
+											<option value="">Action</option>
+										</select>
 									</div>
 								</td>
 							</tr>
@@ -66,11 +62,7 @@ const CallsTable = () => {
 								</td>
 								<td>CP15627</td>
 								<td>Sep 04, 2021</td>
-								<td>
-									<button type="button" className={style.text_prime} onClick={callHandle}>
-										Leonardo Davinci
-									</button>
-								</td>
+								<td>Leonardo Davinci</td>
 								<td>6206750254</td>
 								<td className="text-center">-</td>
 								<td>
@@ -83,9 +75,12 @@ const CallsTable = () => {
 								<td>$1000</td>
 								<td>
 									<div className={style.btn_blk}>
-										<button type="button" className={`${style.site_btn} ${style.sm}`}>
-											Call
-										</button>
+										<select name="" id="" className={style.input}>
+											<option value="">Action</option>
+											<option value="">Action</option>
+											<option value="">Action</option>
+											<option value="">Action</option>
+										</select>
 									</div>
 								</td>
 							</tr>
@@ -95,11 +90,7 @@ const CallsTable = () => {
 								</td>
 								<td>CP15627</td>
 								<td>Sep 04, 2021</td>
-								<td>
-									<button type="button" className={style.text_prime} onClick={callHandle}>
-										Leonardo Davinci
-									</button>
-								</td>
+								<td>Leonardo Davinci</td>
 								<td>6206750254</td>
 								<td className="text-center">-</td>
 								<td>
@@ -112,9 +103,12 @@ const CallsTable = () => {
 								<td>$1000</td>
 								<td>
 									<div className={style.btn_blk}>
-										<button type="button" className={`${style.site_btn} ${style.sm}`}>
-											Call
-										</button>
+										<select name="" id="" className={style.input}>
+											<option value="">Action</option>
+											<option value="">Action</option>
+											<option value="">Action</option>
+											<option value="">Action</option>
+										</select>
 									</div>
 								</td>
 							</tr>
@@ -124,11 +118,7 @@ const CallsTable = () => {
 								</td>
 								<td>CP15627</td>
 								<td>Sep 04, 2021</td>
-								<td>
-									<button type="button" className={style.text_prime} onClick={callHandle}>
-										Leonardo Davinci
-									</button>
-								</td>
+								<td>Leonardo Davinci</td>
 								<td>6206750254</td>
 								<td className="text-center">-</td>
 								<td>
@@ -141,9 +131,12 @@ const CallsTable = () => {
 								<td>$1000</td>
 								<td>
 									<div className={style.btn_blk}>
-										<button type="button" className={`${style.site_btn} ${style.sm}`}>
-											Call
-										</button>
+										<select name="" id="" className={style.input}>
+											<option value="">Action</option>
+											<option value="">Action</option>
+											<option value="">Action</option>
+											<option value="">Action</option>
+										</select>
 									</div>
 								</td>
 							</tr>
@@ -153,11 +146,7 @@ const CallsTable = () => {
 								</td>
 								<td>CP15627</td>
 								<td>Sep 04, 2021</td>
-								<td>
-									<button type="button" className={style.text_prime} onClick={callHandle}>
-										Leonardo Davinci
-									</button>
-								</td>
+								<td>Leonardo Davinci</td>
 								<td>6206750254</td>
 								<td className="text-center">-</td>
 								<td>
@@ -170,9 +159,12 @@ const CallsTable = () => {
 								<td>$1000</td>
 								<td>
 									<div className={style.btn_blk}>
-										<button type="button" className={`${style.site_btn} ${style.sm}`}>
-											Call
-										</button>
+										<select name="" id="" className={style.input}>
+											<option value="">Action</option>
+											<option value="">Action</option>
+											<option value="">Action</option>
+											<option value="">Action</option>
+										</select>
 									</div>
 								</td>
 							</tr>
@@ -182,11 +174,7 @@ const CallsTable = () => {
 								</td>
 								<td>CP15627</td>
 								<td>Sep 04, 2021</td>
-								<td>
-									<button type="button" className={style.text_prime} onClick={callHandle}>
-										Leonardo Davinci
-									</button>
-								</td>
+								<td>Leonardo Davinci</td>
 								<td>6206750254</td>
 								<td className="text-center">-</td>
 								<td>
@@ -199,9 +187,12 @@ const CallsTable = () => {
 								<td>$1000</td>
 								<td>
 									<div className={style.btn_blk}>
-										<button type="button" className={`${style.site_btn} ${style.sm}`}>
-											Call
-										</button>
+										<select name="" id="" className={style.input}>
+											<option value="">Action</option>
+											<option value="">Action</option>
+											<option value="">Action</option>
+											<option value="">Action</option>
+										</select>
 									</div>
 								</td>
 							</tr>
@@ -211,11 +202,7 @@ const CallsTable = () => {
 								</td>
 								<td>CP15627</td>
 								<td>Sep 04, 2021</td>
-								<td>
-									<button type="button" className={style.text_prime} onClick={callHandle}>
-										Leonardo Davinci
-									</button>
-								</td>
+								<td>Leonardo Davinci</td>
 								<td>6206750254</td>
 								<td className="text-center">-</td>
 								<td>
@@ -228,9 +215,12 @@ const CallsTable = () => {
 								<td>$1000</td>
 								<td>
 									<div className={style.btn_blk}>
-										<button type="button" className={`${style.site_btn} ${style.sm}`}>
-											Call
-										</button>
+										<select name="" id="" className={style.input}>
+											<option value="">Action</option>
+											<option value="">Action</option>
+											<option value="">Action</option>
+											<option value="">Action</option>
+										</select>
 									</div>
 								</td>
 							</tr>
@@ -240,11 +230,7 @@ const CallsTable = () => {
 								</td>
 								<td>CP15627</td>
 								<td>Sep 04, 2021</td>
-								<td>
-									<button type="button" className={style.text_prime} onClick={callHandle}>
-										Leonardo Davinci
-									</button>
-								</td>
+								<td>Leonardo Davinci</td>
 								<td>6206750254</td>
 								<td className="text-center">-</td>
 								<td>
@@ -257,9 +243,12 @@ const CallsTable = () => {
 								<td>$1000</td>
 								<td>
 									<div className={style.btn_blk}>
-										<button type="button" className={`${style.site_btn} ${style.sm}`}>
-											Call
-										</button>
+										<select name="" id="" className={style.input}>
+											<option value="">Action</option>
+											<option value="">Action</option>
+											<option value="">Action</option>
+											<option value="">Action</option>
+										</select>
 									</div>
 								</td>
 							</tr>
@@ -269,11 +258,7 @@ const CallsTable = () => {
 								</td>
 								<td>CP15627</td>
 								<td>Sep 04, 2021</td>
-								<td>
-									<button type="button" className={style.text_prime} onClick={callHandle}>
-										Leonardo Davinci
-									</button>
-								</td>
+								<td>Leonardo Davinci</td>
 								<td>6206750254</td>
 								<td className="text-center">-</td>
 								<td>
@@ -286,9 +271,12 @@ const CallsTable = () => {
 								<td>$1000</td>
 								<td>
 									<div className={style.btn_blk}>
-										<button type="button" className={`${style.site_btn} ${style.sm}`}>
-											Call
-										</button>
+										<select name="" id="" className={style.input}>
+											<option value="">Action</option>
+											<option value="">Action</option>
+											<option value="">Action</option>
+											<option value="">Action</option>
+										</select>
 									</div>
 								</td>
 							</tr>
@@ -298,11 +286,7 @@ const CallsTable = () => {
 								</td>
 								<td>CP15627</td>
 								<td>Sep 04, 2021</td>
-								<td>
-									<button type="button" className={style.text_prime} onClick={callHandle}>
-										Leonardo Davinci
-									</button>
-								</td>
+								<td>Leonardo Davinci</td>
 								<td>6206750254</td>
 								<td className="text-center">-</td>
 								<td>
@@ -315,9 +299,12 @@ const CallsTable = () => {
 								<td>$1000</td>
 								<td>
 									<div className={style.btn_blk}>
-										<button type="button" className={`${style.site_btn} ${style.sm}`}>
-											Call
-										</button>
+										<select name="" id="" className={style.input}>
+											<option value="">Action</option>
+											<option value="">Action</option>
+											<option value="">Action</option>
+											<option value="">Action</option>
+										</select>
 									</div>
 								</td>
 							</tr>
@@ -325,9 +312,8 @@ const CallsTable = () => {
 					</table>
 				</div>
 			</div>
-			{call ? <PopupTargetCall closePopupHandle={callHandle} /> : null}
 		</>
 	)
 }
 
-export default CallsTable
+export default IssueTable

@@ -2,9 +2,9 @@ import React, { useState } from "react"
 import style from "@/styles/scss/web.module.scss"
 import SalesPersonHeader from "@/components/salesPersonHeader"
 import SalesPersonSidebar from "@/components/salesPersonSidebar"
-import ApplicationDetail from "./application/applicationDetail"
+import SalesDetail from "./sales/salesDetail"
 
-const Application = () => {
+const Sales = () => {
 	const [toggle, setToggle] = useState(false)
 	const toggleHandle = () => {
 		setToggle(!toggle)
@@ -14,12 +14,12 @@ const Application = () => {
 			<section className={`${style.dashboard} ${toggle ? style.flow : ""}`} id={style.application}>
 				<SalesPersonSidebar isActive={toggle} />
 				<div id={style.main_area}>
-					<SalesPersonHeader isActive={toggle} onToggle={toggleHandle} pageTitle="My Application" />
-					<ApplicationDetail />
+					<SalesPersonHeader isActive={toggle} onToggle={toggleHandle} pageTitle="Sales" />
+					<SalesDetail />
 				</div>
 			</section>
 		</>
 	)
 }
 
-export default Application
+export default Sales

@@ -89,6 +89,7 @@ export { default as IconDownloadCircle } from "/public/images/icon-download-circ
 export { default as IconCheckCircle } from "/public/images/icon-check-circle.svg"
 
 export { default as CrownLogoIcon } from "/public/images/crown_logo_icon.svg"
+export { default as CheckCircleIcon } from "/public/images/check_circle.svg"
 export { default as SaveIcon } from "/public/images/save_icon.svg"
 export { default as PlayIcon } from "/public/images/play_icon.svg"
 export { default as ZelleIcon } from "/public/images/zelle_icon.svg"

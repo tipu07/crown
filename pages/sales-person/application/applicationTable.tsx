@@ -1,7 +1,7 @@
 import React from "react"
 import style from "@/styles/scss/web.module.scss"
 import Image from "next/image"
-import { IconChevRight, IconDownload, IconEdit } from "@/components/images"
+import { IconEdit2, IconEye } from "@/components/images"
 import RatingStars from "@/components/ratingStars"
 
 const ApplicationTable = () => {
@@ -46,13 +46,13 @@ const ApplicationTable = () => {
 								<td>Credit CardCard</td>
 								<td>$1000</td>
 								<td>
-									<div className={style.btn_blk}>
-										<select name="" id="" className={style.input}>
-											<option value="">Action</option>
-											<option value="">Action</option>
-											<option value="">Action</option>
-											<option value="">Action</option>
-										</select>
+									<div className={style.action_btn_list}>
+										<button type="button">
+											<Image width={100} height={100} src={IconEdit2} alt="" />
+										</button>
+										<button type="button">
+											<Image width={100} height={100} src={IconEye} alt="" />
+										</button>
 									</div>
 								</td>
 							</tr>
@@ -74,13 +74,13 @@ const ApplicationTable = () => {
 								<td>Credit CardCard</td>
 								<td>$1000</td>
 								<td>
-									<div className={style.btn_blk}>
-										<select name="" id="" className={style.input}>
-											<option value="">Action</option>
-											<option value="">Action</option>
-											<option value="">Action</option>
-											<option value="">Action</option>
-										</select>
+									<div className={style.action_btn_list}>
+										<button type="button">
+											<Image width={100} height={100} src={IconEdit2} alt="" />
+										</button>
+										<button type="button">
+											<Image width={100} height={100} src={IconEye} alt="" />
+										</button>
 									</div>
 								</td>
 							</tr>
@@ -102,13 +102,13 @@ const ApplicationTable = () => {
 								<td>Credit CardCard</td>
 								<td>$1000</td>
 								<td>
-									<div className={style.btn_blk}>
-										<select name="" id="" className={style.input}>
-											<option value="">Action</option>
-											<option value="">Action</option>
-											<option value="">Action</option>
-											<option value="">Action</option>
-										</select>
+									<div className={style.action_btn_list}>
+										<button type="button">
+											<Image width={100} height={100} src={IconEdit2} alt="" />
+										</button>
+										<button type="button">
+											<Image width={100} height={100} src={IconEye} alt="" />
+										</button>
 									</div>
 								</td>
 							</tr>
@@ -130,13 +130,13 @@ const ApplicationTable = () => {
 								<td>Credit CardCard</td>
 								<td>$1000</td>
 								<td>
-									<div className={style.btn_blk}>
-										<select name="" id="" className={style.input}>
-											<option value="">Action</option>
-											<option value="">Action</option>
-											<option value="">Action</option>
-											<option value="">Action</option>
-										</select>
+									<div className={style.action_btn_list}>
+										<button type="button">
+											<Image width={100} height={100} src={IconEdit2} alt="" />
+										</button>
+										<button type="button">
+											<Image width={100} height={100} src={IconEye} alt="" />
+										</button>
 									</div>
 								</td>
 							</tr>
@@ -158,13 +158,13 @@ const ApplicationTable = () => {
 								<td>Credit CardCard</td>
 								<td>$1000</td>
 								<td>
-									<div className={style.btn_blk}>
-										<select name="" id="" className={style.input}>
-											<option value="">Action</option>
-											<option value="">Action</option>
-											<option value="">Action</option>
-											<option value="">Action</option>
-										</select>
+									<div className={style.action_btn_list}>
+										<button type="button">
+											<Image width={100} height={100} src={IconEdit2} alt="" />
+										</button>
+										<button type="button">
+											<Image width={100} height={100} src={IconEye} alt="" />
+										</button>
 									</div>
 								</td>
 							</tr>
@@ -186,13 +186,13 @@ const ApplicationTable = () => {
 								<td>Credit CardCard</td>
 								<td>$1000</td>
 								<td>
-									<div className={style.btn_blk}>
-										<select name="" id="" className={style.input}>
-											<option value="">Action</option>
-											<option value="">Action</option>
-											<option value="">Action</option>
-											<option value="">Action</option>
-										</select>
+									<div className={style.action_btn_list}>
+										<button type="button">
+											<Image width={100} height={100} src={IconEdit2} alt="" />
+										</button>
+										<button type="button">
+											<Image width={100} height={100} src={IconEye} alt="" />
+										</button>
 									</div>
 								</td>
 							</tr>
@@ -214,13 +214,13 @@ const ApplicationTable = () => {
 								<td>Credit CardCard</td>
 								<td>$1000</td>
 								<td>
-									<div className={style.btn_blk}>
-										<select name="" id="" className={style.input}>
-											<option value="">Action</option>
-											<option value="">Action</option>
-											<option value="">Action</option>
-											<option value="">Action</option>
-										</select>
+									<div className={style.action_btn_list}>
+										<button type="button">
+											<Image width={100} height={100} src={IconEdit2} alt="" />
+										</button>
+										<button type="button">
+											<Image width={100} height={100} src={IconEye} alt="" />
+										</button>
 									</div>
 								</td>
 							</tr>
@@ -242,13 +242,13 @@ const ApplicationTable = () => {
 								<td>Credit CardCard</td>
 								<td>$1000</td>
 								<td>
-									<div className={style.btn_blk}>
-										<select name="" id="" className={style.input}>
-											<option value="">Action</option>
-											<option value="">Action</option>
-											<option value="">Action</option>
-											<option value="">Action</option>
-										</select>
+									<div className={style.action_btn_list}>
+										<button type="button">
+											<Image width={100} height={100} src={IconEdit2} alt="" />
+										</button>
+										<button type="button">
+											<Image width={100} height={100} src={IconEye} alt="" />
+										</button>
 									</div>
 								</td>
 							</tr>
@@ -270,13 +270,13 @@ const ApplicationTable = () => {
 								<td>Credit CardCard</td>
 								<td>$1000</td>
 								<td>
-									<div className={style.btn_blk}>
-										<select name="" id="" className={style.input}>
-											<option value="">Action</option>
-											<option value="">Action</option>
-											<option value="">Action</option>
-											<option value="">Action</option>
-										</select>
+									<div className={style.action_btn_list}>
+										<button type="button">
+											<Image width={100} height={100} src={IconEdit2} alt="" />
+										</button>
+										<button type="button">
+											<Image width={100} height={100} src={IconEye} alt="" />
+										</button>
 									</div>
 								</td>
 							</tr>
@@ -298,13 +298,13 @@ const ApplicationTable = () => {
 								<td>Credit CardCard</td>
 								<td>$1000</td>
 								<td>
-									<div className={style.btn_blk}>
-										<select name="" id="" className={style.input}>
-											<option value="">Action</option>
-											<option value="">Action</option>
-											<option value="">Action</option>
-											<option value="">Action</option>
-										</select>
+									<div className={style.action_btn_list}>
+										<button type="button">
+											<Image width={100} height={100} src={IconEdit2} alt="" />
+										</button>
+										<button type="button">
+											<Image width={100} height={100} src={IconEye} alt="" />
+										</button>
 									</div>
 								</td>
 							</tr>
