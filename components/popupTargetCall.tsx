@@ -118,7 +118,7 @@ const PopupTargetCall = (props: any) => {
 														</button>
 													</div>
 													<div className="col-sm-6">
-														<button type="button" className={`${style.select_btn} w-100`} onClick={() => setFieldset("NotInterested")}>
+														<button type="button" className={`${style.select_btn} w-100`}>
 															<Image width={60} height={60} src={CheckCircleIcon} alt="" />
 															Interested
 														</button>
@@ -151,6 +151,9 @@ const PopupTargetCall = (props: any) => {
 													</div>
 												</div>
 												<div className={`${style.btn_blk} justify-content-end mt-5`}>
+													<button type="button" className={`${style.site_btn} ${style.light}`} onClick={() => setFieldset("TargetCall")}>
+														Back
+													</button>
 													<button type="button" className={style.site_btn}>
 														Submit
 													</button>

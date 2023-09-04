@@ -3763,10 +3763,12 @@
 
 .select_btn {
 	@extend .site_btn;
+	height: 5.6rem;
 	background: var(--light);
 	color: var(--black);
 	border: 0.1rem solid var(--gray);
-	&:hover {
+	&:hover,
+	&:focus {
 		background: var(--light);
 		color: var(--prime_color);
 	}
